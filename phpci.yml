@@ -1,0 +1,42 @@
+build_settings:
+    clone_depth: 1 # depth of 1 is a shallow clone, remove this line to clone entire repo
+    ignore:
+        - "vendor"
+    mysql:
+        host: "localhost"
+        user: "root"
+        pass: ""
+
+setup:
+    mysql:
+        - "DROP DATABASE IF EXISTS APP_test;"
+        - "CREATE DATABASE APP_test;"
+    composer:
+        action: "install"
+
+test:
+    php_unit:
+        config:
+            - "phpunit.xml.dist"
+        run_from: "/"
+        coverage: "/var/www/phpci/public/APP_coverage"
+    php_code_sniffer:
+        allowed_warnings: 50
+        standard: "vendor/cakephp/cakephp-codesniffer/CakePHP"
+    php_loc:
+        directory: src/
+    php_parallel_lint:
+
+failure:
+    email:
+        committer: true
+    hipchat_notify:
+        authToken: TOKEN
+        room: ROOM
+        message: <b>%PROJECT_TITLE%</b> - build <a href="%BUILD_URI%">%BUILD%</a> failed.
+        color: red
+        notify: true
+
+complete:
+    mysql:
+        - "DROP DATABASE IF EXISTS APP_test;"

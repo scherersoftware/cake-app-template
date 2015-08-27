@@ -1,0 +1,8 @@
+[^.]*
+!uploads
+!cache
+!cache/models
+!cache/persistent
+!cache/views
+!sessions
+!tests
