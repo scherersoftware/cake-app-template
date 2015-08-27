@@ -216,9 +216,9 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'nonstandard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'my_app',
+            'username' => env('MYSQL_USER') ? env('MYSQL_USER') : 'root',
+            'password' => env('MYSQL_PASSWORD'),
+            'database' => 'cakephp_app_template',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
@@ -252,9 +252,9 @@ return [
             'persistent' => false,
             'host' => 'localhost',
             //'port' => 'nonstandard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
+            'username' => 'root',
+            'password' => '',
+            'database' => 'test_cakephp_app_template',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
@@ -321,5 +321,33 @@ return [
      */
     'Session' => [
         'defaults' => 'php',
+        'cookie' => 'CAKEPHPAPPTEMPLATE'
+    ],
+    'Attachments' => [
+        'tmpUploadsPath' => ROOT . '/tmp/uploads/',
+        'path' => ROOT . '/app_data/attachments/',
+        'acceptedFileTypes' => '/\.(gif|jpe?g|png|pdf|docx|doc|xls|xlsx|tif|tiff|zip)$/i'
+    ],
+    'Authentication' => [
+        'max_login_retries' => 5,
+        'login_lock_duration' => '1 hour'
+    ],
+    'Notifications' => [
+        'default_language' => 'de',
+        'transports' => [
+            'email' => [
+                'profile' => 'default',
+                'emailTransport' => 'default',
+                'templated' => false,
+                'template' => 'default',
+                'layout' => 'standard'
+            ],
+        ],
+        'Administration' => [
+            'layout' => 'Admin.default',
+            'helpers' => [
+                'Admin.Menu'
+            ]
+        ]
     ],
 ];

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef2254b87b67630e4f4e3b4655ece177",
+    "hash": "9d1ed3e55b1ba32783fd6cdfefb6c8eb",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -201,6 +201,45 @@
             "time": "2015-08-22 01:46:55"
         },
         {
+            "name": "cakephp/cakephp-codesniffer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/cakephp-codesniffer.git",
+                "reference": "558a3acd9d15d1625997494c5947d62b88dcdaf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/558a3acd9d15d1625997494c5947d62b88dcdaf1",
+                "reference": "558a3acd9d15d1625997494c5947d62b88dcdaf1",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/cakephp-codesniffer/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP CodeSniffer Standards",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "codesniffer",
+                "framework"
+            ],
+            "time": "2015-08-05 01:28:40"
+        },
+        {
             "name": "cakephp/migrations",
             "version": "1.2.1",
             "source": {
@@ -291,6 +330,418 @@
             "time": "2015-06-10 10:35:13"
         },
         {
+            "name": "codekanzlei/cake-attachments",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-attachments.git",
+                "reference": "547e528a3c8378854ef9d4af581ebdd5d81df2cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/547e528a3c8378854ef9d4af581ebdd5d81df2cb",
+                "reference": "547e528a3c8378854ef9d4af581ebdd5d81df2cb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imagick": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev",
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Attachments"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Attachments\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "File Attachments plugin for CakePHP",
+            "time": "2015-08-18 11:42:15"
+        },
+        {
+            "name": "codekanzlei/cake-auth-actions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-auth-actions.git",
+                "reference": "54f2bd30381839456fe8690db69bd3bfbc60cf64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-auth-actions/zipball/54f2bd30381839456fe8690db69bd3bfbc60cf64",
+                "reference": "54f2bd30381839456fe8690db69bd3bfbc60cf64",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "AuthActions"
+            },
+            "autoload": {
+                "psr-4": {
+                    "AuthActions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple ACL alternative for CakePHP 3",
+            "time": "2015-04-30 10:56:45"
+        },
+        {
+            "name": "codekanzlei/cake-cktools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-cktools.git",
+                "reference": "13736c68b1d5e844782e90e60a15a65320e02656"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/13736c68b1d5e844782e90e60a15a65320e02656",
+                "reference": "13736c68b1d5e844782e90e60a15a65320e02656",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*",
+                "facebook/php-sdk-v4": "4.0.*",
+                "mpdf/mpdf": "6.0.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "CkTools"
+            },
+            "autoload": {
+                "psr-4": {
+                    "CkTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "codekanzlei Tools & Utilities collection",
+            "time": "2015-08-26 11:17:04"
+        },
+        {
+            "name": "codekanzlei/cake-frontend-bridge",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-frontend-bridge.git",
+                "reference": "ac52f5ca1e68956b5fb39f4ca359ef0582283c22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/ac52f5ca1e68956b5fb39f4ca359ef0582283c22",
+                "reference": "ac52f5ca1e68956b5fb39f4ca359ef0582283c22",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "FrontendBridge"
+            },
+            "autoload": {
+                "psr-4": {
+                    "FrontendBridge\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Frontend Bridge CakePHP 3",
+            "time": "2015-08-26 10:54:19"
+        },
+        {
+            "name": "codekanzlei/cake-list-filter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-list-filter.git",
+                "reference": "69490677285481bb8c25f5a34f3e54a6d167a737"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-list-filter/zipball/69490677285481bb8c25f5a34f3e54a6d167a737",
+                "reference": "69490677285481bb8c25f5a34f3e54a6d167a737",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "ListFilter"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ListFilter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "List Filter Component / Helper for easy CRUD lists",
+            "time": "2015-07-29 15:56:20"
+        },
+        {
+            "name": "codekanzlei/cake-model-history",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-model-history.git",
+                "reference": "42fc34dea92969586d25045e67c5d0e03ff8ce0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/42fc34dea92969586d25045e67c5d0e03ff8ce0d",
+                "reference": "42fc34dea92969586d25045e67c5d0e03ff8ce0d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev",
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "ModelHistory"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ModelHistory\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "ModelHistory plugin for CakePHP3",
+            "time": "2015-05-20 14:26:39"
+        },
+        {
+            "name": "codekanzlei/cake-notifications",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-notifications.git",
+                "reference": "f8d992f436f785681d9be7c6a19000add2432571"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-notifications/zipball/f8d992f436f785681d9be7c6a19000add2432571",
+                "reference": "f8d992f436f785681d9be7c6a19000add2432571",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*",
+                "parse/php-sdk": "1.0.*"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev",
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Notifications"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Notifications\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "CakePHP3 Notifications Plugin",
+            "time": "2015-08-26 16:31:36"
+        },
+        {
+            "name": "dereuromark/cakephp-queue",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dereuromark/cakephp-queue.git",
+                "reference": "a5e0cd74f236df8bc15ef965d371c227a3bffa3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dereuromark/cakephp-queue/zipball/a5e0cd74f236df8bc15ef965d371c227a3bffa3d",
+                "reference": "a5e0cd74f236df8bc15ef965d371c227a3bffa3d",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "php": ">=5.4.16"
+            },
+            "require-dev": {
+                "cakephp/migrations": "dev-master",
+                "dereuromark/cakephp-tools": "dev-cake3"
+            },
+            "suggest": {
+                "dereuromark/cakephp-tools": "For the Email lib and QueueEmailTask. Or write your own task here."
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Queue\\": "src",
+                    "Queue\\Test\\Fixture\\": "tests\\Fixture"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Yell",
+                    "homepage": "https://github.com/davidyell",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Mark Scherer",
+                    "homepage": "http://www.dereuromark.de",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "The Queue plugin for CakePHP provides deferred task execution.",
+            "homepage": "http://github.com/dereuromark/cakephp-queue",
+            "keywords": [
+                "background",
+                "cakephp",
+                "deferred tasks",
+                "queue"
+            ],
+            "time": "2015-08-26 08:40:05"
+        },
+        {
+            "name": "facebook/php-sdk-v4",
+            "version": "4.0.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facebook/facebook-php-sdk-v4.git",
+                "reference": "c82611e05596622c9bd7abfa1cea1512d885c95e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/c82611e05596622c9bd7abfa1cea1512d885c95e",
+                "reference": "c82611e05596622c9bd7abfa1cea1512d885c95e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "~4.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Facebook\\": "src/Facebook/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Facebook Platform"
+            ],
+            "authors": [
+                {
+                    "name": "Facebook",
+                    "homepage": "https://github.com/facebook/facebook-php-sdk-v4/contributors"
+                }
+            ],
+            "description": "Facebook SDK for PHP",
+            "homepage": "https://github.com/facebook/facebook-php-sdk-v4",
+            "keywords": [
+                "facebook",
+                "sdk"
+            ],
+            "time": "2015-04-03 20:31:47"
+        },
+        {
+            "name": "friendsofcake/bootstrap-ui",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
+                "reference": "27421b73a9e7d67b3b631c3578684fa9089446a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/27421b73a9e7d67b3b631c3578684fa9089446a4",
+                "reference": "27421b73a9e7d67b3b631c3578684fa9089446a4",
+                "shasum": ""
+            },
+            "require-dev": {
+                "cakephp/cakephp": "~3.0",
+                "cakephp/cakephp-codesniffer": "2.*",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "BootstrapUI\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jad Bitar",
+                    "homepage": "http://jadb.io",
+                    "role": "Author"
+                },
+                {
+                    "name": "Others",
+                    "homepage": "https://github.com/friendsofcake/bootstrap-ui/graphs/contributors"
+                }
+            ],
+            "description": "Twitter Bootstrap 3 support for CakePHP 3",
+            "homepage": "http://github.com/friendsofcake/bootstrap-ui",
+            "keywords": [
+                "bootstrap",
+                "cakephp",
+                "twitter"
+            ],
+            "time": "2015-08-23 02:32:33"
+        },
+        {
             "name": "ircmaxell/password-compat",
             "version": "v1.0.4",
             "source": {
@@ -331,6 +782,174 @@
                 "password"
             ],
             "time": "2014-11-20 16:49:30"
+        },
+        {
+            "name": "league/climate",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/climate.git",
+                "reference": "834cb907c89eb31e2171b68ee25c0ed26c8f34f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/climate/zipball/834cb907c89eb31e2171b68ee25c0ed26c8f34f4",
+                "reference": "834cb907c89eb31e2171b68ee25c0ed26c8f34f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "seld/cli-prompt": "~1.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1.4",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\CLImate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Tannenbaum",
+                    "email": "hey@joe.codes",
+                    "homepage": "http://joe.codes/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP's best friend for the terminal. CLImate allows you to easily output colored text, special formats, and more.",
+            "keywords": [
+                "cli",
+                "colors",
+                "command",
+                "php",
+                "terminal"
+            ],
+            "time": "2015-08-13 16:50:51"
+        },
+        {
+            "name": "markstory/asset_compress",
+            "version": "3.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markstory/asset_compress.git",
+                "reference": "ea18dc3f3e607e6dadf4e23c36bdbf51afa2272d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markstory/asset_compress/zipball/ea18dc3f3e607e6dadf4e23c36bdbf51afa2272d",
+                "reference": "ea18dc3f3e607e6dadf4e23c36bdbf51afa2272d",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "markstory/mini-asset": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "suggest": {
+                "leafo/lessphp": "For using the LessPHP filter.",
+                "leafo/scssphp": "For using the ScssPHP filter.",
+                "linkorb/jsmin-php": "For using the JSMin filter.",
+                "natxet/CssMin": "For using the CssMin filter.",
+                "tedivm/jshrink": "For using the JShrink filter."
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "AssetCompress\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                }
+            ],
+            "description": "An asset compression plugin for CakePHP. Provides file concatenation and a flexible filter system for preprocessing and minification.",
+            "homepage": "https://github.com/markstory/asset_compress",
+            "keywords": [
+                "assets",
+                "cakephp",
+                "coffee-script",
+                "less",
+                "minifier",
+                "sass"
+            ],
+            "time": "2015-04-24 16:35:23"
+        },
+        {
+            "name": "markstory/mini-asset",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markstory/mini-asset.git",
+                "reference": "69c7ef7acc28eb02f072ac2b6d345a1f21918424"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markstory/mini-asset/zipball/69c7ef7acc28eb02f072ac2b6d345a1f21918424",
+                "reference": "69c7ef7acc28eb02f072ac2b6d345a1f21918424",
+                "shasum": ""
+            },
+            "require": {
+                "league/climate": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "suggest": {
+                "leafo/lessphp": "For using the LessPHP filter.",
+                "leafo/scssphp": "For using the ScssPHP filter.",
+                "linkorb/jsmin-php": "For using the JSMin filter.",
+                "natxet/CssMin": "For using the CssMin filter.",
+                "tedivm/jshrink": "For using the JShrink filter."
+            },
+            "bin": [
+                "bin/mini_asset"
+            ],
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "MiniAsset\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                }
+            ],
+            "description": "An asset compression library. Provides file concatenation and a flexible filter system for preprocessing and minification.",
+            "homepage": "https://github.com/markstory/mini-asset",
+            "keywords": [
+                "assets",
+                "cakephp",
+                "coffee-script",
+                "less",
+                "minifier",
+                "sass"
+            ],
+            "time": "2015-08-02 15:07:59"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -387,6 +1006,49 @@
             "time": "2015-06-18 09:43:23"
         },
         {
+            "name": "mpdf/mpdf",
+            "version": "v6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpdf/mpdf.git",
+                "reference": "a15743d030ce3b5b7be36c6e83f76589b27c3f2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/a15743d030ce3b5b7be36c6e83f76589b27c3f2c",
+                "reference": "a15743d030ce3b5b7be36c6e83f76589b27c3f2c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=4.3.10"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "mpdf.php",
+                    "classes"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-1.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ian Back"
+                }
+            ],
+            "description": "A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support",
+            "homepage": "http://www.mpdf1.com/mpdf/index.php",
+            "keywords": [
+                "pdf",
+                "php",
+                "utf-8"
+            ],
+            "time": "2015-03-01 10:27:49"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.13.0",
             "source": {
@@ -431,6 +1093,118 @@
                 "time"
             ],
             "time": "2014-09-26 02:52:02"
+        },
+        {
+            "name": "oyejorge/less.php",
+            "version": "v1.7.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oyejorge/less.php.git",
+                "reference": "4385036b1dbfaf37f5380bd26a1e6006fc43149f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oyejorge/less.php/zipball/4385036b1dbfaf37f5380bd26a1e6006fc43149f",
+                "reference": "4385036b1dbfaf37f5380bd26a1e6006fc43149f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "bin": [
+                "bin/lessc"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Less": "lib/"
+                },
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Agar",
+                    "homepage": "https://github.com/agar"
+                },
+                {
+                    "name": "Martin Jantošovič",
+                    "homepage": "https://github.com/Mordred"
+                },
+                {
+                    "name": "Josh Schmidt",
+                    "homepage": "https://github.com/oyejorge"
+                }
+            ],
+            "description": "PHP port of the Javascript version of LESS http://lesscss.org",
+            "homepage": "http://lessphp.gpeasy.com",
+            "keywords": [
+                "css",
+                "less",
+                "less.js",
+                "lesscss",
+                "php",
+                "stylesheet"
+            ],
+            "time": "2015-07-13 20:34:18"
+        },
+        {
+            "name": "parse/php-sdk",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ParsePlatform/parse-php-sdk.git",
+                "reference": "0171095e85e073400507f2d23caed7fbac0d56bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ParsePlatform/parse-php-sdk/zipball/0171095e85e073400507f2d23caed7fbac0d56bb",
+                "reference": "0171095e85e073400507f2d23caed7fbac0d56bb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "~2.5",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Parse\\": "src/Parse/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Parse Platform License"
+            ],
+            "authors": [
+                {
+                    "name": "Parse",
+                    "homepage": "https://github.com/parseplatform/parse-php-sdk/contributors"
+                }
+            ],
+            "description": "Parse PHP SDK",
+            "homepage": "https://github.com/parseplatform/parse-php-sdk",
+            "keywords": [
+                "parse",
+                "sdk"
+            ],
+            "time": "2015-02-24 01:54:30"
         },
         {
             "name": "psr/log",
@@ -531,6 +1305,128 @@
                 "phinx"
             ],
             "time": "2015-06-14 13:02:38"
+        },
+        {
+            "name": "seld/cli-prompt",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/cli-prompt.git",
+                "reference": "fe114c7a6ac5cb0ce76932ae4017024d9842a49c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/cli-prompt/zipball/fe114c7a6ac5cb0ce76932ae4017024d9842a49c",
+                "reference": "fe114c7a6ac5cb0ce76932ae4017024d9842a49c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Seld\\CliPrompt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "Allows you to prompt for user input on the command line, and optionally hide the characters they type",
+            "keywords": [
+                "cli",
+                "console",
+                "hidden",
+                "input",
+                "prompt"
+            ],
+            "time": "2015-04-30 20:24:49"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "2.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "c1a26c729508f73560c1a4f767f60b8ab6b4a666"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/c1a26c729508f73560c1a4f767f60b8ab6b4a666",
+                "reference": "c1a26c729508f73560c1a4f767f60b8ab6b4a666",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.1.2"
+            },
+            "bin": [
+                "scripts/phpcs",
+                "scripts/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/Fixer.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2015-06-24 03:16:23"
         },
         {
             "name": "symfony/config",
@@ -736,6 +1632,52 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2015-07-28 14:07:07"
+        },
+        {
+            "name": "tedivm/jshrink",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/JShrink.git",
+                "reference": "688527a2e854d7935f24f24c7d5eb1b604742bf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/JShrink/zipball/688527a2e854d7935f24f24c7d5eb1b604742bf9",
+                "reference": "688527a2e854d7935f24f24c7d5eb1b604742bf9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "0.4.0",
+                "phpunit/phpunit": "4.0.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JShrink": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "Javascript Minifier built in PHP",
+            "homepage": "http://github.com/tedious/JShrink",
+            "keywords": [
+                "javascript",
+                "minifier"
+            ],
+            "time": "2015-07-04 07:35:09"
         }
     ],
     "packages-dev": [
@@ -878,6 +1820,60 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2014-10-24 07:27:01"
+        },
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3,<8.0-DEV"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1.8",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://github.com/doctrine/instantiator",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2015-06-14 21:17:01"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1062,6 +2058,483 @@
             "time": "2015-07-14 17:31:05"
         },
         {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "dflydev/markdown": "~1.0",
+                "erusev/parsedown": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "phpDocumentor": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "mike.vanriel@naenius.com"
+                }
+            ],
+            "time": "2015-02-03 12:10:50"
+        },
+        {
+            "name": "phpspec/prophecy",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/prophecy.git",
+                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4745ded9307786b730d7a60df5cb5a6c43cf95f7",
+                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/instantiator": "^1.0.2",
+                "phpdocumentor/reflection-docblock": "~2.0",
+                "sebastian/comparator": "~1.1"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Prophecy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Konstantin Kudryashov",
+                    "email": "ever.zet@gmail.com",
+                    "homepage": "http://everzet.com"
+                },
+                {
+                    "name": "Marcello Duarte",
+                    "email": "marcello.duarte@gmail.com"
+                }
+            ],
+            "description": "Highly opinionated mocking framework for PHP 5.3+",
+            "homepage": "https://github.com/phpspec/prophecy",
+            "keywords": [
+                "Double",
+                "Dummy",
+                "fake",
+                "mock",
+                "spy",
+                "stub"
+            ],
+            "time": "2015-08-13 10:07:40"
+        },
+        {
+            "name": "phpunit/php-code-coverage",
+            "version": "2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2d7c03c0e4e080901b8f33b2897b0577be18a13c",
+                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-file-iterator": "~1.3",
+                "phpunit/php-text-template": "~1.2",
+                "phpunit/php-token-stream": "~1.3",
+                "sebastian/environment": "^1.3.2",
+                "sebastian/version": "~1.0"
+            },
+            "require-dev": {
+                "ext-xdebug": ">=2.1.4",
+                "phpunit/phpunit": "~4"
+            },
+            "suggest": {
+                "ext-dom": "*",
+                "ext-xdebug": ">=2.2.1",
+                "ext-xmlwriter": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+            "homepage": "https://github.com/sebastianbergmann/php-code-coverage",
+            "keywords": [
+                "coverage",
+                "testing",
+                "xunit"
+            ],
+            "time": "2015-08-04 03:42:39"
+        },
+        {
+            "name": "phpunit/php-file-iterator",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
+            "keywords": [
+                "filesystem",
+                "iterator"
+            ],
+            "time": "2015-06-21 13:08:43"
+        },
+        {
+            "name": "phpunit/php-text-template",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-text-template.git",
+                "reference": "31f8b717e51d9a2afca6c9f046f5d69fc27c8686"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/31f8b717e51d9a2afca6c9f046f5d69fc27c8686",
+                "reference": "31f8b717e51d9a2afca6c9f046f5d69fc27c8686",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Simple template engine.",
+            "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+            "keywords": [
+                "template"
+            ],
+            "time": "2015-06-21 13:50:34"
+        },
+        {
+            "name": "phpunit/php-timer",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-timer.git",
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Utility class for timing",
+            "homepage": "https://github.com/sebastianbergmann/php-timer/",
+            "keywords": [
+                "timer"
+            ],
+            "time": "2015-06-21 08:01:12"
+        },
+        {
+            "name": "phpunit/php-token-stream",
+            "version": "1.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
+                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Wrapper around PHP's tokenizer extension.",
+            "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2015-08-16 08:51:00"
+        },
+        {
+            "name": "phpunit/phpunit",
+            "version": "4.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2246830f4a1a551c67933e4171bf2126dc29d357",
+                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-reflection": "*",
+                "ext-spl": "*",
+                "php": ">=5.3.3",
+                "phpspec/prophecy": "^1.3.1",
+                "phpunit/php-code-coverage": "~2.1",
+                "phpunit/php-file-iterator": "~1.4",
+                "phpunit/php-text-template": "~1.2",
+                "phpunit/php-timer": ">=1.0.6",
+                "phpunit/phpunit-mock-objects": "~2.3",
+                "sebastian/comparator": "~1.1",
+                "sebastian/diff": "~1.2",
+                "sebastian/environment": "~1.3",
+                "sebastian/exporter": "~1.2",
+                "sebastian/global-state": "~1.0",
+                "sebastian/version": "~1.0",
+                "symfony/yaml": "~2.1|~3.0"
+            },
+            "suggest": {
+                "phpunit/php-invoker": "~1.1"
+            },
+            "bin": [
+                "phpunit"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.8.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "The PHP Unit Testing framework.",
+            "homepage": "https://phpunit.de/",
+            "keywords": [
+                "phpunit",
+                "testing",
+                "xunit"
+            ],
+            "time": "2015-08-24 04:09:38"
+        },
+        {
+            "name": "phpunit/phpunit-mock-objects",
+            "version": "2.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
+                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
+                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/instantiator": "^1.0.2",
+                "php": ">=5.3.3",
+                "phpunit/php-text-template": "~1.2",
+                "sebastian/exporter": "~1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "suggest": {
+                "ext-soap": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Mock Object library for PHPUnit",
+            "homepage": "https://github.com/sebastianbergmann/phpunit-mock-objects/",
+            "keywords": [
+                "mock",
+                "xunit"
+            ],
+            "time": "2015-08-19 09:14:08"
+        },
+        {
             "name": "psy/psysh",
             "version": "v0.5.2",
             "source": {
@@ -1134,6 +2607,479 @@
             "time": "2015-07-16 15:26:57"
         },
         {
+            "name": "riimu/kit-phpencoder",
+            "version": "v2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Riimu/Kit-PHPEncoder.git",
+                "reference": "20368adc25a7a6109a96b442dc04cd8540f74b10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Riimu/Kit-PHPEncoder/zipball/20368adc25a7a6109a96b442dc04cd8540f74b10",
+                "reference": "20368adc25a7a6109a96b442dc04cd8540f74b10",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "ext-gmp": "To convert GMP numbers into PHP code"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Riimu\\Kit\\PHPEncoder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Riikka Kalliomäki",
+                    "email": "riikka.kalliomaki@gmail.com",
+                    "homepage": "http://riimu.net"
+                }
+            ],
+            "description": "Highly customizable alternative to var_export for PHP code generation",
+            "homepage": "http://kit.riimu.net",
+            "keywords": [
+                "code",
+                "encoder",
+                "export",
+                "generator",
+                "variable"
+            ],
+            "time": "2015-08-22 11:34:19"
+        },
+        {
+            "name": "scherersoftware/cakephp-schema",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cakephp-schema.git",
+                "reference": "c384e1c1e173d91f292c4ba92f8edacc032c23fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cakephp-schema/zipball/c384e1c1e173d91f292c4ba92f8edacc032c23fb",
+                "reference": "c384e1c1e173d91f292c4ba92f8edacc032c23fb",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "php": ">=5.4",
+                "riimu/kit-phpencoder": "2.*"
+            },
+            "require-dev": {
+                "cakephp/bake": "dev-master",
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Schema\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ladislav Gallay",
+                    "role": "Author"
+                },
+                {
+                    "name": "Robert Scherer",
+                    "role": "Author"
+                }
+            ],
+            "description": "Schema saving and loading from file for CakePHP 3.0",
+            "homepage": "https://github.com/scherersoftware/cakephp-schema",
+            "keywords": [
+                "cakephp",
+                "database",
+                "migrations",
+                "orm",
+                "schema"
+            ],
+            "time": "2015-08-22 10:34:10"
+        },
+        {
+            "name": "sebastian/comparator",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/comparator.git",
+                "reference": "937efb279bd37a375bcadf584dec0726f84dbf22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/937efb279bd37a375bcadf584dec0726f84dbf22",
+                "reference": "937efb279bd37a375bcadf584dec0726f84dbf22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sebastian/diff": "~1.2",
+                "sebastian/exporter": "~1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Volker Dusch",
+                    "email": "github@wallbash.com"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@2bepublished.at"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Provides the functionality to compare PHP values for equality",
+            "homepage": "http://www.github.com/sebastianbergmann/comparator",
+            "keywords": [
+                "comparator",
+                "compare",
+                "equality"
+            ],
+            "time": "2015-07-26 15:48:44"
+        },
+        {
+            "name": "sebastian/diff",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/diff.git",
+                "reference": "863df9687835c62aa423a22412d26fa2ebde3fd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/863df9687835c62aa423a22412d26fa2ebde3fd3",
+                "reference": "863df9687835c62aa423a22412d26fa2ebde3fd3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Diff implementation",
+            "homepage": "http://www.github.com/sebastianbergmann/diff",
+            "keywords": [
+                "diff"
+            ],
+            "time": "2015-02-22 15:13:53"
+        },
+        {
+            "name": "sebastian/environment",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/environment.git",
+                "reference": "6324c907ce7a52478eeeaede764f48733ef5ae44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6324c907ce7a52478eeeaede764f48733ef5ae44",
+                "reference": "6324c907ce7a52478eeeaede764f48733ef5ae44",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Provides functionality to handle HHVM/PHP environments",
+            "homepage": "http://www.github.com/sebastianbergmann/environment",
+            "keywords": [
+                "Xdebug",
+                "environment",
+                "hhvm"
+            ],
+            "time": "2015-08-03 06:14:51"
+        },
+        {
+            "name": "sebastian/exporter",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/exporter.git",
+                "reference": "7ae5513327cb536431847bcc0c10edba2701064e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/7ae5513327cb536431847bcc0c10edba2701064e",
+                "reference": "7ae5513327cb536431847bcc0c10edba2701064e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sebastian/recursion-context": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Volker Dusch",
+                    "email": "github@wallbash.com"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@2bepublished.at"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "Adam Harvey",
+                    "email": "aharvey@php.net"
+                }
+            ],
+            "description": "Provides the functionality to export PHP variables for visualization",
+            "homepage": "http://www.github.com/sebastianbergmann/exporter",
+            "keywords": [
+                "export",
+                "exporter"
+            ],
+            "time": "2015-06-21 07:55:53"
+        },
+        {
+            "name": "sebastian/global-state",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/global-state.git",
+                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "suggest": {
+                "ext-uopz": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Snapshotting of global state",
+            "homepage": "http://www.github.com/sebastianbergmann/global-state",
+            "keywords": [
+                "global state"
+            ],
+            "time": "2014-10-06 09:23:50"
+        },
+        {
+            "name": "sebastian/recursion-context",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/recursion-context.git",
+                "reference": "994d4a811bafe801fb06dccbee797863ba2792ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/994d4a811bafe801fb06dccbee797863ba2792ba",
+                "reference": "994d4a811bafe801fb06dccbee797863ba2792ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "Adam Harvey",
+                    "email": "aharvey@php.net"
+                }
+            ],
+            "description": "Provides functionality to recursively process PHP variables",
+            "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
+            "time": "2015-06-21 08:04:50"
+        },
+        {
+            "name": "sebastian/version",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/version.git",
+                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
+                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that helps with managing the version number of Git-hosted PHP projects",
+            "homepage": "https://github.com/sebastianbergmann/version",
+            "time": "2015-06-21 13:59:46"
+        },
+        {
             "name": "symfony/var-dumper",
             "version": "v2.7.3",
             "source": {
@@ -1196,7 +3142,20 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "psy/psysh": 0
+        "codekanzlei/cake-auth-actions": 20,
+        "codekanzlei/cake-list-filter": 20,
+        "codekanzlei/cake-cktools": 20,
+        "codekanzlei/cake-frontend-bridge": 20,
+        "codekanzlei/cake-attachments": 20,
+        "codekanzlei/cake-notifications": 20,
+        "codekanzlei/cake-model-history": 20,
+        "cakephp/cakephp-codesniffer": 20,
+        "markstory/mini-asset": 20,
+        "markstory/asset_compress": 20,
+        "friendsofcake/bootstrap-ui": 20,
+        "dereuromark/cakephp-queue": 20,
+        "psy/psysh": 0,
+        "scherersoftware/cakephp-schema": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

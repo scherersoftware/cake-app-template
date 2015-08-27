@@ -1,6 +1,6 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
+    "name": "scherersoftware/cakephp-app-template",
+    "description": "CakePHP App Template",
     "homepage": "http://cakephp.org",
     "type": "project",
     "license": "MIT",
@@ -9,16 +9,28 @@
         "cakephp/cakephp": "~3.0",
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
-        "cakephp/plugin-installer": "*"
+        "cakephp/plugin-installer": "*",
+        "codekanzlei/cake-auth-actions": "dev-master",
+        "codekanzlei/cake-list-filter": "dev-master",
+        "codekanzlei/cake-cktools": "dev-master",
+        "codekanzlei/cake-frontend-bridge": "dev-master",
+        "codekanzlei/cake-attachments": "dev-master",
+        "codekanzlei/cake-notifications": "dev-master",
+        "codekanzlei/cake-model-history": "dev-master",
+        "cakephp/cakephp-codesniffer": "dev-master",
+        "markstory/mini-asset": "dev-master",
+        "markstory/asset_compress": "3.0.x-dev",
+        "tedivm/jshrink": "~1.0",
+        "friendsofcake/bootstrap-ui": "dev-master",
+        "oyejorge/less.php": "*",
+        "dereuromark/cakephp-queue": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
         "cakephp/debug_kit": "~3.0",
-        "cakephp/bake": "~1.0"
-    },
-    "suggest": {
-        "phpunit/phpunit": "Allows automated tests to be run without system-wide install.",
-        "cakephp/cakephp-codesniffer": "Allows to check the code against the coding standards used in CakePHP."
+        "cakephp/bake": "~1.0",
+        "phpunit/phpunit": "*",
+        "scherersoftware/cakephp-schema": "dev-master"
     },
     "autoload": {
         "psr-4": {

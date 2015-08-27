@@ -54,6 +54,8 @@ use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
 
+define('ENVIRONMENT', Environments::detect());
+
 /**
  * Read configuration file and inject configuration into various
  * CakePHP classes.
@@ -109,6 +111,18 @@ if ($isCli) {
     (new ErrorHandler(Configure::read('Error')))->register();
 }
 
+if (isset($_GET['cache']) && $_GET['cache'] == 'disable') {
+    Cache::disable();
+}
+
+Configure::write('debug', false);
+if (ENVIRONMENT === Environments::DEVELOPMENT) {
+    Configure::write('debug', true);
+}
+if (env('HTTP_CKDBG') == 1) {
+    Configure::write('debug', true);
+}
+
 // Include the CLI bootstrap overrides.
 if ($isCli) {
     require __DIR__ . '/bootstrap_cli.php';
@@ -141,13 +155,6 @@ Log::config(Configure::consume('Log'));
 Security::salt(Configure::consume('Security.salt'));
 
 /**
- * The default crypto extension in 3.0 is OpenSSL.
- * If you are migrating from 2.x uncomment this code to
- * use a more compatible Mcrypt based implementation
- */
-// Security::engine(new \Cake\Utility\Crypto\Mcrypt());
-
-/**
  * Setup detectors for mobile and tablet.
  */
 Request::addDetector('mobile', function ($request) {
@@ -160,32 +167,47 @@ Request::addDetector('tablet', function ($request) {
 });
 
 /**
- * Custom Inflector rules, can be set to correctly pluralize or singularize
- * table, model, controller names or whatever other string is passed to the
- * inflection functions.
- *
- * Inflector::rules('plural', ['/^(inflect)or$/i' => '\1ables']);
- * Inflector::rules('irregular', ['red' => 'redlings']);
- * Inflector::rules('uninflected', ['dontinflectme']);
- * Inflector::rules('transliteration', ['/å/' => 'aa']);
+ * Load Plugins
  */
-
-/**
- * Plugins need to be loaded manually, you can either load them one by one or all of them in a single call
- * Uncomment one of the lines below, as you need. make sure you read the documentation on Plugin to use more
- * advanced ways of loading plugins
- *
- * Plugin::loadAll(); // Loads all plugins at once
- * Plugin::load('Migrations'); //Loads a single plugin named Migrations
- *
- */
-
 Plugin::load('Migrations');
-
+Plugin::load('BootstrapUI');
+Plugin::load('CkTools', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('FrontendBridge', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
+Plugin::load('AuthActions', ['bootstrap' => false, 'routes' => false]);
+Plugin::load('ListFilter', ['bootstrap' => false, 'routes' => false]);
+Plugin::load('Notifications', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('ModelHistory', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('AssetCompress', ['bootstrap' => true]);
+Plugin::load('Admin', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('Schema', ['bootstrap' => true]);
+Plugin::load('Queue');
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
+}
+
+// Datasource Type Mappings
+Type::map('json', 'CkTools\Database\Type\JsonType');
+
+// Load Additional Configs
+Configure::load('CkTools.countries');
+
+/**
+ * Debug Logging Helper
+ *
+ * @return voidauth
+ */
+function dlog()
+{
+    $args = func_get_args();
+    foreach ($args as $arg) {
+        if (!is_string($arg)) {
+            $arg = print_r($arg, true);
+        }
+        \Cake\Log\Log::write('debug', print_r($arg, true));
+    }
 }
 
 /**
