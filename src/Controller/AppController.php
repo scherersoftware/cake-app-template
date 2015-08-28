@@ -67,11 +67,10 @@ class AppController extends Controller
                     'fields' => ['username' => 'email'],
                     'repository' => 'Users',
                     'scope' => [
-                        'role' => User::ROLE_USER,
-                        'status' => Status::ACTIVE,
-                        'failed_login_count <' => Configure::read('Authentication.max_login_retries')
+                        'Users.status' => Status::ACTIVE,
+                        'Users.failed_login_count <' => Configure::read('Authentication.max_login_retries')
                     ]
-                ],
+                ]
             ],
             'authorize' => ['Controller'],
             'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
@@ -103,14 +102,7 @@ class AppController extends Controller
 
         // $this->_apiTokenAuthentication();
         $this->FrontendBridge->setJson('locale', 'de');
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function beforeRender(\Cake\Event\Event $event)
-    {
-        parent::beforeRender($event);
+        parent::beforeFilter($event);
     }
 
     /**
@@ -122,31 +114,6 @@ class AppController extends Controller
             return $this->renderJsonAction($view, $layout);
         }
         return parent::render($view, $layout);
-    }
-
-    /**
-     * handles the case of requesting a login action but being logged in already
-     * by redirecting depending on role of the user
-     *
-     * @return void
-     */
-    protected function _handleAlreadyLoggedIn()
-    {
-        if (!empty($this->Auth->user('id'))) {
-            $this->Flash->default(__('login.already_logged_in'));
-
-            switch ($this->Auth->user('role')) {
-                case User::ROLE_ADMIN:
-                    return $this->redirect('/admin');
-                    break;
-                case User::ROLE_USER:
-                    return $this->redirect($this->Auth->redirectUrl());
-                    break;
-                default:
-                    return $this->redirect('/');
-                    break;
-            }
-        }
     }
 
     /**
