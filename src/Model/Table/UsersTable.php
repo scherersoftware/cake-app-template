@@ -3,6 +3,7 @@ namespace App\Model\Table;
 
 use App\Lib\Status;
 use App\Model\Entity\User;
+use Cake\Auth\DefaultPasswordHasher;
 use Cake\Core\Configure;
 use Cake\Database\Expression\QueryExpression;
 use Cake\Datasource\EntityInterface;
@@ -73,8 +74,33 @@ class UsersTable extends Table
         $validator
             ->allowEmpty('password', 'update');
 
-        $this->validationChangePassword($validator);
+        $this->validationPassword($validator);
 
+        return $validator;
+    }
+
+    /**
+     * Validation for the change password process
+     *
+     * @param Validator $validator Validator
+     * @return Validator
+     */
+    public function validationChangePassword(Validator $validator)
+    {
+        $validator->requirePresence('password');
+        $validator->requirePresence('password_confirm');
+        $validator->requirePresence('current_password');
+        $validator->notEmpty('password');
+        $validator->notEmpty('password_confirm');
+        $validator->notEmpty('current_password');
+        $validator->add('current_password', 'custom', [
+            'rule' => function ($value, $context) {
+                $user = $this->get($context['data']['id']);
+                return (new DefaultPasswordHasher)->check($value, $user->password);
+            },
+            'message' => __('validation.user.old_password_wrong')
+        ]);
+        $this->validationPassword($validator, true);
         return $validator;
     }
 
@@ -98,11 +124,15 @@ class UsersTable extends Table
      * Validation for password changes
      *
      * @param Validator $validator Validator
+     * @param bool $force Whether to require validation in all cases
      * @return Validator
      */
-    public function validationChangePassword(Validator $validator)
+    public function validationPassword(Validator $validator, $force = false)
     {
-        $shouldValidate = function ($context) {
+        $shouldValidate = function ($context) use ($force) {
+            if ($force) {
+                return true;
+            }
             return $context['newRecord'] || !empty($context['data']['password']);
         };
         $validator

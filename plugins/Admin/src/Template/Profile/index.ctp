@@ -8,11 +8,14 @@ use App\Model\Entity\User;
     <legend><?= __('profile.my_data') ?></legend>
 
     <dl class="dl-horizontal">
-        <dt><?= __('user.forename') ?></dt>
-        <dd><?= $user->forename ?></dd>
+        <dt><?= __('user.firstname') ?></dt>
+        <dd><?= h($user->firstname) ?></dd>
 
-        <dt><?= __('user.surname') ?></dt>
-        <dd><?= $user->surname ?></dd>
+        <dt><?= __('user.lastname') ?></dt>
+        <dd><?= h($user->lastname) ?></dd>
+
+        <dt><?= __('user.email') ?></dt>
+        <dd><?= h($user->email) ?></dd>
 
         <dt><?= __('user.role') ?></dt>
         <dd><?= User::getTypeDescription($user->role) ?>
@@ -39,7 +42,7 @@ use App\Model\Entity\User;
         'type' => 'password'
     ]) ?>
     <hr>
-    <?php echo $this->Form->input('new_password', [
+    <?php echo $this->Form->input('password', [
         'label' => __('profile.new_password'),
         'type' => 'password'
     ]) ?>
