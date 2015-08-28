@@ -9,11 +9,9 @@ $config = [
         'Home' => '*',
         'Login' => [
             'login',
-            'logout'
         ],
         'Admin.Login' => [
             'login',
-            'logout',
         ]
     ],
     'auth_actions' => [

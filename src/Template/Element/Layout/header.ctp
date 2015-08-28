@@ -18,13 +18,17 @@
             'class' => 'navbar-brand'
         ]);
         ?>
-        <div class="clearfix"></div>
     </div>
+    <?php if(!isset($this->Auth) || !$this->Auth->loggedIn()): ?>
+        <div class="pull-right">
+            <?= $this->CkTools->button(__('login.login'), ['controller' => 'login', 'action' => 'login']) ?>
+        </div>
+    <?php endif; ?>
     <ul class="nav navbar-top-links navbar-right">
-        <?php if(isset($this->Auth) && $this->Auth->loggedIn()) : ?>
+        <?php if(isset($this->Auth) && $this->Auth->loggedIn()): ?>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    <i class="fa fa-user fa-fw"></i>  <?= $this->Auth->user('firstname') ?> <?= $this->Auth->user('lastname') ?> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
                     <li>

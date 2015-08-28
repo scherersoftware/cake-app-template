@@ -335,12 +335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-attachments.git",
-                "reference": "547e528a3c8378854ef9d4af581ebdd5d81df2cb"
+                "reference": "a9ca555a4857f14630f98a4e073c83c7f104645a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/547e528a3c8378854ef9d4af581ebdd5d81df2cb",
-                "reference": "547e528a3c8378854ef9d4af581ebdd5d81df2cb",
+                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/a9ca555a4857f14630f98a4e073c83c7f104645a",
+                "reference": "a9ca555a4857f14630f98a4e073c83c7f104645a",
                 "shasum": ""
             },
             "require": {
@@ -362,7 +362,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "File Attachments plugin for CakePHP",
-            "time": "2015-08-18 11:42:15"
+            "time": "2015-08-28 12:35:28"
         },
         {
             "name": "codekanzlei/cake-auth-actions",
@@ -370,12 +370,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-auth-actions.git",
-                "reference": "54f2bd30381839456fe8690db69bd3bfbc60cf64"
+                "reference": "02c93e9e084c5b2a20b1c7912d09f3a91afd2c99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-auth-actions/zipball/54f2bd30381839456fe8690db69bd3bfbc60cf64",
-                "reference": "54f2bd30381839456fe8690db69bd3bfbc60cf64",
+                "url": "https://api.github.com/repos/scherersoftware/cake-auth-actions/zipball/02c93e9e084c5b2a20b1c7912d09f3a91afd2c99",
+                "reference": "02c93e9e084c5b2a20b1c7912d09f3a91afd2c99",
                 "shasum": ""
             },
             "require": {
@@ -398,7 +398,7 @@
                 "MIT"
             ],
             "description": "Simple ACL alternative for CakePHP 3",
-            "time": "2015-04-30 10:56:45"
+            "time": "2015-08-28 13:02:45"
         },
         {
             "name": "codekanzlei/cake-cktools",
@@ -444,12 +444,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-frontend-bridge.git",
-                "reference": "ac52f5ca1e68956b5fb39f4ca359ef0582283c22"
+                "reference": "68808016098cb5c41c95a52c8487c1264c4c9dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/ac52f5ca1e68956b5fb39f4ca359ef0582283c22",
-                "reference": "ac52f5ca1e68956b5fb39f4ca359ef0582283c22",
+                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/68808016098cb5c41c95a52c8487c1264c4c9dd6",
+                "reference": "68808016098cb5c41c95a52c8487c1264c4c9dd6",
                 "shasum": ""
             },
             "require": {
@@ -472,7 +472,7 @@
                 "MIT"
             ],
             "description": "Frontend Bridge CakePHP 3",
-            "time": "2015-08-26 10:54:19"
+            "time": "2015-08-28 13:06:51"
         },
         {
             "name": "codekanzlei/cake-list-filter",

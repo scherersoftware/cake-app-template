@@ -21,24 +21,24 @@ function renderInputs($view) {
            'one', 'two', 'three'
        ]
     ]);
-    echo $view->Form->input('chosen', [
+   echo $view->Form->input('multi_select', [
+      'multiple' => true,
+      'options' => [
+          'one', 'two', 'three'
+      ]
+   ]);
+    echo $view->Form->input('selectize', [
         'options' => [
             'one', 'two', 'three'
         ],
-        'class' => 'chosen'
+        'class' => 'selectize'
     ]);
-    echo $view->Form->input('chosen_multi', [
+    echo $view->Form->input('selectize_multi', [
         'multiple' => true,
         'options' => [
             'one', 'two', 'three'
         ],
-        'class' => 'chosen'
-    ]);
-    echo $view->Form->input('multi_select', [
-       'multiple' => true,
-       'options' => [
-           'one', 'two', 'three'
-       ]
+        'class' => 'selectize'
     ]);
     echo $view->Form->input('multi_checkboxes', [
        'multiple' => 'checkbox',
@@ -56,8 +56,6 @@ function renderInputs($view) {
     echo $view->Form->input('textarea', [
       'type' => 'textarea',
     ]);
-
-
 }
 ?>
 

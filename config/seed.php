@@ -12,7 +12,7 @@ return [
             'failed_login_count' => 0,
             'failed_login_timestamp' => null,
             'created' => '2015-08-28 14:25:16',
-            'modified' => '2015-08-28 12:55:20'
+            'modified' => '2015-08-28 13:12:03'
         ],
 
     ],
