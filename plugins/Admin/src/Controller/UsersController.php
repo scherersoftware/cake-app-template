@@ -77,6 +77,8 @@ class UsersController extends AppController
             } else {
                 $this->Flash->success(__('forms.data_not_saved'));
             }
+        } else {
+            unset($user->password);
         }
         $this->set(compact('user'));
     }

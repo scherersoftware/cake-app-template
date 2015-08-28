@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use App\Lib\Status;
+use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
 use CkTools\Utility\TypeAwareTrait;
 
@@ -60,5 +61,19 @@ class User extends Entity
     public static function getStatuses()
     {
         return Status::getMap(Status::ACTIVE, Status::SUSPENDED);
+    }
+
+    /**
+     * Setter for hashed password
+     *
+     * @param string $password not hashed password
+     * @return string
+     */
+    protected function _setPassword($password)
+    {
+        if (!empty($password)) {
+            $password = (new DefaultPasswordHasher)->hash($password);
+        }
+        return $password;
     }
 }

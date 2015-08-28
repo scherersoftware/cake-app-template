@@ -11,36 +11,31 @@
         <table class="table table-striped">
         <thead>
             <tr>
-                <th><?= $this->Paginator->sort('id', __('user.id')) ?></th>
-                <th><?= $this->Paginator->sort('status', __('user.status')) ?></th>
-                <th><?= $this->Paginator->sort('role', __('user.role')) ?></th>
                 <th><?= $this->Paginator->sort('firstname', __('user.firstname')) ?></th>
                 <th><?= $this->Paginator->sort('lastname', __('user.lastname')) ?></th>
                 <th><?= $this->Paginator->sort('email', __('user.email')) ?></th>
-                <th><?= $this->Paginator->sort('password', __('user.password')) ?></th>
+                <th><?= $this->Paginator->sort('status', __('user.status')) ?></th>
+                <th><?= $this->Paginator->sort('role', __('user.role')) ?></th>
                 <th class="actions"><?= __('lists.actions') ?></th>
             </tr>
         </thead>
         <tbody>
         <?php foreach ($users as $user): ?>
             <tr>
-            <td><?= h($user->id) ?></td>
-                <td><?= h($user->status) ?></td>
-                <td><?= h($user->role) ?></td>
                 <td><?= h($user->firstname) ?></td>
                 <td><?= h($user->lastname) ?></td>
                 <td><?= h($user->email) ?></td>
-                <td><?= h($user->password) ?></td>
-                    <td class="actions">
-                    <?= $this->CkTools->viewButton($user) ?>
+                <td><?= h($user->status) ?></td>
+                <td><?= h($user->role) ?></td>
+                <td class="actions">
+                        <?= $this->CkTools->viewButton($user) ?>
+                    <?= $this->CkTools->editButton($user) ?>
                     <?= $this->CkTools->deleteButton($user, ['usePostLink' => true]) ?>
                 </td>
             </tr>
-
         <?php endforeach; ?>
         </tbody>
         </table>
     </div>
 	<?= $this->Paginator->numbers() ?>
-
 </div>

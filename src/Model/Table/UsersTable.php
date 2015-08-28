@@ -5,6 +5,8 @@ use App\Lib\Status;
 use App\Model\Entity\User;
 use Cake\Core\Configure;
 use Cake\Database\Expression\QueryExpression;
+use Cake\Datasource\EntityInterface;
+use Cake\Event\Event;
 use Cake\I18n\Time;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
@@ -69,8 +71,56 @@ class UsersTable extends Table
             ->notEmpty('email');
 
         $validator
-            ->allowEmpty('password');
+            ->allowEmpty('password', 'update');
 
+        $this->validationChangePassword($validator);
+
+        return $validator;
+    }
+
+    /**
+     * beforeSave callback
+     *
+     * @param Event $event CakePHP Event
+     * @param Entity $entity Entity to be saved
+     * @param ArrayObject $options Additional options
+     * @return void
+     */
+    public function beforeSave(Event $event, EntityInterface $entity, \ArrayObject $options)
+    {
+        // When editing, remove passwords if nothing was entered
+        if (empty($entity->password)) {
+            unset($entity->password, $entity->password_confirm);
+        }
+    }
+
+    /**
+     * Validation for password changes
+     *
+     * @param Validator $validator Validator
+     * @return Validator
+     */
+    public function validationChangePassword(Validator $validator)
+    {
+        $shouldValidate = function ($context) {
+            return $context['newRecord'] || !empty($context['data']['password']);
+        };
+        $validator
+            ->notEmpty('password', 'Bitte geben Sie ein neues Passwort ein.', $shouldValidate)
+            ->notEmpty('password_confirm', 'Bitte wiederholen Sie Ihr neues Passwort.', $shouldValidate)
+            ->add('password', [
+                'minLength' => [
+                    'rule' => ['minLength', 8],
+                    'last' => true,
+                    'message' => __('validation.user.password_min_length')
+                ],
+            ])
+            ->add('password_confirm', 'custom', [
+                'rule' => function ($value, $context) {
+                    return isset($context['data']['password']) && $value === $context['data']['password'];
+                },
+                'message' => __('validation.user.password_confirmation_must_match')
+            ]);
         return $validator;
     }
 
