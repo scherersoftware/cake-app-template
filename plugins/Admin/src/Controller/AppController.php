@@ -7,6 +7,10 @@ use App\Model\Entity\User;
 class AppController extends BaseController
 {
 
+    public $helpers = [
+        'CkTools.Menu'
+    ];
+
     /**
      * initialize
      *

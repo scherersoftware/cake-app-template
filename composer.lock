@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9d1ed3e55b1ba32783fd6cdfefb6c8eb",
+    "hash": "651e562d370556eeff01034ee3acb25e",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -406,12 +406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-cktools.git",
-                "reference": "13736c68b1d5e844782e90e60a15a65320e02656"
+                "reference": "aac199e5bc454204e89f8c710d10b201430d40e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/13736c68b1d5e844782e90e60a15a65320e02656",
-                "reference": "13736c68b1d5e844782e90e60a15a65320e02656",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/aac199e5bc454204e89f8c710d10b201430d40e5",
+                "reference": "aac199e5bc454204e89f8c710d10b201430d40e5",
                 "shasum": ""
             },
             "require": {
@@ -436,7 +436,7 @@
                 "MIT"
             ],
             "description": "codekanzlei Tools & Utilities collection",
-            "time": "2015-08-26 11:17:04"
+            "time": "2015-08-28 13:38:27"
         },
         {
             "name": "codekanzlei/cake-frontend-bridge",
