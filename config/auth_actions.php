@@ -27,6 +27,9 @@ $config = [
         'Admin.Login' => [
             '*' => [User::ROLE_ADMIN]
         ],
+        'ModelHistory.ModelHistory' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
         'Attachments.Attachments' => [
             'preview' => '*',
             'download' => '*',

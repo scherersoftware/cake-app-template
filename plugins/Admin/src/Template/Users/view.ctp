@@ -47,6 +47,9 @@
             'mode' => 'readonly'
         ]);
     ?>
+    <?=
+        $this->ModelHistory->modelHistoryArea($user);
+    ?>
 </div>
 
 

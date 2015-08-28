@@ -54,6 +54,14 @@ class UsersTable extends Table
             }
         ]);
 
+        $this->addBehavior('ModelHistory.Historizable', [
+            'userNameFields' => [
+                'firstname' => 'firstname',
+                'lastname' => 'lastname',
+                'id' => 'Users.id'
+            ]
+        ]);
+
         $this->addBehavior('Timestamp');
     }
 

@@ -32,7 +32,7 @@ class UsersController extends AppController
     public function view($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Attachments']
+            'contain' => ['Attachments', 'ModelHistory']
         ]);
         $this->set('user', $user);
     }
