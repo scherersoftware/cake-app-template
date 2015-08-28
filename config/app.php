@@ -332,6 +332,9 @@ return [
         'max_login_retries' => 5,
         'login_lock_duration' => '1 hour'
     ],
+    'AssetCompress' => [
+        'rawMode' => true // include all assets instead of combined versions if true
+    ],
     'Notifications' => [
         'default_language' => 'de',
         'transports' => [

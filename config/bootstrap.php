@@ -38,6 +38,7 @@ if (!extension_loaded('intl')) {
     trigger_error('You must enable the intl extension to use CakePHP.', E_USER_ERROR);
 }
 
+use App\Lib\Environments;
 use Cake\Cache\Cache;
 use Cake\Console\ConsoleErrorHandler;
 use Cake\Core\App;
@@ -170,6 +171,7 @@ Request::addDetector('tablet', function ($request) {
  * Load Plugins
  */
 Plugin::load('Migrations');
+#Plugin::load('Admin', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('BootstrapUI');
 Plugin::load('CkTools', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('FrontendBridge', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
@@ -179,7 +181,6 @@ Plugin::load('Notifications', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('ModelHistory', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('AssetCompress', ['bootstrap' => true]);
-Plugin::load('Admin', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('Queue');
 // Only try to load DebugKit in development mode

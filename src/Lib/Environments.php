@@ -66,8 +66,6 @@ class Environments
             $environment = self::DEVELOPMENT;
         } elseif (strpos($host, 'cakephp-app-template.com') !== false) {
             $environment = self::PRODUCTION;
-        } else {
-            throw new Exception('Could not detect environment.');
         }
         return $environment;
     }

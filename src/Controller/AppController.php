@@ -34,7 +34,6 @@ class AppController extends Controller
         'Flash' => [
             'className' => 'BootstrapUI.Flash'
         ],
-        'Utils' => ['className' => 'Utils'],
         'Auth' => ['className' => 'AuthActions.Auth'],
         'FrontendBridge' => ['className' => 'FrontendBridge.FrontendBridge'],
         'ModelHistory.ModelHistory',
@@ -97,95 +96,13 @@ class AppController extends Controller
         $this->loadModel('Users');
         $this->Auth->eventManager()->attach([$this->Users, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
 
-        if (PHP_SAPI !== 'cli') {
+        /*if (PHP_SAPI !== 'cli') {
             $notificationHandler = new NotificationHandler();
             $notificationHandler->handleEvents();
-        }
+        }*/
 
         // $this->_apiTokenAuthentication();
         $this->FrontendBridge->setJson('locale', 'de');
-    }
-
-    /**
-     * handle facebook/google logins, register with its cases and redirects
-     *
-     * @return void
-     */
-    public function authenticated()
-    {
-        $result = $this->Auth->identify();
-
-        // user already exists, so redirect him like after normal login
-        if (!empty($result['id'])) {
-            return $this->redirect($this->Auth->redirectUrl());
-        }
-
-        // it's an attempt to register by social login
-        // so we definitely need an email
-        if (empty($result['email'])) {
-            throw new \Cake\Core\Exception\Exception(__('login.no_email_received'));
-        }
-
-        $provider = __('login.social_login_provider');
-        if (!empty($result['profileURL'])) {
-            $provider = $this->Users->extractProvider($result['profileURL']);
-        }
-        $emailExistsQuery = $this->Users->find()
-            ->where([
-                'email' => $result['email']
-            ]);
-        // check if user with this email already exist
-        if ($emailExistsQuery->count() > 0) {
-            // then, there certainly is a reason why he wasn't identified in the first place
-            $user = $emailExistsQuery->first();
-
-            // user exists but has another role than user
-            if ($user->role !== User::ROLE_USER) {
-                $this->Flash->error(__('login.email_used'));
-                return $this->redirect($this->Auth->logout());
-            }
-            // user exists but has no active status
-            if ($user->status !== Status::ACTIVE) {
-                $this->Flash->error(__('login.wrong_status'));
-                return $this->redirect($this->Auth->logout());
-            }
-
-            if (!empty($result['identifier'])) {
-                // check if the provider and the provider identifier match the existing account
-                if ($user->provider !== $provider || $user->provider_uid !== $result['identifier']) {
-                    if (empty($user->provider) && empty($user->provider_uid)) {
-                        // user exists but registered the old fashioned way and not via social login
-                        // log him in for convenience reasons
-                        $this->Auth->setUser($user->toArray());
-                        return $this->redirect($this->Auth->redirectUrl());
-                    }
-                    // user exists but used another social login for registration than for this login attempt
-                    $this->Flash->error(__('login.existing_account_but_wrong_social_account_used'));
-                    return $this->redirect($this->Auth->logout());
-                }
-            }
-            // at this point, the account exists and everything is fine, but then Auth->identify() should have
-            // identified him correctly and we should not be here
-            throw new \Cake\Core\Exception\Exception(__('login.something_went_wrong'));
-        } //end if user with this email already exist
-
-        // create new account
-        $user = $this->Users->registerThirdPartyUser($result);
-        if (empty($user->errors())) {
-            // log the newly created user in
-            $this->request->session()->delete($this->Auth->sessionKey);
-            $this->Auth->setUser($user->toArray());
-
-            return $this->redirect([
-                'plugin' => false,
-                'controller' => 'login',
-                'action' => 'completeRegistration'
-            ]);
-        } else {
-            // data from third party were not enough to register user or validation failed
-            $this->Flash->error(__('login.could_not_create_user_from_provider_data', $provider));
-            return $this->redirect($this->Auth->logout());
-        }
     }
 
     /**
@@ -225,7 +142,6 @@ class AppController extends Controller
                 case User::ROLE_USER:
                     return $this->redirect($this->Auth->redirectUrl());
                     break;
-
                 default:
                     return $this->redirect('/');
                     break;
