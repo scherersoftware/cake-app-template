@@ -1,49 +1,46 @@
-<?php
-use Cake\Core\Configure;
 
-$this->assign('title', __('users.index.title'));
-
-?>
 <h1 class="page-header">
-    <?= __('users.index.title') ?>
+    <?= __('users') ?>
     <div class="pull-right">
-        <?= $this->CkTools->addButton() ?>
+        <?= $this->CkTools->addButton(__('users.add')) ?>
     </div>
 </h1>
 
-<?= $this->ListFilter->renderFilterbox(); ?>
-
-<?php if ($users->count() == 0): ?>
-    <div class="alert alert-info">
-        <?= __('users.no_users_found') ?>
-    </div>
-<?php else: ?>
+<div class="users index">
     <div class="table-responsive">
         <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th><?= $this->Paginator->sort('forename', __('user.name')) ?></th>
-                    <th><?= $this->Paginator->sort('email', __('user.email')) ?></th>
-                    <th><?= $this->Paginator->sort('role', __('user.role')) ?></th>
-                    <th><?= $this->Paginator->sort('status', __('user.status')) ?></th>
-                    <th><?= $this->Paginator->sort('created', __('user.created')) ?></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($users as $user): ?>
-                    <tr class="<?php if ($user->failed_login_count >= Configure::read('Authentication.max_login_retries')): ?>warning<?php endif; ?>">
-                        <td><?= $user->full_name ?></td>
-                        <td><?= $user->email ?></td>
-                        <td><?= $user::getTypeDescription($user->role) ?></td>
-                        <td><?= $this->Utils->statusLabel($user->status) ?></td>
-                        <td><?= $this->Time->nice($user->created) ?></td>
-                        <td>
-                            <?= $this->CkTools->viewButton($user) ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
+        <thead>
+            <tr>
+                <th><?= $this->Paginator->sort('id', __('user.id')) ?></th>
+                <th><?= $this->Paginator->sort('status', __('user.status')) ?></th>
+                <th><?= $this->Paginator->sort('role', __('user.role')) ?></th>
+                <th><?= $this->Paginator->sort('firstname', __('user.firstname')) ?></th>
+                <th><?= $this->Paginator->sort('lastname', __('user.lastname')) ?></th>
+                <th><?= $this->Paginator->sort('email', __('user.email')) ?></th>
+                <th><?= $this->Paginator->sort('password', __('user.password')) ?></th>
+                <th class="actions"><?= __('lists.actions') ?></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($users as $user): ?>
+            <tr>
+            <td><?= h($user->id) ?></td>
+                <td><?= h($user->status) ?></td>
+                <td><?= h($user->role) ?></td>
+                <td><?= h($user->firstname) ?></td>
+                <td><?= h($user->lastname) ?></td>
+                <td><?= h($user->email) ?></td>
+                <td><?= h($user->password) ?></td>
+                    <td class="actions">
+                    <?= $this->CkTools->viewButton($user) ?>
+                    <?= $this->CkTools->deleteButton($user, ['usePostLink' => true]) ?>
+                </td>
+            </tr>
+
+        <?php endforeach; ?>
+        </tbody>
         </table>
-        <?= $this->Paginator->numbers() ?>
     </div>
-<?php endif; ?>
+	<?= $this->Paginator->numbers() ?>
+
+</div>

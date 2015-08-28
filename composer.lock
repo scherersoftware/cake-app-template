@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "651e562d370556eeff01034ee3acb25e",
+    "hash": "94823eab54f0cc4601daa5882ffc77b7",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -399,6 +399,44 @@
             ],
             "description": "Simple ACL alternative for CakePHP 3",
             "time": "2015-08-28 13:02:45"
+        },
+        {
+            "name": "codekanzlei/cake-bootstrap3",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-bootstrap3.git",
+                "reference": "bc27747fcb2a4794cb13fe057ce12fa103ff1784"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/bc27747fcb2a4794cb13fe057ce12fa103ff1784",
+                "reference": "bc27747fcb2a4794cb13fe057ce12fa103ff1784",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*",
+                "oyejorge/less.php": "~1.5",
+                "twbs/bootstrap": "3.2.*@dev"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.x-dev"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "CakeBootstrap3"
+            },
+            "autoload": {
+                "psr-4": {
+                    "CakeBootstrap3\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bootstrap 3 Plugin for CakePHP 3",
+            "time": "2015-05-05 10:46:01"
         },
         {
             "name": "codekanzlei/cake-cktools",
@@ -1678,6 +1716,57 @@
                 "minifier"
             ],
             "time": "2015-07-04 07:35:09"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "c068162161154a4b85110ea1e7dd3d7897ce2b72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/c068162161154a4b85110ea1e7dd3d7897ce2b72",
+                "reference": "c068162161154a4b85110ea1e7dd3d7897ce2b72",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ],
+            "time": "2014-06-26 16:36:48"
         }
     ],
     "packages-dev": [
@@ -3149,6 +3238,7 @@
         "codekanzlei/cake-attachments": 20,
         "codekanzlei/cake-notifications": 20,
         "codekanzlei/cake-model-history": 20,
+        "codekanzlei/cake-bootstrap3": 20,
         "cakephp/cakephp-codesniffer": 20,
         "markstory/mini-asset": 20,
         "markstory/asset_compress": 20,

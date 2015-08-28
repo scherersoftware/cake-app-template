@@ -187,6 +187,7 @@ Plugin::load('Queue');
 // Debug Kit should not be installed on a production system
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
+    Plugin::load('CakeBootstrap3');
 }
 
 // Datasource Type Mappings

@@ -1,27 +1,27 @@
-<?php
-use App\Model\Entity\User;
 
-$this->assign('title', __('users.edit.title'));
-
-?>
 <h1 class="page-header">
-    <?= __('users.edit.title') ?>
+    <?= __('users.edit') ?>
     <div class="pull-right">
-        <?= $this->CkTools->button(__('back_to_details'), [
-            'action' => 'view',
-            $user->id
-        ], [
-            'icon' => 'arrow-left'
-        ]) ?>
+        <?= $this->CkTools->viewButton($user) ?>
+        <?= $this->ListFilter->backToListButton() ?>
     </div>
 </h1>
 
 
-<?= $this->Form->create($user, ['align' => 'horizontal']) ?>
-
-<?= $this->element('../Users/form', [
-    'edit' => true
-]) ?>
-
-<?= $this->CkTools->formButtons(['useReferer' => true]) ?>
-<?= $this->Form->end(); ?>
+<div class="users form">
+    <?= $this->Form->create($user, ['align' => 'horizontal', 'novalidate']); ?>
+    <fieldset>
+        <?php
+            echo $this->Form->input('status', ['label' => __('user.status')]);
+            echo $this->Form->input('role', ['label' => __('user.role')]);
+            echo $this->Form->input('firstname', ['label' => __('user.firstname')]);
+            echo $this->Form->input('lastname', ['label' => __('user.lastname')]);
+            echo $this->Form->input('email', ['label' => __('user.email')]);
+            echo $this->Form->input('password', ['label' => __('user.password')]);
+            echo $this->Form->input('failed_login_count', ['label' => __('user.failed_login_count')]);
+            echo $this->Form->input('failed_login_timestamp', ['label' => __('user.failed_login_timestamp')]);
+        ?>
+    </fieldset>
+    <?= $this->CkTools->formButtons() ?>
+    <?= $this->Form->end() ?>
+</div>

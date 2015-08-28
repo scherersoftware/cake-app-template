@@ -18,6 +18,9 @@ $config = [
         'Admin.Dashboard' => [
             '*' => [User::ROLE_ADMIN]
         ],
+        'Admin.Users' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
         'Admin.Profile' => [
             '*' => [User::ROLE_ADMIN]
         ],

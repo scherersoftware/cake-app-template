@@ -17,6 +17,7 @@
         "codekanzlei/cake-attachments": "dev-master",
         "codekanzlei/cake-notifications": "dev-master",
         "codekanzlei/cake-model-history": "dev-master",
+        "codekanzlei/cake-bootstrap3": "dev-master",
         "cakephp/cakephp-codesniffer": "dev-master",
         "markstory/mini-asset": "dev-master",
         "markstory/asset_compress": "3.0.x-dev",
