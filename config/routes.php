@@ -49,6 +49,9 @@ Router::scope('/', function ($routes) {
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
 
+    $routes->connect('/admin', ['plugin' => 'Admin', 'controller' => 'Dashboard', 'action' => 'index']);
+    $routes->connect('/admin/login', ['plugin' => 'Admin', 'controller' => 'Login', 'action' => 'login']);
+
     /**
      * Connect catchall routes for all controllers.
      *

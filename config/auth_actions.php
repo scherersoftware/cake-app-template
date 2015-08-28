@@ -17,6 +17,12 @@ $config = [
     'auth_actions' => [
         'Admin.Dashboard' => [
             '*' => [User::ROLE_ADMIN]
-        ]
+        ],
+        'Admin.Profile' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Admin.Login' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
     ]
 ];

@@ -171,7 +171,7 @@ Request::addDetector('tablet', function ($request) {
  * Load Plugins
  */
 Plugin::load('Migrations');
-#Plugin::load('Admin', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('Admin', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('BootstrapUI');
 Plugin::load('CkTools', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('FrontendBridge', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
