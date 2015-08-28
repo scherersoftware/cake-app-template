@@ -3,12 +3,14 @@ namespace App\Model\Table;
 
 use App\Lib\Status;
 use App\Model\Entity\User;
+use Attachments\Model\Entity\Attachment;
 use Cake\Auth\DefaultPasswordHasher;
 use Cake\Core\Configure;
 use Cake\Database\Expression\QueryExpression;
 use Cake\Datasource\EntityInterface;
 use Cake\Event\Event;
 use Cake\I18n\Time;
+use Cake\Network\Request;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -34,6 +36,23 @@ class UsersTable extends Table
         $this->table('users');
         $this->displayField('email');
         $this->primaryKey('id');
+
+        $this->addBehavior('Attachments.Attachments', [
+            'downloadAuthorizeCallback' => function (Attachment $attachment, User $user, Request $request) {
+                $loggedIn = $request->session()->check('Auth.User');
+                if ($loggedIn) {
+                    // Allowed for Admins
+                    if ($request->session()->read('Auth.User.role') == User::ROLE_ADMIN) {
+                        return true;
+                    }
+                    // Allowed for the posessing user himself
+                    if ($request->session()->read('Auth.User.id') === $user->id) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        ]);
 
         $this->addBehavior('Timestamp');
     }

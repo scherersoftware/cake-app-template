@@ -25,6 +25,7 @@ class User extends Entity
     protected $_accessible = [
         '*' => true,
         'id' => false,
+        'attachment_uploads' => true
     ];
 
     const ROLE_USER = 'user';

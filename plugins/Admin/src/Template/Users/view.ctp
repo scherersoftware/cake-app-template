@@ -39,6 +39,14 @@
         <dt><?= __('modified') ?></dt>
         <dd><?= h($user->modified) ?></dd>
     </dl>
+
+    <?=
+        $this->Attachments->attachmentsArea($user, [
+            'label' => __('user.attachments'),
+            'formFieldName' => 'attachment_uploads',
+            'mode' => 'readonly'
+        ]);
+    ?>
 </div>
 
 

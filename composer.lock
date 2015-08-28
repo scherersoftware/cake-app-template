@@ -406,12 +406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-bootstrap3.git",
-                "reference": "bc27747fcb2a4794cb13fe057ce12fa103ff1784"
+                "reference": "551d8d3a74ca471674c83b83ac0b19e9afc1afd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/bc27747fcb2a4794cb13fe057ce12fa103ff1784",
-                "reference": "bc27747fcb2a4794cb13fe057ce12fa103ff1784",
+                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/551d8d3a74ca471674c83b83ac0b19e9afc1afd5",
+                "reference": "551d8d3a74ca471674c83b83ac0b19e9afc1afd5",
                 "shasum": ""
             },
             "require": {
@@ -436,7 +436,7 @@
                 "MIT"
             ],
             "description": "Bootstrap 3 Plugin for CakePHP 3",
-            "time": "2015-05-05 10:46:01"
+            "time": "2015-08-28 13:57:16"
         },
         {
             "name": "codekanzlei/cake-cktools",

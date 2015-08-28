@@ -27,5 +27,10 @@ $config = [
         'Admin.Login' => [
             '*' => [User::ROLE_ADMIN]
         ],
+        'Attachments.Attachments' => [
+            'preview' => '*',
+            'download' => '*',
+            '*' => [User::ROLE_ADMIN]
+        ]
     ]
 ];

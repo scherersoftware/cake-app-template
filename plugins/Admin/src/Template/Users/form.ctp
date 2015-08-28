@@ -21,6 +21,12 @@ use App\Model\Entity\User;
             echo $this->Form->input('password', ['label' => __('user.password')]);
             echo $this->Form->input('password_confirm', ['label' => __('user.password_confirm'), 'type' => 'password']);
         ?>
+        <?=
+            $this->Attachments->attachmentsArea($user, [
+                'label' => __('user.attachments'),
+                'formFieldName' => 'attachment_uploads',
+            ]);
+        ?>
     </fieldset>
     <?= $this->CkTools->formButtons() ?>
     <?= $this->Form->end() ?>
