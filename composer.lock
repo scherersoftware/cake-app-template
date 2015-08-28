@@ -335,12 +335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-attachments.git",
-                "reference": "a9ca555a4857f14630f98a4e073c83c7f104645a"
+                "reference": "7d01ed00df6915548c8f483a1b2f1926f758ae97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/a9ca555a4857f14630f98a4e073c83c7f104645a",
-                "reference": "a9ca555a4857f14630f98a4e073c83c7f104645a",
+                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/7d01ed00df6915548c8f483a1b2f1926f758ae97",
+                "reference": "7d01ed00df6915548c8f483a1b2f1926f758ae97",
                 "shasum": ""
             },
             "require": {
@@ -362,7 +362,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "File Attachments plugin for CakePHP",
-            "time": "2015-08-28 12:35:28"
+            "time": "2015-08-28 15:56:35"
         },
         {
             "name": "codekanzlei/cake-auth-actions",
@@ -554,12 +554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-model-history.git",
-                "reference": "42fc34dea92969586d25045e67c5d0e03ff8ce0d"
+                "reference": "0d7017ac9eb1a1afee51d54537ba81495046c756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/42fc34dea92969586d25045e67c5d0e03ff8ce0d",
-                "reference": "42fc34dea92969586d25045e67c5d0e03ff8ce0d",
+                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/0d7017ac9eb1a1afee51d54537ba81495046c756",
+                "reference": "0d7017ac9eb1a1afee51d54537ba81495046c756",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 "MIT"
             ],
             "description": "ModelHistory plugin for CakePHP3",
-            "time": "2015-05-20 14:26:39"
+            "time": "2015-08-28 15:56:26"
         },
         {
             "name": "codekanzlei/cake-notifications",
