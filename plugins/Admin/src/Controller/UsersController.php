@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 
 use Admin\Controller\AppController;
+use App\Model\Entity\User;
 
 /**
  * Users Controller
@@ -10,6 +11,43 @@ use Admin\Controller\AppController;
  */
 class UsersController extends AppController
 {
+
+    /**
+     * Provides ListFilter configuration
+     *
+     * @return array
+     */
+    public function getListFilters()
+    {
+        $filters = [];
+        if ($this->request->action == 'index') {
+            $filters['fields'] = [
+                'Users.role' => [
+                    'searchType' => 'select',
+                    'options' => User::getRoles(),
+                    'inputOptions' => [
+                        'label' => __('user.role')
+                    ]
+                ],
+                'Users.status' => [
+                    'searchType' => 'select',
+                    'options' => User::getStatuses(),
+                    'inputOptions' => [
+                        'label' => __('user.status')
+                    ]
+                ],
+                'Users.fulltext' => [
+                    'searchType' => 'fulltext',
+                    'searchFields' => [
+                        'Users.firstname',
+                        'Users.lastname',
+                        'Users.email'
+                    ]
+                ]
+            ];
+        }
+        return $filters;
+    }
 
     /**
      * Index method

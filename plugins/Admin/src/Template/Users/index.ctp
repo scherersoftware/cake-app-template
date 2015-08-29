@@ -1,3 +1,8 @@
+<?php
+use App\Lib\Status;
+use App\Model\Entity\User;
+
+?>
 
 <h1 class="page-header">
     <?= __('users') ?>
@@ -5,6 +10,8 @@
         <?= $this->CkTools->addButton(__('users.add')) ?>
     </div>
 </h1>
+
+<?= $this->ListFilter->renderFilterbox() ?>
 
 <div class="users index">
     <div class="table-responsive">
@@ -25,10 +32,10 @@
                 <td><?= h($user->firstname) ?></td>
                 <td><?= h($user->lastname) ?></td>
                 <td><?= h($user->email) ?></td>
-                <td><?= h($user->status) ?></td>
-                <td><?= h($user->role) ?></td>
+                <td><?= Status::getDescription($user->status) ?></td>
+                <td><?= User::getTypeDescription($user->role) ?></td>
                 <td class="actions">
-                        <?= $this->CkTools->viewButton($user) ?>
+                    <?= $this->CkTools->viewButton($user) ?>
                     <?= $this->CkTools->editButton($user) ?>
                     <?= $this->CkTools->deleteButton($user, ['usePostLink' => true]) ?>
                 </td>
