@@ -29,7 +29,6 @@ class LoginController extends AppController
             $userData = $this->Auth->identify();
             if ($userData && $userData['status'] == Status::ACTIVE) {
                 $this->Auth->setUser($userData);
-                $this->Auth->redirectUrl($this->Auth->config('loginRedirect'));
                 return $this->redirect($this->Auth->redirectUrl());
             } elseif ($this->Users->hasLoginRetriesLock($this->request->data)) {
                 $this->Flash->error(__('login.login_retries_lock'));

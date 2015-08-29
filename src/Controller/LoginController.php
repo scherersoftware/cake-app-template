@@ -32,7 +32,7 @@ class LoginController extends AppController
             $this->request->session()->start();
         }
         if (!empty($this->request->query('redirectUrl'))) {
-            $this->request->session()->write('Login.redirectUrl', $this->request->query('redirectUrl'));
+            $this->request->session()->write('Auth.redirect', $this->request->query('redirectUrl'));
         }
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -42,8 +42,6 @@ class LoginController extends AppController
                     $this->AuthUtils->addRememberMeCookie($userData['id']);
                 }
                 $this->Auth->setUser($userData);
-                // FIXME better definition of redirectURL
-                $this->Auth->redirectUrl($this->Auth->config('loginRedirect'));
                 return $this->redirect($this->Auth->redirectUrl());
             } elseif ($this->Users->hasLoginRetriesLock($this->request->data)) {
                 $this->Flash->error(__('login.login_retries_lock'));
