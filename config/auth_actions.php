@@ -12,6 +12,9 @@ $config = [
         ],
         'Admin.Login' => [
             'login',
+        ],
+        'Api.Users' => [
+            'authenticate'
         ]
     ],
     'auth_actions' => [

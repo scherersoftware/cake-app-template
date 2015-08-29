@@ -36,7 +36,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "src",
-            "Admin\\": "./plugins/Admin/src"
+            "Admin\\": "./plugins/Admin/src",
+            "Api\\": "./plugins/Api/src"
         }
     },
     "autoload-dev": {

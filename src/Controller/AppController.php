@@ -100,7 +100,7 @@ class AppController extends Controller
             $notificationHandler->handleEvents();
         }*/
 
-        // $this->_apiTokenAuthentication();
+        $this->_apiTokenAuthentication();
         $this->FrontendBridge->setJson('locale', 'de');
         parent::beforeFilter($event);
     }

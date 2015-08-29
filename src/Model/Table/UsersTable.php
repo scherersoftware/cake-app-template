@@ -132,6 +132,20 @@ class UsersTable extends Table
     }
 
     /**
+     * Find a user by its API token
+     *
+     * @param string $apiToken API Token
+     * @return User
+     */
+    public function getByApiToken($apiToken)
+    {
+        return $this->find()
+            ->where([
+                'api_token' => $apiToken
+            ])->first();
+    }
+
+    /**
      * beforeSave callback
      *
      * @param Event $event CakePHP Event

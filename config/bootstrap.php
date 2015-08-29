@@ -183,6 +183,8 @@ Plugin::load('ModelHistory', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('Queue');
+Plugin::load('Api', ['bootstrap' => true, 'routes' => true]);
+
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
 if (Configure::read('debug')) {
