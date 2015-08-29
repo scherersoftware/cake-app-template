@@ -339,7 +339,7 @@ return [
         'rawMode' => true // include all assets instead of combined versions if true
     ],
     'Notifications' => [
-        'default_language' => 'de',
+        'default_language' => 'en',
         'transports' => [
             'email' => [
                 'profile' => 'default',
@@ -352,7 +352,7 @@ return [
         'Administration' => [
             'layout' => 'Admin.default',
             'helpers' => [
-                'Admin.Menu'
+                'CkTools.Menu'
             ]
         ]
     ],

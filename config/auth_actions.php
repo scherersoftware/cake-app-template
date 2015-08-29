@@ -33,6 +33,9 @@ $config = [
         'ModelHistory.ModelHistory' => [
             '*' => [User::ROLE_ADMIN]
         ],
+        'Notifications.NotificationContents' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
         'Attachments.Attachments' => [
             'preview' => '*',
             'download' => '*',
