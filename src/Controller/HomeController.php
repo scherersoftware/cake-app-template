@@ -17,15 +17,6 @@ class HomeController extends AppController
     }
 
     /**
-     * Form Components Showcase
-     *
-     * @return void
-     */
-    public function formtest()
-    {
-    }
-
-    /**
      * Returns a JSON response
      *
      * @return Response
