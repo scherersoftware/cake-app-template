@@ -50,7 +50,8 @@ class AppController extends Controller
         'FrontendBridge.FrontendBridge',
         'ListFilter.ListFilter',
         'Cookie',
-        'AuthActions.AuthUtils'
+        'AuthActions.AuthUtils',
+        'CkTools.Api'
     ];
 
     /**
