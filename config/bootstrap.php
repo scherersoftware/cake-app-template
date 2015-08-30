@@ -219,6 +219,7 @@ function dlog()
  */
 DispatcherFactory::add('Asset');
 DispatcherFactory::add('Routing');
+DispatcherFactory::add('ADmad/Glide.Glide', ['for' => '/images']);
 DispatcherFactory::add('ControllerFactory');
 
 /**

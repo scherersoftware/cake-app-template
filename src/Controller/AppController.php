@@ -41,7 +41,8 @@ class AppController extends Controller
         'CkTools.TinyMce',
         'ListFilter.ListFilter',
         'AssetCompress.AssetCompress',
-        'Attachments.Attachments'
+        'Attachments.Attachments',
+        'ADmad/Glide.Glide'
     ];
 
     public $components = [
