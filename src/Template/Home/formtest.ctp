@@ -1,9 +1,14 @@
 <?php
+$this->TinyMce->includeAssets();
 
 function renderInputs($view) {
     echo $view->Form->input('start_date', [
         'type' => 'date',
         'label' => 'Date'
+    ]);
+    echo $view->Form->input('static', [
+        'type' => 'staticControl',
+        'value' => 'Static Value'
     ]);
     echo $view->Form->input('standard_text');
     echo $view->Form->input('prepended_text', [
@@ -51,11 +56,16 @@ function renderInputs($view) {
        'options' => ['Yes', 'No']
     ]);
     echo $view->Form->input('checkbox', [
-      'type' => 'checkbox',
+        'type' => 'checkbox',
     ]);
     echo $view->Form->input('textarea', [
-      'type' => 'textarea',
+        'type' => 'textarea',
     ]);
+    echo $view->Form->input('textarea_' . rand(), [
+        'type' => 'textarea',
+        'class' => 'tinymce'
+    ]);
+    echo $view->TinyMce->picker('logo_' . rand());
 }
 ?>
 

@@ -38,6 +38,7 @@ class AppController extends Controller
         'FrontendBridge' => ['className' => 'FrontendBridge.FrontendBridge'],
         'ModelHistory.ModelHistory',
         'CkTools.CkTools',
+        'CkTools.TinyMce',
         'ListFilter.ListFilter',
         'AssetCompress.AssetCompress',
         'Attachments.Attachments'

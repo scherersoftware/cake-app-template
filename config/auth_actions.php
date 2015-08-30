@@ -40,6 +40,9 @@ $config = [
             'preview' => '*',
             'download' => '*',
             '*' => [User::ROLE_ADMIN]
+        ],
+        'CkTools.Moxiemanager' => [
+            '*' => [User::ROLE_ADMIN]
         ]
     ]
 ];

@@ -24,7 +24,8 @@
         "tedivm/jshrink": "~1.0",
         "friendsofcake/bootstrap-ui": "dev-master",
         "oyejorge/less.php": "*",
-        "dereuromark/cakephp-queue": "dev-master"
+        "dereuromark/cakephp-queue": "dev-master",
+        "admad/cakephp-glide": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",

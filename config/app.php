@@ -356,4 +356,11 @@ return [
             ]
         ]
     ],
+    'CkTools' => [
+        'moxiemanager' => [
+            'general.license' => '',
+            'filesystem.rootpath' => WWW_ROOT . 'files',
+            'general.language' => 'en'
+        ]
+    ]
 ];
