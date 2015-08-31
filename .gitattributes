@@ -36,3 +36,4 @@
 *.phar binary
 *.ttf binary
 *.xls binary
+*.mwb binary
