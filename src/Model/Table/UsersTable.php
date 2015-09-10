@@ -294,4 +294,24 @@ class UsersTable extends Table
         }
         return false;
     }
+
+    /**
+     * creates a unique hash for User
+     *
+     * @param  User $user the user entity
+     * @return string
+     */
+    public function getHash(User $user)
+    {
+        $vars = [
+            $user->email,
+            $user->id,
+            $user->password,
+            $user->modified,
+            $user->status
+        ];
+        $secretStr = implode('', $vars);
+        $hash = \Cake\Utility\Security::hash($secretStr, 'sha512', true);
+        return $hash;
+    }
 }

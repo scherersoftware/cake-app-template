@@ -67,4 +67,78 @@ class LoginController extends AppController
         $this->AuthUtils->destroyRememberMeCookie();
         return $this->redirect($this->Auth->logout());
     }
+
+    /**
+     * new password for users
+     *
+     * @return void
+     */
+    public function forgotPassword()
+    {
+        $this->layout = 'plain';
+        if ($this->request->is('post') && !empty($this->request->data['email'])) {
+            $user = $this->Users->getUserByEmail($this->request->data['email']);
+
+            if (empty($user)) {
+                return $this->Flash->error(__('login.unknown_email'));
+            }
+
+            EventManager::instance()->dispatch(new \Cake\Event\Event('Users.forgot_password', $this, [
+                'user' => $user
+            ]));
+            $this->Flash->default(__('login.restore_password_email_sent'), true);
+
+            $plugin = false;
+            if (!empty($user->role) && $user->role === User::ROLE_ADMIN) {
+                $plugin = 'admin';
+            }
+            return $this->redirect([
+                'plugin' => $plugin,
+                'action' => 'login'
+            ]);
+        } else {
+            return $this->Flash->error(__('login.email_required'));
+        }
+    }
+
+    /**
+     * restores password
+     *
+     * @param int $userId userId
+     * @param string $token token
+     * @return void
+     */
+    public function restorePassword($userId, $token)
+    {
+        $this->layout = 'plain';
+        if (!empty($userId) && !empty($token)) {
+            $user = $this->Users->get($userId);
+            if (!empty($user)) {
+                $userHash = $this->Users->getHash($user);
+
+                $timestamp = substr($token, -10);
+                $hash = substr($token, 0, -10);
+                $time = new \Cake\I18n\Time($timestamp);
+                $expire = '1 day';
+
+                if (!($hash === $userHash && $time->wasWithinLast($expire))) {
+                    $this->Flash->error(__('login.restore_password_link_invalid'));
+                    return $this->redirect(['action' => 'login']);
+                }
+            }
+            // Save new Password
+            if ($this->request->is(['patch', 'post', 'put'])) {
+                if (empty($this->Users->changePassword($user, $this->request->data)->errors())) {
+                    $this->Users->resetLoginRetries($user);
+                    $this->Flash->success(__('login.new_password_saved'));
+                    return $this->redirect(['action' => 'login']);
+                } else {
+                    $this->Flash->error(__('login.invalid_password'));
+                }
+            }
+        } else {
+            return $this->redirect(['action' => 'login']);
+        }
+        $this->set(compact('user'));
+    }
 }

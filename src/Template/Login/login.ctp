@@ -41,6 +41,11 @@ $this->assign('layout', 'plain');
                     </fieldset>
                     <br>
                     <?= $this->Html->link(__('login.forgot_password'), ['action' => 'forgot-password']) ?>
+                    <p>
+                        <span>Email: john.doe@example.com</span>
+                        <br>
+                        <span>Password: password</span>
+                    </p>
                 </div>
             </div>
         </div>

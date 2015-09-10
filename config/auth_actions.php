@@ -9,15 +9,25 @@ $config = [
         'Home' => '*',
         'Login' => [
             'login',
+            'logout',
+            'forgotPassword',
+            'restorePassword'
         ],
         'Admin.Login' => [
             'login',
+            'logout'
         ],
         'Api.Users' => [
             'authenticate'
         ]
     ],
     'auth_actions' => [
+        'Home' => [
+            'view' => [
+                User::ROLE_ADMIN,
+                User::ROLE_USER
+            ]
+        ],
         'Admin.Dashboard' => [
             '*' => [User::ROLE_ADMIN]
         ],

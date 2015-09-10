@@ -77,7 +77,7 @@ class AppController extends Controller
             ],
             'authorize' => ['Controller'],
             'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
-            'loginRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'index'],
+            'loginRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'view'],
             'logoutRedirect' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
             'authError' => 'Sie sind nicht berechtigt diese Seite zu öffnen',
             'flash' => [
@@ -98,10 +98,10 @@ class AppController extends Controller
         $this->loadModel('Users');
         $this->Auth->eventManager()->attach([$this->Users, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
 
-        /*if (PHP_SAPI !== 'cli') {
+        if (PHP_SAPI !== 'cli') {
             $notificationHandler = new NotificationHandler();
             $notificationHandler->handleEvents();
-        }*/
+        }
 
         $this->_apiTokenAuthentication();
         $this->FrontendBridge->setJson('locale', 'de');
