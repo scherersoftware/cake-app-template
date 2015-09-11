@@ -9,7 +9,7 @@
         <?php
         $title = 'CakePHP App Template';
         echo $this->Html->link($title, [
-            'controller' => 'Dashboard',
+            'controller' => 'Home',
             'action' => 'index',
             'plugin' => null
         ], [
@@ -21,7 +21,7 @@
     </div>
     <?php if(!isset($this->Auth) || !$this->Auth->loggedIn()): ?>
         <div class="pull-right">
-            <?= $this->CkTools->button(__('login.login'), ['controller' => 'login', 'action' => 'login']) ?>
+            <?= $this->CkTools->button(__('login.login'), ['controller' => 'login', 'action' => 'login'], ['additionalClasses' => 'login-button']) ?>
         </div>
     <?php endif; ?>
     <ul class="nav navbar-top-links navbar-right">
