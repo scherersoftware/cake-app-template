@@ -1,0 +1,300 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-09-09 11:46+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:47
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:34
+msgid "login.login_retries_lock"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:50
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:37
+msgid "login.wrong_credentials"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:63
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:51
+msgid "login.you_have_been_logged_out"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:83
+msgid "login.unknown_email"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:89
+msgid "login.restore_password_email_sent"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:100
+msgid "login.email_required"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:125
+msgid "login.restore_password_link_invalid"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:133
+msgid "login.new_password_saved"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:136
+msgid "login.invalid_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Lib/Status.php:21
+msgid "status.active"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Lib/Status.php:22
+msgid "status.deleted"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Lib/Status.php:23
+msgid "status.suspended"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Model/Entity/User.php:42
+msgid "user.role.user"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Model/Entity/User.php:43
+msgid "user.role.admin"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Model/Table/UsersTable.php:128
+msgid "validation.user.old_password_wrong"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Model/Table/UsersTable.php:186
+msgid "validation.user.password_min_length"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Model/Table/UsersTable.php:193
+msgid "validation.user.password_confirmation_must_match"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Element/Layout/header.ctp:22
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:35
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:30
+msgid "login.login"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Element/Layout/header.ctp:27
+msgid "login.logut"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:4
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:43
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:37
+msgid "login.forgot_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:8
+msgid "restore_password_text"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:17
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:23
+msgid "login.email"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:21
+msgid "login.restore_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:10
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:9
+msgid "login.please_login"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:28
+msgid "login.password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:33
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:28
+msgid "login.login_for_two_weeks"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:5;17
+msgid "login.new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:23
+msgid "login.confirm_new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:27
+msgid "login.set_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:5
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Dashboard/index.ctp:5
+msgid "dashboard.index.title"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:14
+msgid "users.index.title"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:23
+msgid "notifications.index.title"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/ProfileController.php:23
+msgid "profile.password_change_success"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/ProfileController.php:26
+msgid "profile.password_change_failure"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/UsersController.php:29
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:20
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:15
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:25
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:18
+msgid "user.role"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/UsersController.php:36
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:23
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:11
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:24
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:15
+msgid "user.status"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/UsersController.php:89;113
+msgid "forms.data_saved"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/UsersController.php:92;116
+msgid "forms.data_not_saved"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/UsersController.php:136
+msgid "forms.data_deleted"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/UsersController.php:138
+msgid "forms.data_not_deleted"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:18
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:17
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:20
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:23
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:27
+msgid "user.email"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:23
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:21
+msgid "user.password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:5
+msgid "profile.index.title"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:8
+msgid "profile.my_data"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:11
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:18
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:21
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:21
+msgid "user.firstname"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:14
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:19
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:22
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:24
+msgid "user.lastname"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:29
+msgid "profile.change_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:41
+msgid "profile.current_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:46
+msgid "profile.new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:50
+msgid "profile.repeat_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:54
+msgid "profile.save"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/add.ctp:2
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:10
+msgid "users.add"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/edit.ctp:2
+msgid "users.edit"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:22
+msgid "user.password_confirm"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:26
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:45
+msgid "user.attachments"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:8
+msgid "users"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:26
+msgid "lists.actions"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:2
+msgid "user"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:12
+msgid "user.id"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:30
+msgid "user.failed_login_count"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:33
+msgid "user.failed_login_timestamp"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:36
+msgid "created"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:39
+msgid "modified"
+msgstr ""
+
