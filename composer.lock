@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "2ce7e1c2ef29106c3aeadb584c20db7f",
@@ -647,12 +647,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-notifications.git",
-                "reference": "3ffcd66e359bf7917d52b6b27f419e06208f6c04"
+                "reference": "15f76a9b546df43eb6f3f55386c93ccbf982f06f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-notifications/zipball/3ffcd66e359bf7917d52b6b27f419e06208f6c04",
-                "reference": "3ffcd66e359bf7917d52b6b27f419e06208f6c04",
+                "url": "https://api.github.com/repos/scherersoftware/cake-notifications/zipball/15f76a9b546df43eb6f3f55386c93ccbf982f06f",
+                "reference": "15f76a9b546df43eb6f3f55386c93ccbf982f06f",
                 "shasum": ""
             },
             "require": {
@@ -677,7 +677,7 @@
                 "MIT"
             ],
             "description": "CakePHP3 Notifications Plugin",
-            "time": "2015-09-11 08:32:01"
+            "time": "2015-09-14 14:01:32"
         },
         {
             "name": "dereuromark/cakephp-queue",
@@ -792,12 +792,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
-                "reference": "03a69bf934d618ecbad5aad98f0ef574991f7a7d"
+                "reference": "2e91156f10756f646cab2ee3e1d5d37e5c638026"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/03a69bf934d618ecbad5aad98f0ef574991f7a7d",
-                "reference": "03a69bf934d618ecbad5aad98f0ef574991f7a7d",
+                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/2e91156f10756f646cab2ee3e1d5d37e5c638026",
+                "reference": "2e91156f10756f646cab2ee3e1d5d37e5c638026",
                 "shasum": ""
             },
             "require-dev": {
@@ -833,7 +833,7 @@
                 "cakephp",
                 "twitter"
             ],
-            "time": "2015-09-11 11:59:13"
+            "time": "2015-09-14 13:54:17"
         },
         {
             "name": "guzzlehttp/psr7",
