@@ -2,7 +2,7 @@
 
 <h2>Glide-resized Image</h2>
 
-<?= $this->Glide->image('cakephp_hero.png', ['h' => 50]) ?>
+<?= $this->Glide->image('/files/cakephp_hero.png', ['h' => 50]) ?>
 
 <h2>FrontendBridge</h2>
 
