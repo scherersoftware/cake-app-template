@@ -500,12 +500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-cktools.git",
-                "reference": "855e94cdededca8dfde10934b7384d07b30996c8"
+                "reference": "6d5f1bbb0c25e6e6edd3392d7655925b6a6c5e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/855e94cdededca8dfde10934b7384d07b30996c8",
-                "reference": "855e94cdededca8dfde10934b7384d07b30996c8",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/6d5f1bbb0c25e6e6edd3392d7655925b6a6c5e51",
+                "reference": "6d5f1bbb0c25e6e6edd3392d7655925b6a6c5e51",
                 "shasum": ""
             },
             "require": {
@@ -530,7 +530,7 @@
                 "MIT"
             ],
             "description": "codekanzlei Tools & Utilities collection",
-            "time": "2015-09-08 13:24:39"
+            "time": "2015-09-14 13:17:47"
         },
         {
             "name": "codekanzlei/cake-frontend-bridge",
@@ -538,12 +538,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-frontend-bridge.git",
-                "reference": "f82e285aa75985134f39fe0f7ea719d98d5f1375"
+                "reference": "823b310af2689951277e6c96631410d12a2df8ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/f82e285aa75985134f39fe0f7ea719d98d5f1375",
-                "reference": "f82e285aa75985134f39fe0f7ea719d98d5f1375",
+                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/823b310af2689951277e6c96631410d12a2df8ae",
+                "reference": "823b310af2689951277e6c96631410d12a2df8ae",
                 "shasum": ""
             },
             "require": {
@@ -566,7 +566,7 @@
                 "MIT"
             ],
             "description": "Frontend Bridge CakePHP 3",
-            "time": "2015-08-31 13:55:10"
+            "time": "2015-09-14 12:54:48"
         },
         {
             "name": "codekanzlei/cake-list-filter",
