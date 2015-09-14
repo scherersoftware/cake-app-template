@@ -366,7 +366,7 @@ return [
     'Glide' => [
         'serverConfig' => [
             'base_url' => '/images/',
-            'source' => WWW_ROOT . 'files/',
+            'source' => WWW_ROOT,
             'cache' => WWW_ROOT . 'cache_img/',
             'response' => new \ADmad\Glide\Responses\CakeResponseFactory(),
         ],
