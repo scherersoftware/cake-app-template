@@ -32,7 +32,7 @@ use App\Model\Entity\User;
                 <td><?= h($user->firstname) ?></td>
                 <td><?= h($user->lastname) ?></td>
                 <td><?= h($user->email) ?></td>
-                <td><?= Status::getDescription($user->status) ?></td>
+                <td><?= $this->Utils->statusLabel($user->status) ?></td>
                 <td><?= User::getTypeDescription($user->role) ?></td>
                 <td class="actions">
                     <?= $this->CkTools->viewButton($user) ?>

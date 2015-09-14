@@ -13,7 +13,7 @@
         <dd><?= h($user->id) ?></dd>
                     
         <dt><?= __('user.status') ?></dt>
-        <dd><?= h($user->status) ?></dd>
+        <dd><?= $this->Utils->statusLabel($user->status) ?></dd>
                     
         <dt><?= __('user.role') ?></dt>
         <dd><?= h($user->role) ?></dd>
