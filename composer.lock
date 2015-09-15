@@ -1717,12 +1717,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-cms.git",
-                "reference": "2b60b2a1126bfa2563dfde56b1a8e5545b882fcc"
+                "reference": "a48b12474c911c47edee08db255034b2ffa295b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-cms/zipball/2b60b2a1126bfa2563dfde56b1a8e5545b882fcc",
-                "reference": "2b60b2a1126bfa2563dfde56b1a8e5545b882fcc",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cms/zipball/a48b12474c911c47edee08db255034b2ffa295b3",
+                "reference": "a48b12474c911c47edee08db255034b2ffa295b3",
                 "shasum": ""
             },
             "require": {
@@ -1747,7 +1747,7 @@
                 "MIT"
             ],
             "description": "Block-based Content Management System for CakePHP 3",
-            "time": "2015-09-15 06:32:42"
+            "time": "2015-09-15 07:33:30"
         },
         {
             "name": "seld/cli-prompt",
