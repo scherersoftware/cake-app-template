@@ -1,5 +1,69 @@
 <?php
 return [
+    'cms_blocks' => [
+        [
+            'id' => '01dab545-cd82-427e-a1d5-9763cb2ca7cb',
+            'cms_row_id' => '7a8dc8ff-c3bb-4116-a2ab-440b45de775b',
+            'status' => 'active',
+            'column_index' => 1,
+            'position' => 1,
+            'widget' => 'Cms.Html',
+            'block_data' => [
+                'html' => 'Hello',
+            ],
+            'created' => '2015-09-15 07:29:35',
+            'modified' => '2015-09-15 07:29:45'
+        ],
+        [
+            'id' => '1cf60b5a-84ff-4404-a6ee-299b37033f56',
+            'cms_row_id' => '7a8dc8ff-c3bb-4116-a2ab-440b45de775b',
+            'status' => 'active',
+            'column_index' => 2,
+            'position' => 1,
+            'widget' => 'Cms.TinyMce',
+            'block_data' => [
+                'html' => '<p><strong>World</strong></p>',
+            ],
+            'created' => '2015-09-15 07:29:52',
+            'modified' => '2015-09-15 07:30:11'
+        ],
+        [
+            'id' => '66ea9935-6f1c-423a-9ab5-c2e2e4c54a3e',
+            'cms_row_id' => '7a8dc8ff-c3bb-4116-a2ab-440b45de775b',
+            'status' => 'active',
+            'column_index' => 3,
+            'position' => 1,
+            'widget' => 'Cms.Html',
+            'block_data' => [
+                'html' => '!',
+            ],
+            'created' => '2015-09-15 07:30:21',
+            'modified' => '2015-09-15 07:30:28'
+        ],
+
+    ],
+    'cms_pages' => [
+        [
+            'id' => '71650c0c-9ce6-4faa-9f8e-f7475e1a1e88',
+            'slug' => 'demo/content/cms-page',
+            'name' => 'CMS Demo Page',
+            'status' => 'active',
+            'created' => '2015-09-15 07:29:23',
+            'modified' => '2015-09-15 07:29:23'
+        ],
+
+    ],
+    'cms_rows' => [
+        [
+            'id' => '7a8dc8ff-c3bb-4116-a2ab-440b45de775b',
+            'cms_page_id' => '71650c0c-9ce6-4faa-9f8e-f7475e1a1e88',
+            'layout' => '4-4-4',
+            'position' => 1,
+            'created' => '2015-09-15 07:29:29',
+            'modified' => '2015-09-15 07:29:29'
+        ],
+
+    ],
     'i18n' => [
         [
             'id' => 1,

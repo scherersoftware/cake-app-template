@@ -18,6 +18,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
 
@@ -51,6 +52,8 @@ Router::scope('/', function ($routes) {
 
     $routes->connect('/admin', ['plugin' => 'Admin', 'controller' => 'Dashboard', 'action' => 'index']);
     $routes->connect('/admin/login', ['plugin' => 'Admin', 'controller' => 'Login', 'action' => 'login']);
+
+    $routes->connect('/:slug', Configure::read('Cms.Frontend.renderAction'), ['routeClass' => 'Cms.SlugRoute']);
 
     /**
      * Connect catchall routes for all controllers.

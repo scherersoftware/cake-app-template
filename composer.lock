@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2ce7e1c2ef29106c3aeadb584c20db7f",
+    "hash": "aa3f46d08d38afd7e6ad7edb480ed4ab",
     "packages": [
         {
             "name": "admad/cakephp-glide",
@@ -1712,6 +1712,44 @@
             "time": "2015-09-11 15:44:41"
         },
         {
+            "name": "scherersoftware/cake-cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scherersoftware/cake-cms.git",
+                "reference": "2b60b2a1126bfa2563dfde56b1a8e5545b882fcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cms/zipball/2b60b2a1126bfa2563dfde56b1a8e5545b882fcc",
+                "reference": "2b60b2a1126bfa2563dfde56b1a8e5545b882fcc",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*",
+                "codekanzlei/cake-cktools": "*",
+                "codekanzlei/cake-frontend-bridge": "*"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "~3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Cms"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cms\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Block-based Content Management System for CakePHP 3",
+            "time": "2015-09-15 06:32:42"
+        },
+        {
             "name": "seld/cli-prompt",
             "version": "1.0.0",
             "source": {
@@ -2764,16 +2802,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
+                "reference": "6f1447a60f068c89d345ceee32025a51dd630f1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/6f1447a60f068c89d345ceee32025a51dd630f1c",
+                "reference": "6f1447a60f068c89d345ceee32025a51dd630f1c",
                 "shasum": ""
             },
             "require": {
@@ -2809,7 +2847,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-08-16 08:51:00"
+            "time": "2015-09-14 18:56:12"
         },
         {
             "name": "phpunit/phpunit",
@@ -3555,6 +3593,7 @@
         "codekanzlei/cake-notifications": 20,
         "codekanzlei/cake-model-history": 20,
         "codekanzlei/cake-bootstrap3": 20,
+        "scherersoftware/cake-cms": 20,
         "cakephp/cakephp-codesniffer": 20,
         "markstory/mini-asset": 20,
         "markstory/asset_compress": 20,

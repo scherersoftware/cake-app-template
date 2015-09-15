@@ -180,6 +180,7 @@ Plugin::load('ListFilter', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('Notifications', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('ModelHistory', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('Cms', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('Queue');

@@ -19,6 +19,9 @@ $config = [
         ],
         'Api.Users' => [
             'authenticate'
+        ],
+        'Cms.CmsPages' => [
+            'show'
         ]
     ],
     'auth_actions' => [
@@ -52,6 +55,15 @@ $config = [
             '*' => [User::ROLE_ADMIN]
         ],
         'CkTools.Moxiemanager' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Cms.CmsPages' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Cms.CmsRows' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Cms.CmsBlocks' => [
             '*' => [User::ROLE_ADMIN]
         ]
     ]

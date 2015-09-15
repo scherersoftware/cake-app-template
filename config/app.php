@@ -375,5 +375,13 @@ return [
             'Cache-Control' => 'max-age=31536000, public',
             'Expires' => true
         ]
+    ],
+    'Cms' => [
+        'Administration' => [
+            'layout' => 'Admin.default',
+            'helpers' => [
+                'CkTools.Menu'
+            ]
+        ]
     ]
 ];

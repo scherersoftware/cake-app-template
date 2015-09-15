@@ -4,6 +4,10 @@
 
 <?= $this->Glide->image('/files/cakephp_hero.png', ['h' => 50]) ?>
 
+<h2>CMS Demo Page</h2>
+
+<?= $this->Html->link('Click me', '/demo/content/cms-page') ?>
+
 <h2>FrontendBridge</h2>
 
 <p>See webroot/js/app/controllers/home/index_controller.js for explanations</p>

@@ -27,6 +27,21 @@ $config = [
                 'controller' => 'NotificationContents',
                 'action' => 'index'
             ]
-        ]
+        ],
+        'cms' => [
+            'title' => __d('cms', 'cms.name'),
+            'icon' => 'file-text-o',
+            'children' => [
+                'pages' => [
+                    'title' => __d('cms', 'cms_pages.index.title'),
+                    'icon' => 'file-text',
+                    'url' => [
+                        'plugin' => 'Cms',
+                        'controller' => 'CmsPages',
+                        'action' => 'index'
+                    ],
+                ]
+            ]
+        ],
     ]
 ];
