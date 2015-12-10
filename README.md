@@ -29,3 +29,4 @@ For the Admin Plugin we have a custom Bootstrap LESS file (same system as for th
 - schema shell & data seeding
 - custom font awesome
 - list used third-party libraries
+- cake monitor

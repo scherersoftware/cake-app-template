@@ -185,6 +185,7 @@ Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('Queue');
 Plugin::load('Api', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('Monitor', ['bootstrap' => true, 'routes' => true]);
 
 Configure::write('AssetCompress.rawMode', false);
 if (ENVIRONMENT === Environments::DEVELOPMENT) {
