@@ -225,8 +225,9 @@ function dlog()
  * Connect middleware/dispatcher filters.
  */
 DispatcherFactory::add('Asset');
-DispatcherFactory::add('Routing');
+DispatcherFactory::add('Cms.WidgetAsset');
 DispatcherFactory::add('ADmad/Glide.Glide', ['for' => '/images']);
+DispatcherFactory::add('Routing');
 DispatcherFactory::add('ControllerFactory');
 
 /**
