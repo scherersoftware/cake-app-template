@@ -21,12 +21,6 @@ $config = [
         ]
     ],
     'auth_actions' => [
-        'Home' => [
-            'view' => [
-                User::ROLE_ADMIN,
-                User::ROLE_USER
-            ]
-        ],
         'Admin.Dashboard' => [
             '*' => [User::ROLE_ADMIN]
         ],
@@ -61,6 +55,9 @@ $config = [
         ],
         'Cms.CmsBlocks' => [
             '*' => [User::ROLE_ADMIN]
+        ],
+        'Api.Users' => [
+            'current' => [User::ROLE_ADMIN]
         ]
     ]
 ];
