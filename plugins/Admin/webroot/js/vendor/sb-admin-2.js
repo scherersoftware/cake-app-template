@@ -27,10 +27,11 @@ $(function() {
     });
 
     var url = window.location;
-    var element = $('ul.nav a').filter(function() {
-        return this.href == url || url.href.indexOf(this.href) == 0;
-    }).addClass('active').parent().parent().addClass('in').parent();
-    if (element.is('li')) {
-        element.addClass('active');
-    }
+    // Instead of using this build in function we use a custom MenuHelper
+    // var element = $('ul.nav a').filter(function() {
+    //     return this.href == url || url.href.indexOf(this.href) == 0;
+    // }).addClass('active').parent().parent().addClass('in').parent();
+    // if (element.is('li')) {
+    //     element.addClass('active');
+    // }
 });
