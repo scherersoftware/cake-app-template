@@ -104,6 +104,11 @@ class AppController extends Controller
         }
 
         $this->_apiTokenAuthentication();
+        if (!$this->AuthUtils->loggedIn() && $userId = $this->AuthUtils->checkRememberMeCookie()) {
+            $this->loadModel('Users');
+            $user = $this->Users->get($userId)->toArray();
+            $this->Auth->setUser($user);
+        }
         $this->FrontendBridge->setJson('locale', 'de');
         parent::beforeFilter($event);
     }
