@@ -20,7 +20,7 @@ Frontend.AppController = Frontend.Controller.extend({
         }
 
         if (!this.getVar('isMobile')) {
-            //$('.selectize').selectize();
+            $('.selectize').selectize();
         }
 
         $('form.blockui-on-submit').submit(function(e) {
@@ -42,7 +42,9 @@ Frontend.AppController = Frontend.Controller.extend({
         if (this.getVar('isAjax')) {
             return;
         }
-        $('#side-menu').metisMenu();
+        if ($('#side-menu').length) {
+            $('#side-menu').metisMenu();
+        }
         $(window).bind("load resize", function() {
             topOffset = 50;
             width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
