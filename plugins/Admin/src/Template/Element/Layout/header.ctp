@@ -6,17 +6,19 @@
         <span class="icon-bar"></span>
     </button>
     <?php
-    echo $this->Html->link('CakePHP App Template - Administration', [
-        'controller' => 'Dashboard',
-        'action' => 'index',
-        'plugin' => 'Admin'
-    ], [
-        'class' => 'navbar-brand'
-    ]);
+        $title = 'CakePHP App Template';
+        echo $this->Html->link($title, [
+            'controller' => 'Home',
+            'action' => 'index',
+            'plugin' => null
+        ], [
+            'title' => $title,
+            'escape' => false,
+            'class' => 'navbar-brand'
+        ]);
     ?>
-    <div class="clearfix"></div>
 </div>
-<ul class="nav navbar-top-links navbar-right">
+<ul class="nav navbar-right top-nav">
     <?php if(isset($this->Auth) && $this->Auth->user() !== null) : ?>
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
