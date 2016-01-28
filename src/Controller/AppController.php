@@ -79,7 +79,7 @@ class AppController extends Controller
             'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
             'loginRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'index'],
             'logoutRedirect' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
-            'authError' => 'Sie sind nicht berechtigt diese Seite zu öffnen',
+            'authError' => __('auht.not_allowed'),
             'flash' => [
                 'params' => [
                     'class' => 'alert alert-warning'

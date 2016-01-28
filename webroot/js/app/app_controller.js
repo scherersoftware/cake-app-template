@@ -20,7 +20,7 @@ Frontend.AppController = Frontend.Controller.extend({
         }
 
         if (!this.getVar('isMobile')) {
-            $('.selectize').selectize();
+            //$('.selectize').selectize();
         }
 
         $('form.blockui-on-submit').submit(function(e) {

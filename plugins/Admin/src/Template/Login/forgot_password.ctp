@@ -1,8 +1,10 @@
-<div class="container" style="margin-top: 50px">
+<div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h4 class="form-header text-center"><?= __('login.forgot_password') ?></h4>
+        <div class="col-md-4 col-md-offset-4">
             <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><?= __('login.forgot_password') ?></h3>
+                </div>
                 <div class="panel-body">
                     <p>
                         <?= __('restore_password_text') ?>

@@ -1,16 +1,13 @@
-<?php
-$this->layout = 'Admin.plain';
-
-?>
-
-<div class="container" style="margin-top: 50px">
+<div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <h4 class="form-header text-center"><?= __('login.please_login') ?></h4>
             <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><?= __('login.please_login') ?></h3>
+                </div>
                 <div class="panel-body">
-                    <fieldset>
-                        <?php
+                <fieldset>
+                    <?php
                         echo $this->Form->create($user, [
                             'novalidate'
                         ]);
@@ -31,20 +28,11 @@ $this->layout = 'Admin.plain';
                             'class' => 'btn btn-lg btn-primary btn-block'
                         ]);
                         echo $this->Form->end();
-                        ?>
-                    </fieldset>
-                    <br>
-                    <?= $this->Html->link(__('login.forgot_password'), ['plugin' => false, 'action' => 'forgot-password']) ?>
-                    <p>
-                        <span>Email: john.doe@example.com</span>
-                        <br>
-                        <span>Password: password</span>
-                    </p>
-                </div>
+                    ?>
+                </fieldset>
+                <br>
+                <?= $this->Html->link(__('login.forgot_password'), ['plugin' => 'admin', 'controller' => 'login', 'action' => 'forgot-password']) ?>
             </div>
         </div>
     </div>
 </div>
-
-
-

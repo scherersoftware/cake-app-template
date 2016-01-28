@@ -7,15 +7,11 @@ $config = [
     ],
     'public_actions' => [
         'Home' => '*',
-        'Login' => [
+        'Admin.Login' => [
             'login',
             'logout',
             'forgotPassword',
             'restorePassword'
-        ],
-        'Admin.Login' => [
-            'login',
-            'logout'
         ],
         'Api.Users' => [
             'authenticate'
