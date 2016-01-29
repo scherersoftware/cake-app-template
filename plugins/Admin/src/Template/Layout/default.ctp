@@ -11,7 +11,7 @@
         </nav>
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12 class="<?php echo $this->FrontendBridge->getMainContentClasses() ?>"">
+                <div class="col-lg-12 <?php echo $this->FrontendBridge->getMainContentClasses() ?>">
                     <?= $this->Flash->render() ?>
                     <?= $this->Flash->render('auth') ?>
                     <?= $this->fetch('content') ?>
