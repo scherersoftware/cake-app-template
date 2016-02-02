@@ -18,6 +18,9 @@ $config = [
         ],
         'Cms.CmsPages' => [
             'show'
+        ],
+        'CkTools.Moxiemanager' => [
+            'api'
         ]
     ],
     'auth_actions' => [
@@ -42,9 +45,6 @@ $config = [
         'Attachments.Attachments' => [
             'preview' => '*',
             'download' => '*',
-            '*' => [User::ROLE_ADMIN]
-        ],
-        'CkTools.Moxiemanager' => [
             '*' => [User::ROLE_ADMIN]
         ],
         'Cms.CmsPages' => [
