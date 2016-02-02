@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-09-09 11:46+0000\n"
+"POT-Creation-Date: 2016-02-02 16:06+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,43 +14,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:47
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:34
-msgid "login.login_retries_lock"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:50
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:37
-msgid "login.wrong_credentials"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:63
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:51
-msgid "login.you_have_been_logged_out"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:83
-msgid "login.unknown_email"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:89
-msgid "login.restore_password_email_sent"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:100
-msgid "login.email_required"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:125
-msgid "login.restore_password_link_invalid"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:133
-msgid "login.new_password_saved"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:136
-msgid "login.invalid_password"
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/AppController.php:82
+msgid "auht.not_allowed"
 msgstr ""
 
 #: /Users/cleptric/Sites/cakephp-app-template/Lib/Status.php:21
@@ -85,61 +50,6 @@ msgstr ""
 msgid "validation.user.password_confirmation_must_match"
 msgstr ""
 
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Element/Layout/header.ctp:22
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:35
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:30
-msgid "login.login"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Element/Layout/header.ctp:27
-msgid "login.logut"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:4
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:43
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:37
-msgid "login.forgot_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:8
-msgid "restore_password_text"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:17
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:23
-msgid "login.email"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:21
-msgid "login.restore_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:10
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:9
-msgid "login.please_login"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:28
-msgid "login.password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:33
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:28
-msgid "login.login_for_two_weeks"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:5;17
-msgid "login.new_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:23
-msgid "login.confirm_new_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:27
-msgid "login.set_password"
-msgstr ""
-
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:5
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Dashboard/index.ctp:5
 msgid "dashboard.index.title"
@@ -151,6 +61,42 @@ msgstr ""
 
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:23
 msgid "notifications.index.title"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:48
+msgid "login.login_retries_lock"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:51
+msgid "login.wrong_credentials"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:64
+msgid "login.you_have_been_logged_out"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:85
+msgid "login.unknown_email"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:92
+msgid "login.restore_password_email_sent"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:100
+msgid "login.email_required"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:126
+msgid "login.restore_password_link_invalid"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:134
+msgid "login.new_password_saved"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:137
+msgid "login.invalid_password"
 msgstr ""
 
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/ProfileController.php:23
@@ -193,7 +139,28 @@ msgstr ""
 msgid "forms.data_not_deleted"
 msgstr ""
 
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:18
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:6
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:34
+msgid "login.forgot_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:10
+msgid "restore_password_text"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:19
+msgid "login.email"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:23
+msgid "login.restore_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:6
+msgid "login.please_login"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:15
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:17
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:20
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:23
@@ -201,9 +168,29 @@ msgstr ""
 msgid "user.email"
 msgstr ""
 
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:23
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:20
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:21
 msgid "user.password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:25
+msgid "login.login_for_two_weeks"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:27
+msgid "login.login"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/restore_password.ctp:5;17
+msgid "login.new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/restore_password.ctp:23
+msgid "login.confirm_new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/restore_password.ctp:27
+msgid "login.set_password"
 msgstr ""
 
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:5
