@@ -1,0 +1,6 @@
+/* Overwrites for default styles from sb-admin and bootsrap */
+
+/* menu */
+.dropdown {
+    float: right;
+}

@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 
+use Admin\Controller\AppController;
 use App\Lib\Status;
 use App\Model\Entity\User;
 use Cake\Event\EventManager;

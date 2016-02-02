@@ -8,9 +8,9 @@
     <?php
         $title = 'CakePHP App Template';
         echo $this->Html->link($title, [
-            'controller' => 'Home',
+            'controller' => 'Dashboard',
             'action' => 'index',
-            'plugin' => null
+            'plugin' => 'Admin'
         ], [
             'title' => $title,
             'escape' => false,

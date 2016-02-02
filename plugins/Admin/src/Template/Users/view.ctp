@@ -48,7 +48,7 @@
         ]);
     ?>
     <?=
-        $this->ModelHistory->modelHistoryArea($user);
+        $this->ModelHistory->modelHistoryArea($user, ['commentBox' => true]);
     ?>
 </div>
 

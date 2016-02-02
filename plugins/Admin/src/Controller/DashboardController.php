@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 
+use Admin\Controller\AppController;
 use Cake\ORM\TableRegistry;
 
 class DashboardController extends AppController
