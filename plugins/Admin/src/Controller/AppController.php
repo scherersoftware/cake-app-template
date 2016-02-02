@@ -42,5 +42,6 @@ class AppController extends BaseController
         if (!$this->Auth->user()) {
             $this->Auth->config('authError', false);
         }
+        parent::beforeFilter($event);
     }
 }
