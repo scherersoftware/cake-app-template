@@ -32,4 +32,15 @@ class AppController extends BaseController
             ]
         ]);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function beforeFilter(\Cake\Event\Event $event)
+    {
+        //don't show auth error if user isn't logged in
+        if (!$this->Auth->user()) {
+            $this->Auth->config('authError', false);
+        }
+    }
 }
