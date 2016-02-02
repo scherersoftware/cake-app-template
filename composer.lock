@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c3dc686660d7577ebf6f4dec679f2958",
-    "content-hash": "5c865dd4f9457336b8952cd381ba660c",
+    "hash": "8d167339e1eda1c2d14019e9e13624f7",
+    "content-hash": "8b7ed1f7439edfc8071ff3770fef06ed",
     "packages": [
         {
             "name": "admad/cakephp-glide",
@@ -184,25 +184,24 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.1.8",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "72db96b63022e5b9bcafe960c039315d128f9649"
+                "reference": "d272cc93627e098a7d781138ca850d91e54e6f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/72db96b63022e5b9bcafe960c039315d128f9649",
-                "reference": "72db96b63022e5b9bcafe960c039315d128f9649",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/d272cc93627e098a7d781138ca850d91e54e6f62",
+                "reference": "d272cc93627e098a7d781138ca850d91e54e6f62",
                 "shasum": ""
             },
             "require": {
                 "aura/intl": "1.1.*",
+                "cakephp/chronos": "*",
                 "ext-intl": "*",
                 "ext-mbstring": "*",
-                "ircmaxell/password-compat": "1.0.*",
-                "nesbot/carbon": "1.13.*",
-                "php": ">=5.4.16",
+                "php": ">=5.5.9",
                 "psr/log": "1.0"
             },
             "replace": {
@@ -250,7 +249,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-01-24 02:07:15"
+            "time": "2016-01-31 02:56:35"
         },
         {
             "name": "cakephp/cakephp-codesniffer",
@@ -290,6 +289,61 @@
                 "framework"
             ],
             "time": "2015-11-29 16:32:42"
+        },
+        {
+            "name": "cakephp/chronos",
+            "version": "0.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/chronos.git",
+                "reference": "f29f6e746954850a9c2b7862f15b591271b0a9e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/f29f6e746954850a9c2b7862f15b591271b0a9e0",
+                "reference": "f29f6e746954850a9c2b7862f15b591271b0a9e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.10"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "cakephp/cakephp-codesniffer": "dev-master",
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Chronos\\": "src"
+                },
+                "files": [
+                    "src/carbon_compat.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Nesbitt",
+                    "email": "brian@nesbot.com",
+                    "homepage": "http://nesbot.com"
+                },
+                {
+                    "name": "The CakePHP Team",
+                    "homepage": "http://cakephp.org"
+                }
+            ],
+            "description": "A simple API extension for DateTime.",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "date",
+                "datetime",
+                "time"
+            ],
+            "time": "2016-01-02 12:05:36"
         },
         {
             "name": "cakephp/migrations",
@@ -496,12 +550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-cktools.git",
-                "reference": "8efd8be58131733be914dc3de030bae6c627f5b0"
+                "reference": "78fa3de75974ae85efe0e52b14aa1006e3e901e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/8efd8be58131733be914dc3de030bae6c627f5b0",
-                "reference": "8efd8be58131733be914dc3de030bae6c627f5b0",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/78fa3de75974ae85efe0e52b14aa1006e3e901e0",
+                "reference": "78fa3de75974ae85efe0e52b14aa1006e3e901e0",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +580,7 @@
                 "MIT"
             ],
             "description": "codekanzlei Tools & Utilities collection",
-            "time": "2016-01-21 10:39:32"
+            "time": "2016-01-28 16:04:10"
         },
         {
             "name": "codekanzlei/cake-frontend-bridge",
@@ -534,12 +588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-frontend-bridge.git",
-                "reference": "07a85d1743075c821eec4da9435093c9204c7fcc"
+                "reference": "6f72dd813d34918b81b6df1eb8571b3c3c9fea5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/07a85d1743075c821eec4da9435093c9204c7fcc",
-                "reference": "07a85d1743075c821eec4da9435093c9204c7fcc",
+                "url": "https://api.github.com/repos/scherersoftware/cake-frontend-bridge/zipball/6f72dd813d34918b81b6df1eb8571b3c3c9fea5b",
+                "reference": "6f72dd813d34918b81b6df1eb8571b3c3c9fea5b",
                 "shasum": ""
             },
             "require": {
@@ -562,7 +616,7 @@
                 "MIT"
             ],
             "description": "Frontend Bridge CakePHP 3",
-            "time": "2015-10-28 14:05:08"
+            "time": "2016-02-01 22:21:42"
         },
         {
             "name": "codekanzlei/cake-list-filter",
@@ -606,12 +660,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-model-history.git",
-                "reference": "214bd3939659570491179e369c1f73203070aba1"
+                "reference": "b792d7b75e48cf43900c280c02eb90c4f8943eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/214bd3939659570491179e369c1f73203070aba1",
-                "reference": "214bd3939659570491179e369c1f73203070aba1",
+                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/b792d7b75e48cf43900c280c02eb90c4f8943eee",
+                "reference": "b792d7b75e48cf43900c280c02eb90c4f8943eee",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +689,7 @@
                 "MIT"
             ],
             "description": "ModelHistory plugin for CakePHP3",
-            "time": "2016-01-12 14:42:02"
+            "time": "2016-02-02 13:11:18"
         },
         {
             "name": "codekanzlei/cake-notifications",
@@ -788,12 +842,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
-                "reference": "0c82f70071fce164fcc2b38ed5cf2c54465b69e1"
+                "reference": "a5a90446180bed2079e2efd4a6eb8cfa862817af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/0c82f70071fce164fcc2b38ed5cf2c54465b69e1",
-                "reference": "0c82f70071fce164fcc2b38ed5cf2c54465b69e1",
+                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/a5a90446180bed2079e2efd4a6eb8cfa862817af",
+                "reference": "a5a90446180bed2079e2efd4a6eb8cfa862817af",
                 "shasum": ""
             },
             "require": {
@@ -831,7 +885,7 @@
                 "cakephp",
                 "twitter"
             ],
-            "time": "2016-01-23 04:46:58"
+            "time": "2016-01-30 18:40:24"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -952,48 +1006,6 @@
                 "watermark"
             ],
             "time": "2016-01-02 19:15:13"
-        },
-        {
-            "name": "ircmaxell/password-compat",
-            "version": "v1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ircmaxell/password_compat.git",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/password.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
-                    "homepage": "http://blog.ircmaxell.com"
-                }
-            ],
-            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
-            "homepage": "https://github.com/ircmaxell/password_compat",
-            "keywords": [
-                "hashing",
-                "password"
-            ],
-            "time": "2014-11-20 16:49:30"
         },
         {
             "name": "league/climate",
@@ -1254,12 +1266,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markstory/mini-asset.git",
-                "reference": "9d73eb57f79198e7b1d306d28e39da5d43e4e2e9"
+                "reference": "d69fd1aa3cce8887944f36759970ea0359bdff10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markstory/mini-asset/zipball/9d73eb57f79198e7b1d306d28e39da5d43e4e2e9",
-                "reference": "9d73eb57f79198e7b1d306d28e39da5d43e4e2e9",
+                "url": "https://api.github.com/repos/markstory/mini-asset/zipball/d69fd1aa3cce8887944f36759970ea0359bdff10",
+                "reference": "d69fd1aa3cce8887944f36759970ea0359bdff10",
                 "shasum": ""
             },
             "require": {
@@ -1306,7 +1318,7 @@
                 "minifier",
                 "sass"
             ],
-            "time": "2016-01-27 03:38:24"
+            "time": "2016-01-30 00:42:03"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -1404,52 +1416,6 @@
                 "utf-8"
             ],
             "time": "2015-03-01 10:27:49"
-        },
-        {
-            "name": "nesbot/carbon",
-            "version": "1.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5cb6e71055f7b0b57956b73d324cc4de31278f42",
-                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Carbon": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Brian Nesbitt",
-                    "email": "brian@nesbot.com",
-                    "homepage": "http://nesbot.com"
-                }
-            ],
-            "description": "A simple API extension for DateTime.",
-            "homepage": "https://github.com/briannesbitt/Carbon",
-            "keywords": [
-                "date",
-                "datetime",
-                "time"
-            ],
-            "time": "2014-09-26 02:52:02"
         },
         {
             "name": "oyejorge/less.php",
@@ -2282,21 +2248,21 @@
     "packages-dev": [
         {
             "name": "cakephp/bake",
-            "version": "1.1.3",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "c53b197cfa9587b3cbf92d3b82044828c7d02590"
+                "reference": "d60995d4d80498dd3285f076dffd3c9059cda160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/c53b197cfa9587b3cbf92d3b82044828c7d02590",
-                "reference": "c53b197cfa9587b3cbf92d3b82044828c7d02590",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/d60995d4d80498dd3285f076dffd3c9059cda160",
+                "reference": "d60995d4d80498dd3285f076dffd3c9059cda160",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp": ">=3.1.0",
-                "php": ">=5.4"
+                "cakephp/cakephp": ">=3.2.0",
+                "php": ">=5.5.9"
             },
             "require-dev": {
                 "cakephp/cakephp-codesniffer": "dev-master",
@@ -2324,7 +2290,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-12-29 19:03:50"
+            "time": "2016-02-02 02:35:00"
         },
         {
             "name": "cakephp/debug_kit",
@@ -3050,16 +3016,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.1.4",
+            "version": "5.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "676c25c4ac563869572c878fdaf3db21587f5f3b"
+                "reference": "d0f7ae467dcbe7a6ad050540c9d1d39a7aefff26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/676c25c4ac563869572c878fdaf3db21587f5f3b",
-                "reference": "676c25c4ac563869572c878fdaf3db21587f5f3b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d0f7ae467dcbe7a6ad050540c9d1d39a7aefff26",
+                "reference": "d0f7ae467dcbe7a6ad050540c9d1d39a7aefff26",
                 "shasum": ""
             },
             "require": {
@@ -3120,7 +3086,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-01-11 10:11:10"
+            "time": "2016-02-02 09:03:29"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
