@@ -4,55 +4,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-09-09 11:46+0000\n"
-"PO-Revision-Date: 2015-09-14 15:25+0100\n"
+"POT-Creation-Date: 2016-02-02 16:06+0000\n"
+"PO-Revision-Date: 2016-02-02 17:12+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team:  <EMAIL@ADDRESS>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.6\n"
-"Language: en_US\n"
 
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:47
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:34
-msgid "login.login_retries_lock"
-msgstr "Your account is blocked because you tried to login too often"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:50
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:37
-msgid "login.wrong_credentials"
-msgstr "Wrong email or password"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:63
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:51
-msgid "login.you_have_been_logged_out"
-msgstr "You have been logged out"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:83
-msgid "login.unknown_email"
-msgstr "This email doesn't exists"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:89
-msgid "login.restore_password_email_sent"
-msgstr "An email with a link to restore you password has been send to you"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:100
-msgid "login.email_required"
-msgstr "Please enter an email"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:125
-msgid "login.restore_password_link_invalid"
-msgstr "This link has been expired"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:133
-msgid "login.new_password_saved"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Controller/LoginController.php:136
-msgid "login.invalid_password"
-msgstr ""
+#: /Users/cleptric/Sites/cakephp-app-template/Controller/AppController.php:82
+msgid "auht.not_allowed"
+msgstr "Your are not allowed to access this"
 
 #: /Users/cleptric/Sites/cakephp-app-template/Lib/Status.php:21
 msgid "status.active"
@@ -86,61 +51,6 @@ msgstr "The password must be 8 characters long"
 msgid "validation.user.password_confirmation_must_match"
 msgstr "Both passwords must be equal "
 
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Element/Layout/header.ctp:22
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:35
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:30
-msgid "login.login"
-msgstr "Login"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Element/Layout/header.ctp:27
-msgid "login.logut"
-msgstr "logout"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:4
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:43
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:37
-msgid "login.forgot_password"
-msgstr "Forgot password?"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:8
-msgid "restore_password_text"
-msgstr "Enter your email to receive an email to restore your password"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:17
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:23
-msgid "login.email"
-msgstr "email"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/forgot_password.ctp:21
-msgid "login.restore_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:10
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:9
-msgid "login.please_login"
-msgstr "Please login"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:28
-msgid "login.password"
-msgstr "password"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/login.ctp:33
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:28
-msgid "login.login_for_two_weeks"
-msgstr "Keep logged in for two weeks"
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:5;17
-msgid "login.new_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:23
-msgid "login.confirm_new_password"
-msgstr ""
-
-#: /Users/cleptric/Sites/cakephp-app-template/Template/Login/restore_password.ctp:27
-msgid "login.set_password"
-msgstr ""
-
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:5
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Dashboard/index.ctp:5
 msgid "dashboard.index.title"
@@ -153,6 +63,42 @@ msgstr "User-Management"
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/menu.php:23
 msgid "notifications.index.title"
 msgstr "Notifications-Management"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:48
+msgid "login.login_retries_lock"
+msgstr "Your account is blocked because you tried to login too often"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:51
+msgid "login.wrong_credentials"
+msgstr "Wrong email or password"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:64
+msgid "login.you_have_been_logged_out"
+msgstr "You have been logged out"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:85
+msgid "login.unknown_email"
+msgstr "This email doesn't exists"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:92
+msgid "login.restore_password_email_sent"
+msgstr "An email with a link to restore you password has been send to you"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:100
+msgid "login.email_required"
+msgstr "Please enter an email"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:126
+msgid "login.restore_password_link_invalid"
+msgstr "This link has been expired"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:134
+msgid "login.new_password_saved"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/LoginController.php:137
+msgid "login.invalid_password"
+msgstr ""
 
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Controller/ProfileController.php:23
 msgid "profile.password_change_success"
@@ -194,7 +140,28 @@ msgstr "You data has been deleted"
 msgid "forms.data_not_deleted"
 msgstr "Your data hasn't been deleted"
 
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:18
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:6
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:34
+msgid "login.forgot_password"
+msgstr "Forgot password?"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:10
+msgid "restore_password_text"
+msgstr "Enter your email to receive an email to restore your password"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:19
+msgid "login.email"
+msgstr "email"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/forgot_password.ctp:23
+msgid "login.restore_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:6
+msgid "login.please_login"
+msgstr "Please login"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:15
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:17
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:20
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/index.ctp:23
@@ -202,10 +169,30 @@ msgstr "Your data hasn't been deleted"
 msgid "user.email"
 msgstr "email"
 
-#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:23
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:20
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/form.ctp:21
 msgid "user.password"
 msgstr "password"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:25
+msgid "login.login_for_two_weeks"
+msgstr "Keep logged in for two weeks"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/login.ctp:27
+msgid "login.login"
+msgstr "Login"
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/restore_password.ctp:5;17
+msgid "login.new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/restore_password.ctp:23
+msgid "login.confirm_new_password"
+msgstr ""
+
+#: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Login/restore_password.ctp:27
+msgid "login.set_password"
+msgstr ""
 
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Profile/index.ctp:5
 msgid "profile.index.title"
@@ -298,3 +285,9 @@ msgstr "created"
 #: /Users/cleptric/Sites/cakephp-app-template/Admin/Template/Users/view.ctp:39
 msgid "modified"
 msgstr "modified"
+
+#~ msgid "login.logut"
+#~ msgstr "logout"
+
+#~ msgid "login.password"
+#~ msgstr "password"
