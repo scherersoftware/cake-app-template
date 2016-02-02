@@ -21,7 +21,7 @@ use App\Model\Entity\User;
         <dd><?= User::getTypeDescription($user->role) ?>
 
         <dt><?= __('user.status') ?></dt>
-        <dd><?= Status::getDescription($user->status) ?>
+        <dd><?= $this->Utils->statusLabel($user->status) ?>
     </dl>
 </fieldset>
 
