@@ -1,2 +1,4 @@
 /vendor/*
+/logs/*
 config/schema/DBSchema.mwb.bak
+.DS_Store
