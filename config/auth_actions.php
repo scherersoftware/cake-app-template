@@ -14,7 +14,8 @@ $config = [
             'restorePassword'
         ],
         'Api.Users' => [
-            'authenticate'
+            'authenticate',
+            'logout'
         ],
         'Cms.CmsPages' => [
             'show'
