@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a4013145ab33184aa2ec158147463f5",
-    "content-hash": "d23d2143c012d98febcd3d97045cca03",
+    "hash": "b9c739a8064bf8d61908268561266ae2",
+    "content-hash": "30c378a5a65a94d30bf0d9f65b3b421d",
     "packages": [
         {
             "name": "admad/cakephp-glide",
@@ -444,12 +444,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-attachments.git",
-                "reference": "d43b1d60c17488286e2c6c297adbaca0b14c4b07"
+                "reference": "f2f6d51365358f5a39e839917e4ab9bd8a407c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/d43b1d60c17488286e2c6c297adbaca0b14c4b07",
-                "reference": "d43b1d60c17488286e2c6c297adbaca0b14c4b07",
+                "url": "https://api.github.com/repos/scherersoftware/cake-attachments/zipball/f2f6d51365358f5a39e839917e4ab9bd8a407c9e",
+                "reference": "f2f6d51365358f5a39e839917e4ab9bd8a407c9e",
                 "shasum": ""
             },
             "require": {
@@ -471,7 +471,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "File Attachments plugin for CakePHP",
-            "time": "2016-03-18 13:45:46"
+            "time": "2016-03-18 14:22:26"
         },
         {
             "name": "codekanzlei/cake-auth-actions",
@@ -663,12 +663,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-model-history.git",
-                "reference": "2d4c24b0ff31ba9c1a133df5516259c16f109093"
+                "reference": "9a44ff2517696363f6204cefa7ebe614ee739602"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/2d4c24b0ff31ba9c1a133df5516259c16f109093",
-                "reference": "2d4c24b0ff31ba9c1a133df5516259c16f109093",
+                "url": "https://api.github.com/repos/scherersoftware/cake-model-history/zipball/9a44ff2517696363f6204cefa7ebe614ee739602",
+                "reference": "9a44ff2517696363f6204cefa7ebe614ee739602",
                 "shasum": ""
             },
             "require": {
@@ -692,7 +692,7 @@
                 "MIT"
             ],
             "description": "ModelHistory plugin for CakePHP3",
-            "time": "2016-02-24 08:55:04"
+            "time": "2016-03-18 15:14:27"
         },
         {
             "name": "codekanzlei/cake-notifications",
@@ -1009,6 +1009,56 @@
                 "watermark"
             ],
             "time": "2016-02-26 18:18:19"
+        },
+        {
+            "name": "jdorn/sql-formatter",
+            "version": "v1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2014-01-12 16:20:24"
         },
         {
             "name": "league/climate",
@@ -1814,12 +1864,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-wiki.git",
-                "reference": "58a4b2ffc124f49602128b8bde9d973b5148fd0a"
+                "reference": "ecfb9169e3d2f6b12c721279230be991b8b01eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-wiki/zipball/58a4b2ffc124f49602128b8bde9d973b5148fd0a",
-                "reference": "58a4b2ffc124f49602128b8bde9d973b5148fd0a",
+                "url": "https://api.github.com/repos/scherersoftware/cake-wiki/zipball/ecfb9169e3d2f6b12c721279230be991b8b01eda",
+                "reference": "ecfb9169e3d2f6b12c721279230be991b8b01eda",
                 "shasum": ""
             },
             "require": {
@@ -1841,7 +1891,7 @@
                 "MIT"
             ],
             "description": "Simple Wiki for CakePHP apps",
-            "time": "2016-03-18 13:44:48"
+            "time": "2016-03-18 15:18:30"
         },
         {
             "name": "seld/cli-prompt",
@@ -2612,56 +2662,6 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
-        },
-        {
-            "name": "jdorn/sql-formatter",
-            "version": "v1.2.17",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
-                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "lib"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Dorn",
-                    "email": "jeremy@jeremydorn.com",
-                    "homepage": "http://jeremydorn.com/"
-                }
-            ],
-            "description": "a PHP SQL highlighting library",
-            "homepage": "https://github.com/jdorn/sql-formatter/",
-            "keywords": [
-                "highlight",
-                "sql"
-            ],
-            "time": "2014-01-12 16:20:24"
         },
         {
             "name": "myclabs/deep-copy",
