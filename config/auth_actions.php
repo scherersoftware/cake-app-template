@@ -22,7 +22,8 @@ $config = [
         ],
         'CkTools.Moxiemanager' => [
             'api'
-        ]
+        ],
+        'Scherersoftware/Wiki.WikiPages' => '*'
     ],
     'auth_actions' => [
         'Admin.Dashboard' => [

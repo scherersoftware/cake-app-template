@@ -27,7 +27,8 @@
         "friendsofcake/bootstrap-ui": "dev-master",
         "oyejorge/less.php": "*",
         "dereuromark/cakephp-queue": "dev-master",
-        "admad/cakephp-glide": "dev-master"
+        "admad/cakephp-glide": "dev-master",
+        "scherersoftware/cake-wiki": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
