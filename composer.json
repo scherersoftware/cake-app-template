@@ -28,7 +28,8 @@
         "oyejorge/less.php": "*",
         "dereuromark/cakephp-queue": "dev-master",
         "admad/cakephp-glide": "dev-master",
-        "scherersoftware/cake-wiki": "dev-master"
+        "scherersoftware/cake-wiki": "dev-master",
+        "jdorn/sql-formatter": "^1.2"
     },
     "require-dev": {
         "psy/psysh": "@stable",

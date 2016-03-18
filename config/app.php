@@ -390,6 +390,14 @@ return [
             'helpers' => [
                 'CkTools.Menu'
             ]
+        ],
+        'useModelHistory' => true,
+        'modelHistoryOptions' => [
+            'userNameFields' => [
+                'firstname' => 'Users.firstname',
+                'lastname' => 'Users.lastname',
+                'id' => 'Users.id'
+            ]
         ]
     ],
     'CakeMonitor' => [
