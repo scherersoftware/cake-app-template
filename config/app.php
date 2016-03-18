@@ -384,6 +384,14 @@ return [
             ]
         ]
     ],
+    'Wiki' => [
+        'Administration' => [
+            'layout' => 'Admin.default',
+            'helpers' => [
+                'CkTools.Menu'
+            ]
+        ]
+    ],
     'CakeMonitor' => [
         'accessToken' => '<VERY_SECURE_TOKEN>',
         'projectName' => '<PROJECT_NAME>'

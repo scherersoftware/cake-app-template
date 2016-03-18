@@ -43,5 +43,14 @@ $config = [
                 ]
             ]
         ],
+        'wiki' => [
+            'title' => __d('wiki', 'wiki_pages.index'),
+            'icon' => 'file-text-o',
+            'url' => [
+                'plugin' => 'Scherersoftware/Wiki',
+                'controller' => 'WikiPages',
+                'action' => 'index'
+            ],
+        ],
     ]
 ];
