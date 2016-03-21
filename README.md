@@ -1,7 +1,8 @@
 # CakePHP 3 cakephp-app-template
+
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
+
 Pre-Configured Application Template for CakePHP 3
-
-
 
 ## i18n Extract Command
 
