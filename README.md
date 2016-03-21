@@ -1,4 +1,4 @@
-# cakephp-app-template
+# CakePHP 3 cakephp-app-template
 Pre-Configured Application Template for CakePHP 3
 
 
