@@ -184,7 +184,8 @@ Plugin::load('Cms', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('Queue');
-Plugin::load('Api', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('Api/V1', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('Api/V2', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Monitor', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Scherersoftware/Wiki', ['bootstrap' => true, 'routes' => true]);
 

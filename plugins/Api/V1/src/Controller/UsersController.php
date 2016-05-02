@@ -1,7 +1,7 @@
 <?php
-namespace Api\Controller;
+namespace Api\V1\Controller;
 
-use CkTools\Lib\ApiReturnCode;
+use CakeApiBaselayer\Lib\ApiReturnCode;
 
 class UsersController extends AppController
 {

@@ -1,9 +1,9 @@
 <?php
-namespace Api\Controller;
+namespace Api\V1\Controller;
 
-use App\Controller\AppController as BaseController;
+use CakeApiBaselayer\Controller\AppController as BaseController;
+use CakeApiBaselayer\Lib\ApiReturnCode;
 use Cake\Routing\Router;
-use CkTools\Lib\ApiReturnCode;
 
 class AppController extends BaseController
 {
@@ -14,9 +14,6 @@ class AppController extends BaseController
      */
     public function initialize()
     {
-        $this->loadModel('Users');
-        $this->loadComponent('RequestHandler');
-        $this->loadComponent('CkTools.Api');
         parent::initialize();
     }
 
@@ -25,7 +22,6 @@ class AppController extends BaseController
      */
     public function beforeFilter(\Cake\Event\Event $event)
     {
-        $this->Api->setup();
         parent::beforeFilter($event);
     }
 
