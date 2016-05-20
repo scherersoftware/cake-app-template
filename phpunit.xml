@@ -9,6 +9,8 @@
 	<php>
 		<ini name="memory_limit" value="-1"/>
 		<ini name="apc.enable_cli" value="1"/>
+        <env name="APP_ENVIRONMENT" value="development_test"/>
+        <env name="MAIN_DOMAIN" value="cakephp-app-template.dev"/>
 	</php>
 
 	<!-- Add any additional test suites you want to run here -->
