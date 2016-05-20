@@ -38,7 +38,7 @@ if (!extension_loaded('intl')) {
     trigger_error('You must enable the intl extension to use CakePHP.', E_USER_ERROR);
 }
 
-use App\Lib\Environments;
+use App\Lib\Environment;
 use Cake\Cache\Cache;
 use Cake\Console\ConsoleErrorHandler;
 use Cake\Core\App;
@@ -55,7 +55,8 @@ use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
 
-define('ENVIRONMENT', Environments::detect());
+Environment::loadVariables();
+define('ENVIRONMENT', Environment::detect());
 
 /**
  * Read configuration file and inject configuration into various
@@ -70,6 +71,13 @@ try {
     Configure::load('app', 'default', false);
 } catch (\Exception $e) {
     die($e->getMessage() . "\n");
+}
+
+if (isset($_GET['cache']) && $_GET['cache'] == 'disable') {
+    Cache::disable();
+}
+if (ENVIRONMENT === Environment::DEVELOPMENT || ENVIRONMENT === Environment::DEVELOPMENT_TEST || env('HTTP_CKDBG') == 1) {
+    Configure::write('debug', true);
 }
 
 // Load an environment local configuration file.
@@ -105,23 +113,13 @@ ini_set('intl.default_locale', 'en_US');
 /**
  * Register application error and exception handlers.
  */
+Plugin::load('Monitor', ['bootstrap' => true, 'routes' => true]); # important for loading and merging the configuration
+
 $isCli = php_sapi_name() === 'cli';
 if ($isCli) {
-    (new ConsoleErrorHandler(Configure::read('Error')))->register();
+    (new \Monitor\Error\ConsoleErrorHandler(Configure::consume('Error')))->register();
 } else {
-    (new ErrorHandler(Configure::read('Error')))->register();
-}
-
-if (isset($_GET['cache']) && $_GET['cache'] == 'disable') {
-    Cache::disable();
-}
-
-Configure::write('debug', false);
-if (ENVIRONMENT === Environments::DEVELOPMENT) {
-    Configure::write('debug', true);
-}
-if (env('HTTP_CKDBG') == 1) {
-    Configure::write('debug', true);
+    (new \Monitor\Error\ErrorHandler(Configure::consume('Error')))->register();
 }
 
 // Include the CLI bootstrap overrides.
@@ -186,12 +184,11 @@ Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('Queue');
 Plugin::load('Api/V1', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Api/V2', ['bootstrap' => true, 'routes' => true]);
-Plugin::load('Monitor', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Scherersoftware/Wiki', ['bootstrap' => true, 'routes' => true]);
 
 
 Configure::write('AssetCompress.rawMode', false);
-if (ENVIRONMENT === Environments::DEVELOPMENT) {
+if (ENVIRONMENT === Environment::DEVELOPMENT) {
     Configure::write('AssetCompress.rawMode', true);
 }
 

@@ -30,7 +30,8 @@
         "dereuromark/cakephp-queue": "dev-master",
         "admad/cakephp-glide": "dev-master",
         "scherersoftware/cake-wiki": "dev-master",
-        "jdorn/sql-formatter": "^1.2"
+        "jdorn/sql-formatter": "^1.2",
+        "josegonzalez/dotenv": "^2.0"
     },
     "require-dev": {
         "psy/psysh": "@stable",

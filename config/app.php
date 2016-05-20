@@ -1,4 +1,6 @@
 <?php
+use App\Lib\Environment;
+
 return [
     /**
      * Debug Level:
@@ -171,13 +173,12 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => 'Mail',
-            // The following keys are used in SMTP transports
-            'host' => 'localhost',
-            'port' => 25,
+            'className' => 'Smtp',
+            'host' => Environment::read('EMAIL_HOST'),
+            'port' => Environment::read('EMAIL_PORT'),
             'timeout' => 30,
-            'username' => 'user',
-            'password' => 'secret',
+            'username' => Environment::read('EMAIL_USERNAME'),
+            'password' => Environment::read('EMAIL_PASSWORD'),
             'client' => null,
             'tls' => null,
         ],
@@ -195,7 +196,7 @@ return [
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => 'you@localhost',
+            'from' => Environment::read('EMAIL_FROM'),
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],
@@ -212,16 +213,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => env('MYSQL_HOST') ? env('MYSQL_HOST') : 'localhost',
-            /**
-             * CakePHP will use the default DB port based on the driver selected
-             * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
-             * the following line and set the port accordingly
-             */
+            'host' => Environment::read('MYSQL_HOST'),
+            /*
+            * CakePHP will use the default DB port based on the driver selected
+            * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
+            * the following line and set the port accordingly
+            */
             //'port' => 'nonstandard_port_number',
-            'username' => env('MYSQL_USER') ? env('MYSQL_USER') : 'root',
-            'password' => env('MYSQL_PASSWORD'),
-            'database' => 'cakephp_app_template',
+            'username' => Environment::read('MYSQL_USERNAME'),
+            'password' => Environment::read('MYSQL_PASSWORD'),
+            'database' => Environment::read('MYSQL_DATABASE'),
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
@@ -324,7 +325,12 @@ return [
      */
     'Session' => [
         'defaults' => 'php',
-        'cookie' => 'CAKEPHPAPPTEMPLATE'
+        'cookie' => Environment::read('SESSION_COOKIE_NAME') ?: 'fallback',
+        'timeout' => 4320,
+        'ini' => [
+            'session.cookie_lifetime' => (24 * 60 * 60),
+            'session.cookie_domain' => '.' . Environment::read('MAIN_DOMAIN')
+        ]
     ],
     'Attachments' => [
         'tmpUploadsPath' => ROOT . '/tmp/uploads/',
@@ -402,6 +408,21 @@ return [
     ],
     'CakeMonitor' => [
         'accessToken' => '<VERY_SECURE_TOKEN>',
-        'projectName' => '<PROJECT_NAME>'
+        'projectName' => '<PROJECT_NAME>',
+        'Sentry' => [
+            'enabled' => ENVIRONMENT === Environment::PRODUCTION, # Boolean value to enable sentry error reporting
+            'dsn' => '', # The DSN for the Sentry project. You find this on the Sentry Project Settings Page.
+            'sanitizeFields' => [ # An array of fields, whose values will be removed before sending
+                                  # data to sentry. Be sure to include fields like session cookie names, 
+                                  # sensitive environment variables and other private configuration.
+                'password',
+                'rememberuser',
+                'auth_token',
+                'api_token',
+                'mysql_password',
+                'email_password',
+                Environment::read('SESSION_COOKIE_NAME')
+            ]
+        ]
     ]
 ];
