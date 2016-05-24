@@ -23,6 +23,13 @@ For the Admin Plugin we have a custom Bootstrap LESS file (same system as for th
     lessc plugins/Admin/webroot/less/custom_bootstrap.less > plugins/Admin/webroot/css/bootstrap.custom.css
     lessc plugins/Admin/webroot/less/sb-admin-2/sb-admin-2.less > plugins/Admin/webroot/css/sb-admin-2.custom.css
 
+## Admin Backend
+
+The password to enter the admin backend under /admin/login is "asdfyxcv"
+
+## Environment Variables
+
+Copy `.env.default` and rename it to `.env`. Be sure that FULL_BASE_URL and MAIN_DOMAIN are set to your local domain.
 
 ## To Be Documented
 

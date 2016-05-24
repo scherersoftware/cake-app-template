@@ -103,7 +103,7 @@ here\'s the link to reset your password: {{reset_password_link}}'
             'firstname' => 'John',
             'lastname' => 'Doe',
             'email' => 'john.doe@example.com',
-            'password' => '$2y$10$XgjYA7WAtPyuDhJ3XyeiN.XkdUPXDES4EQ55yHOdxHbTbs2vYocVa',
+            'password' => '$2y$10$Im.6sVvfio4Z.9MK1ceTzOoNAnxuxirVEkGVcbgIWXUC/OJ0KIJHK',
             'failed_login_count' => 0,
             'failed_login_timestamp' => null,
             'api_token' => null,
