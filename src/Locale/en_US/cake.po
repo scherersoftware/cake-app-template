@@ -1,0 +1,297 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-05-27 10:56+0200\n"
+"PO-Revision-Date: 2016-05-27 10:57+0200\n"
+"Last-Translator: \n"
+"Language-Team: EMAIL@ADDRESS\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/Template/Error/error400.ctp:33
+#: /Users/flix/Sites/cf_media_reporting_tool/Template/Error/error500.ctp:35
+msgid "Error"
+msgstr "Error"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/Template/Error/error400.ctp:35
+msgid "The requested address %s was not found on this server."
+msgstr "The requested address %s was not found on this server."
+
+#: /Users/flix/Sites/cf_media_reporting_tool/Template/Error/error500.ctp:33
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Error/ExceptionRenderer.php:249
+msgid "An Internal Error Has Occurred."
+msgstr "An Internal Error Has Occurred."
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Controller/Component/AuthComponent.php:454
+msgid "You are not authorized to access that location."
+msgstr "You are not authorized to access that location."
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Controller/Component/CsrfComponent.php:154
+msgid "Missing CSRF token cookie"
+msgstr "Missing CSRF token cookie"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Controller/Component/CsrfComponent.php:158
+msgid "CSRF token mismatch."
+msgstr "CSRF token mismatch."
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Error/ExceptionRenderer.php:247
+msgid "Not Found"
+msgstr "Not Found"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/Number.php:89
+msgid "{0,number,#,###.##} KB"
+msgstr "{0,number,#,###.##} KB"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/Number.php:91
+msgid "{0,number,#,###.##} MB"
+msgstr "{0,number,#,###.##} MB"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/Number.php:93
+msgid "{0,number,#,###.##} GB"
+msgstr "{0,number,#,###.##} GB"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/Number.php:95
+msgid "{0,number,#,###.##} TB"
+msgstr "{0,number,#,###.##} TB"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/Number.php:87
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] "{0,number,integer} Byte"
+msgstr[1] "{0,number,integer} Bytes"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr "{0} from now"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "{0} ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:82
+msgid "{0} after"
+msgstr "{0} after"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:82
+msgid "{0} before"
+msgstr "{0} before"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:113
+msgid "just now"
+msgstr "just now"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:150
+msgid "about a second ago"
+msgstr "about a second ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:151
+msgid "about a minute ago"
+msgstr "about a minute ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:152
+msgid "about an hour ago"
+msgstr "about an hour ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:153;328
+msgid "about a day ago"
+msgstr "about a day ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:154;329
+msgid "about a week ago"
+msgstr "about a week ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:155;330
+msgid "about a month ago"
+msgstr "about a month ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:156;331
+msgid "about a year ago"
+msgstr "about a year ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:166
+msgid "in about a second"
+msgstr "in about a second"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:167
+msgid "in about a minute"
+msgstr "in about a minute"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:168
+msgid "in about an hour"
+msgstr "in about an hour"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:169;341
+msgid "in about a day"
+msgstr "in about a day"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:170;342
+msgid "in about a week"
+msgstr "in about a week"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:171;343
+msgid "in about a month"
+msgstr "in about a month"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:172;344
+msgid "in about a year"
+msgstr "in about a year"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:300
+msgid "today"
+msgstr "today"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:364
+msgid "%s ago"
+msgstr "%s ago"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:365
+msgid "on %s"
+msgstr "on %s"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:47;125;312
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} year"
+msgstr[1] "{0} years"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:51;128;315
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} months"
+msgstr[1] "{0} months"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:57;131;318
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} week"
+msgstr[1] "{0} weeks"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:59;134;321
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} day"
+msgstr[1] "{0} days"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:64;137
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} hour"
+msgstr[1] "{0} hours"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:68;140
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} minute"
+msgstr[1] "{0} minutes"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/I18n/RelativeTimeFormatter.php:72;143
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} second"
+msgstr[1] "{0} seconds"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Network/Response.php:1417
+msgid "The requested file was not found"
+msgstr "The requested file was not found"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/ORM/RulesChecker.php:50
+msgid "This value is already in use"
+msgstr "This value is already in use"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/ORM/RulesChecker.php:84
+msgid "This value does not exist"
+msgstr "This value does not exist"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/ORM/RulesChecker.php:107
+msgid "The count does not match {0}{1}"
+msgstr "The count does not match {0}{1}"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Utility/Text.php:744
+msgid "and"
+msgstr "and"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Validation/Validator.php:103
+msgid "This field is required"
+msgstr "This field is required"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr "This field cannot be left empty"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/Validation/Validator.php:1501
+msgid "The provided value is invalid"
+msgstr "The provided value is invalid"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Helper/FormHelper.php:946
+msgid "New %s"
+msgstr "New %s"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Helper/FormHelper.php:949
+msgid "Edit %s"
+msgstr "Edit %s"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Helper/FormHelper.php:1760
+msgid "Submit"
+msgstr "Submit"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Helper/HtmlHelper.php:770
+msgid "Home"
+msgstr "Home"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:530
+msgid "January"
+msgstr "January"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:531
+msgid "February"
+msgstr "February"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:532
+msgid "March"
+msgstr "March"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:533
+msgid "April"
+msgstr "April"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:534
+msgid "May"
+msgstr "May"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:535
+msgid "June"
+msgstr "June"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:536
+msgid "July"
+msgstr "July"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:537
+msgid "August"
+msgstr "August"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:538
+msgid "September"
+msgstr "September"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:539
+msgid "October"
+msgstr "October"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:540
+msgid "November"
+msgstr "November"
+
+#: /Users/flix/Sites/cf_media_reporting_tool/vendor/cakephp/cakephp/View/Widget/DateTimeWidget.php:541
+msgid "December"
+msgstr "December"
+
+#~ msgid "An Internal Error Has Occurred"
+#~ msgstr "An Internal Error Has Occurred"
