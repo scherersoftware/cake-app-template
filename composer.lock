@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b6369239862b9e32b9bbd2623edc8aa",
-    "content-hash": "7a0d3b0a5b5b7fa4280ee05cd7db0fcf",
+    "hash": "94c90a78801be003d589533ab77b5a05",
+    "content-hash": "e23348bbbab3f4b4a297005090343320",
     "packages": [
         {
             "name": "admad/cakephp-glide",
@@ -184,16 +184,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.2.9",
+            "version": "3.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "b98b14de4fea83f20023143ab7712fcfda23da8e"
+                "reference": "f8f48386f77f3638c4686d9f7ec6ee3b5ac52a68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/b98b14de4fea83f20023143ab7712fcfda23da8e",
-                "reference": "b98b14de4fea83f20023143ab7712fcfda23da8e",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/f8f48386f77f3638c4686d9f7ec6ee3b5ac52a68",
+                "reference": "f8f48386f77f3638c4686d9f7ec6ee3b5ac52a68",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-05-17 02:15:10"
+            "time": "2016-05-26 08:22:04"
         },
         {
             "name": "cakephp/cakephp-codesniffer",
@@ -350,16 +350,16 @@
         },
         {
             "name": "cakephp/migrations",
-            "version": "1.5.8",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/migrations.git",
-                "reference": "113deb01d3791d4632f6505ab4517c78075d4189"
+                "reference": "0d96079a92e8a77858c8bf103feae3a93005f415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/migrations/zipball/113deb01d3791d4632f6505ab4517c78075d4189",
-                "reference": "113deb01d3791d4632f6505ab4517c78075d4189",
+                "url": "https://api.github.com/repos/cakephp/migrations/zipball/0d96079a92e8a77858c8bf103feae3a93005f415",
+                "reference": "0d96079a92e8a77858c8bf103feae3a93005f415",
                 "shasum": ""
             },
             "require": {
@@ -396,7 +396,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2016-05-06 21:13:07"
+            "time": "2016-05-23 20:34:05"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -516,12 +516,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-bootstrap3.git",
-                "reference": "551d8d3a74ca471674c83b83ac0b19e9afc1afd5"
+                "reference": "3231674c82202406fc20b7308a2d7ef6cace13ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/551d8d3a74ca471674c83b83ac0b19e9afc1afd5",
-                "reference": "551d8d3a74ca471674c83b83ac0b19e9afc1afd5",
+                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/3231674c82202406fc20b7308a2d7ef6cace13ad",
+                "reference": "3231674c82202406fc20b7308a2d7ef6cace13ad",
                 "shasum": ""
             },
             "require": {
@@ -546,7 +546,7 @@
                 "MIT"
             ],
             "description": "Bootstrap 3 Plugin for CakePHP 3",
-            "time": "2015-08-28 13:57:16"
+            "time": "2016-05-20 20:17:46"
         },
         {
             "name": "codekanzlei/cake-cktools",
@@ -3150,16 +3150,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "2431befdd451fac43fbcde94d1a92fb3b8b68f86"
+                "reference": "4862dac433cbdb4438b593fa7f79e07559ba157e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2431befdd451fac43fbcde94d1a92fb3b8b68f86",
-                "reference": "2431befdd451fac43fbcde94d1a92fb3b8b68f86",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/4862dac433cbdb4438b593fa7f79e07559ba157e",
+                "reference": "4862dac433cbdb4438b593fa7f79e07559ba157e",
                 "shasum": ""
             },
             "require": {
@@ -3209,7 +3209,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-04-08 08:14:53"
+            "time": "2016-05-25 06:48:21"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4300,7 +4300,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4.16"
+        "php": ">=5.5.9"
     },
     "platform-dev": []
 }
