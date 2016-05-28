@@ -21,24 +21,22 @@
         "scherersoftware/cake-monitor": "dev-master",
         "scherersoftware/cake-cms": "dev-master",
         "scherersoftware/cake-api-baselayer": "dev-master",
+        "scherersoftware/cake-wiki": "dev-master",
         "cakephp/cakephp-codesniffer": "dev-master",
-        "markstory/mini-asset": "dev-master",
-        "markstory/asset_compress": "3.0.x-dev",
+        "markstory/asset_compress": "3.0.*",
         "tedivm/jshrink": "~1.0",
         "friendsofcake/bootstrap-ui": "dev-master",
         "oyejorge/less.php": "*",
-        "dereuromark/cakephp-queue": "dev-master",
         "admad/cakephp-glide": "dev-master",
-        "scherersoftware/cake-wiki": "dev-master",
         "jdorn/sql-formatter": "^1.2",
-        "josegonzalez/dotenv": "^2.0"
+        "josegonzalez/dotenv": "^2.0",
+        "josegonzalez/cakephp-queuesadilla": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
         "cakephp/debug_kit": "~3.2",
         "cakephp/bake": "~1.1",
-        "phpunit/phpunit": "*",
-        "scherersoftware/cakephp-schema": "dev-master"
+        "phpunit/phpunit": "*"
     },
     "autoload": {
         "psr-4": {

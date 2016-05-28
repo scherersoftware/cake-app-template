@@ -284,6 +284,13 @@ return [
      * Configures logging options
      */
     'Log' => [
+        'default' => [
+            'className' => 'Cake\Log\Engine\FileLog',
+            'path' => LOGS,
+            'file' => 'default',
+            'levels' => [],
+            'url' => env('LOG_DEBUG_URL', null),
+        ],
         'debug' => [
             'className' => 'Cake\Log\Engine\FileLog',
             'path' => LOGS,
@@ -438,6 +445,15 @@ return [
                 'email_password',
                 Environment::read('SESSION_COOKIE_NAME')
             ]
+        ]
+    ],
+    'Queuesadilla' => [
+        'default' => [
+            'engine' => 'josegonzalez\Queuesadilla\Engine\MysqlEngine',
+            'database' => Environment::read('MYSQL_DATABASE'),
+            'host' => Environment::read('MYSQL_HOST'),
+            'user' => Environment::read('MYSQL_USERNAME'),
+            'pass' => Environment::read('MYSQL_PASSWORD')
         ]
     ]
 ];

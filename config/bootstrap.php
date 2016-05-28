@@ -69,6 +69,7 @@ use Cake\Network\Request;
 use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+use Josegonzalez\CakeQueuesadilla\Queue\Queue;
 
 Environment::loadVariables();
 define('ENVIRONMENT', Environment::detect());
@@ -202,12 +203,12 @@ Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('ModelHistory', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('Cms', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('AssetCompress', ['bootstrap' => true]);
-Plugin::load('Schema', ['bootstrap' => true]);
-Plugin::load('Queue');
 Plugin::load('Api/V1', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Api/V2', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Scherersoftware/Wiki', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('Josegonzalez/CakeQueuesadilla');
 
+Queue::config(Configure::consume('Queuesadilla'));
 
 Configure::write('AssetCompress.rawMode', false);
 if (ENVIRONMENT === Environment::DEVELOPMENT) {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "94c90a78801be003d589533ab77b5a05",
-    "content-hash": "e23348bbbab3f4b4a297005090343320",
+    "hash": "7dbc2bb9817a713504fc64e0d7b46291",
+    "content-hash": "726d38aaedc839a240a44a46822c2f90",
     "packages": [
         {
             "name": "admad/cakephp-glide",
@@ -516,12 +516,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-bootstrap3.git",
-                "reference": "3231674c82202406fc20b7308a2d7ef6cace13ad"
+                "reference": "5064276a5a358d148a23e7e34b693e487edac4e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/3231674c82202406fc20b7308a2d7ef6cace13ad",
-                "reference": "3231674c82202406fc20b7308a2d7ef6cace13ad",
+                "url": "https://api.github.com/repos/scherersoftware/cake-bootstrap3/zipball/5064276a5a358d148a23e7e34b693e487edac4e6",
+                "reference": "5064276a5a358d148a23e7e34b693e487edac4e6",
                 "shasum": ""
             },
             "require": {
@@ -546,7 +546,7 @@
                 "MIT"
             ],
             "description": "Bootstrap 3 Plugin for CakePHP 3",
-            "time": "2016-05-20 20:17:46"
+            "time": "2016-05-27 10:54:24"
         },
         {
             "name": "codekanzlei/cake-cktools",
@@ -554,12 +554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-cktools.git",
-                "reference": "7b754bc92c711b5eb5b1b0819aeea2a35215da6d"
+                "reference": "baeee466caa5e6ec3296650dbe0c892c5a16ba28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/7b754bc92c711b5eb5b1b0819aeea2a35215da6d",
-                "reference": "7b754bc92c711b5eb5b1b0819aeea2a35215da6d",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/baeee466caa5e6ec3296650dbe0c892c5a16ba28",
+                "reference": "baeee466caa5e6ec3296650dbe0c892c5a16ba28",
                 "shasum": ""
             },
             "require": {
@@ -584,7 +584,7 @@
                 "MIT"
             ],
             "description": "codekanzlei Tools & Utilities collection",
-            "time": "2016-05-18 09:15:28"
+            "time": "2016-05-28 00:22:47"
         },
         {
             "name": "codekanzlei/cake-frontend-bridge",
@@ -732,65 +732,6 @@
             ],
             "description": "CakePHP3 Notifications Plugin",
             "time": "2016-03-21 14:04:54"
-        },
-        {
-            "name": "dereuromark/cakephp-queue",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dereuromark/cakephp-queue.git",
-                "reference": "d740b30fba1db495d8bf5df16f1ae03d74ef618a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dereuromark/cakephp-queue/zipball/d740b30fba1db495d8bf5df16f1ae03d74ef618a",
-                "reference": "d740b30fba1db495d8bf5df16f1ae03d74ef618a",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/cakephp": "~3.1",
-                "php": ">=5.4.16"
-            },
-            "require-dev": {
-                "cakephp/migrations": "~1.0",
-                "dereuromark/cakephp-tools": "dev-master",
-                "fig-r/psr2r-sniffer": "dev-master"
-            },
-            "suggest": {
-                "dereuromark/cakephp-tools": "For the Email lib and QueueEmailTask. Or write your own task here. Also for admin backend."
-            },
-            "type": "cakephp-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Queue\\": "src",
-                    "Queue\\Test\\Fixture\\": "tests\\Fixture"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Yell",
-                    "homepage": "https://github.com/davidyell",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Mark Scherer",
-                    "homepage": "http://www.dereuromark.de",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "The Queue plugin for CakePHP provides deferred task execution.",
-            "homepage": "http://github.com/dereuromark/cakephp-queue",
-            "keywords": [
-                "background",
-                "cakephp",
-                "deferred tasks",
-                "queue"
-            ],
-            "time": "2016-05-06 19:36:05"
         },
         {
             "name": "facebook/php-sdk-v4",
@@ -1063,6 +1004,58 @@
             "time": "2014-01-12 16:20:24"
         },
         {
+            "name": "josegonzalez/cakephp-queuesadilla",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/josegonzalez/cakephp-queuesadilla.git",
+                "reference": "4499af80bef3d2315e1469cd0c1939265e4ffd61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/josegonzalez/cakephp-queuesadilla/zipball/4499af80bef3d2315e1469cd0c1939265e4ffd61",
+                "reference": "4499af80bef3d2315e1469cd0c1939265e4ffd61",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "josegonzalez/queuesadilla": "0.0.*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "dev-master",
+                "phpunit/phpunit": "4.1.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Josegonzalez\\CakeQueuesadilla\\": "src",
+                    "Josegonzalez\\CakeQueuesadilla\\Test\\Fixture\\": "tests\\Fixture"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jose Diaz-Gonzalez",
+                    "email": "cakephp+queuesadilla@josediazgonzalez.com",
+                    "homepage": "http://josediazgonzalez.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "CakePHP wrapper plugin around Queuesadilla, a generic php queueing backend",
+            "homepage": "https://github.com/josegonzalez/cakephp-queuesadilla",
+            "keywords": [
+                "cakephp",
+                "queue",
+                "shell"
+            ],
+            "time": "2016-05-13 15:53:43"
+        },
+        {
             "name": "josegonzalez/dotenv",
             "version": "2.0.0",
             "source": {
@@ -1115,6 +1108,67 @@
             "time": "2016-01-07 16:07:20"
         },
         {
+            "name": "josegonzalez/queuesadilla",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/josegonzalez/php-queuesadilla.git",
+                "reference": "81f212b47d79159260ddbbdd740977a8df6289d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/josegonzalez/php-queuesadilla/zipball/81f212b47d79159260ddbbdd740977a8df6289d1",
+                "reference": "81f212b47d79159260ddbbdd740977a8df6289d1",
+                "shasum": ""
+            },
+            "require": {
+                "league/event": "~1.0",
+                "php": ">=5.5.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "iron-io/iron_mq": "dev-master",
+                "monolog/monolog": "*",
+                "pda/pheanstalk": "dev-master",
+                "phpmd/phpmd": "dev-master",
+                "satooshi/php-coveralls": "dev-master",
+                "squizlabs/php_codesniffer": "dev-master"
+            },
+            "suggest": {
+                "iron-io/iron_mq": "Adds support for IronMQ background workers",
+                "monolog/monolog": "Adds support for logging",
+                "pda/pheanstalk": "Adds support for Beanstalk background workers"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "josegonzalez\\Queuesadilla": [
+                        "src",
+                        "tests"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jose Diaz-Gonzalez",
+                    "email": "queuesadilla@josegonzalez.com",
+                    "homepage": "http://josediazgonzalez.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Queue background jobs to any backend system",
+            "homepage": "https://github.com/josegonzalez/php-queuesadilla",
+            "keywords": [
+                "php",
+                "queue"
+            ],
+            "time": "2016-02-29 20:41:59"
+        },
+        {
             "name": "league/climate",
             "version": "3.2.1",
             "source": {
@@ -1164,6 +1218,51 @@
                 "terminal"
             ],
             "time": "2016-04-04 20:24:59"
+        },
+        {
+            "name": "league/event",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/event.git",
+                "reference": "9d9bd9e086b3acad09ab03f5317d27511039d71c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/9d9bd9e086b3acad09ab03f5317d27511039d71c",
+                "reference": "9d9bd9e086b3acad09ab03f5317d27511039d71c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "1.0.*@dev",
+                "phpspec/phpspec": "2.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Event\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Event package",
+            "keywords": [
+                "emitter",
+                "event",
+                "listener"
+            ],
+            "time": "2014-10-11 16:18:15"
         },
         {
             "name": "league/flysystem",
@@ -1369,16 +1468,16 @@
         },
         {
             "name": "markstory/asset_compress",
-            "version": "3.0.x-dev",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markstory/asset_compress.git",
-                "reference": "ea18dc3f3e607e6dadf4e23c36bdbf51afa2272d"
+                "reference": "7e39db392f4c638ba9c20cb55b2b4a582b7e65a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markstory/asset_compress/zipball/ea18dc3f3e607e6dadf4e23c36bdbf51afa2272d",
-                "reference": "ea18dc3f3e607e6dadf4e23c36bdbf51afa2272d",
+                "url": "https://api.github.com/repos/markstory/asset_compress/zipball/7e39db392f4c638ba9c20cb55b2b4a582b7e65a8",
+                "reference": "7e39db392f4c638ba9c20cb55b2b4a582b7e65a8",
                 "shasum": ""
             },
             "require": {
@@ -1386,6 +1485,7 @@
                 "markstory/mini-asset": "*"
             },
             "require-dev": {
+                "cakephp/cakephp-codesniffer": "dev-master",
                 "phpunit/phpunit": "4.1.*"
             },
             "suggest": {
@@ -1422,11 +1522,11 @@
                 "minifier",
                 "sass"
             ],
-            "time": "2015-04-24 16:35:23"
+            "time": "2015-08-31 02:19:30"
         },
         {
             "name": "markstory/mini-asset",
-            "version": "dev-master",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markstory/mini-asset.git",
@@ -3150,16 +3250,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "3.3.2",
+            "version": "3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "4862dac433cbdb4438b593fa7f79e07559ba157e"
+                "reference": "44cd8e3930e431658d1a5de7d282d5cb37837fd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/4862dac433cbdb4438b593fa7f79e07559ba157e",
-                "reference": "4862dac433cbdb4438b593fa7f79e07559ba157e",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/44cd8e3930e431658d1a5de7d282d5cb37837fd5",
+                "reference": "44cd8e3930e431658d1a5de7d282d5cb37837fd5",
                 "shasum": ""
             },
             "require": {
@@ -3209,7 +3309,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-05-25 06:48:21"
+            "time": "2016-05-27 16:24:29"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3594,108 +3694,6 @@
                 "shell"
             ],
             "time": "2016-03-09 05:03:14"
-        },
-        {
-            "name": "riimu/kit-phpencoder",
-            "version": "v2.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Riimu/Kit-PHPEncoder.git",
-                "reference": "88ff39b305a7504fb5ebb14d6a01668766a35e1d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Riimu/Kit-PHPEncoder/zipball/88ff39b305a7504fb5ebb14d6a01668766a35e1d",
-                "reference": "88ff39b305a7504fb5ebb14d6a01668766a35e1d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "suggest": {
-                "ext-gmp": "To convert GMP numbers into PHP code"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Riimu\\Kit\\PHPEncoder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Riikka Kalliomäki",
-                    "email": "riikka.kalliomaki@gmail.com",
-                    "homepage": "http://riimu.net"
-                }
-            ],
-            "description": "Highly customizable alternative to var_export for PHP code generation",
-            "homepage": "http://kit.riimu.net",
-            "keywords": [
-                "code",
-                "encoder",
-                "export",
-                "generator",
-                "variable"
-            ],
-            "time": "2015-11-08 08:23:49"
-        },
-        {
-            "name": "scherersoftware/cakephp-schema",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/scherersoftware/cakephp-schema.git",
-                "reference": "2194e23313f88ab42e58b95ed470c0df3f6b1489"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cakephp-schema/zipball/2194e23313f88ab42e58b95ed470c0df3f6b1489",
-                "reference": "2194e23313f88ab42e58b95ed470c0df3f6b1489",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/cakephp": "~3.0",
-                "php": ">=5.4",
-                "riimu/kit-phpencoder": "2.*"
-            },
-            "require-dev": {
-                "cakephp/bake": "dev-master",
-                "phpunit/phpunit": "*"
-            },
-            "type": "cakephp-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Schema\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ladislav Gallay",
-                    "role": "Author"
-                },
-                {
-                    "name": "Robert Scherer",
-                    "role": "Author"
-                }
-            ],
-            "description": "Schema saving and loading from file for CakePHP 3.0",
-            "homepage": "https://github.com/scherersoftware/cakephp-schema",
-            "keywords": [
-                "cakephp",
-                "database",
-                "migrations",
-                "orm",
-                "schema"
-            ],
-            "time": "2016-05-18 09:06:08"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -4287,15 +4285,12 @@
         "scherersoftware/cake-monitor": 20,
         "scherersoftware/cake-cms": 20,
         "scherersoftware/cake-api-baselayer": 20,
-        "cakephp/cakephp-codesniffer": 20,
-        "markstory/mini-asset": 20,
-        "markstory/asset_compress": 20,
-        "friendsofcake/bootstrap-ui": 20,
-        "dereuromark/cakephp-queue": 20,
-        "admad/cakephp-glide": 20,
         "scherersoftware/cake-wiki": 20,
-        "psy/psysh": 0,
-        "scherersoftware/cakephp-schema": 20
+        "cakephp/cakephp-codesniffer": 20,
+        "friendsofcake/bootstrap-ui": 20,
+        "admad/cakephp-glide": 20,
+        "josegonzalez/cakephp-queuesadilla": 20,
+        "psy/psysh": 0
     },
     "prefer-stable": true,
     "prefer-lowest": false,
