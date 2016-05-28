@@ -434,9 +434,12 @@ return [
         'Sentry' => [
             'enabled' => ENVIRONMENT === Environment::PRODUCTION, # Boolean value to enable sentry error reporting
             'dsn' => '', # The DSN for the Sentry project. You find this on the Sentry Project Settings Page.
-            'sanitizeFields' => [ # An array of fields, whose values will be removed before sending
-                                  # data to sentry. Be sure to include fields like session cookie names, 
-                                  # sensitive environment variables and other private configuration.
+            /**
+             * An array of fields, whose values will be removed before sending
+             * data to sentry. Be sure to include fields like session cookie names,
+             * sensitive environment variables and other private configuration.
+             * */
+            'sanitizeFields' => [
                 'password',
                 'rememberuser',
                 'auth_token',

@@ -1,10 +1,27 @@
-# CakePHP 3 cakephp-app-template
+# CakePHP 3 App Template
 
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
 
 Pre-Configured Application Template for CakePHP 3
 
+## Installation
+
+- Run `composer install`
+- Create a database for the project
+- Copy `.env.default` and rename it to `.env`, then change your configuration accordingly. Be sure that FULL_BASE_URL and MAIN_DOMAIN are set to your local domain.
+- Create the database structure using `bin/cake migrations migrate`
+- Seed the database with demo data using `bin/cake migrations seed`
+
+You can now open the public home page, or log in to /admin using the following credentials:
+
+email: john.doe@example.com
+
+password: asdfyxcv
+
+
 ## i18n Extract Command
+
+Use this commmand to parse the project for translation strings and update the `default.pot` file.
 
     bin/cake i18n extract --paths=src/,plugins/,config/ --merge=no --extract-core=no --output src/Locale/ --overwrite
 
@@ -22,19 +39,3 @@ For the Admin Plugin we have a custom Bootstrap LESS file (same system as for th
 
     lessc plugins/Admin/webroot/less/custom_bootstrap.less > plugins/Admin/webroot/css/bootstrap.custom.css
     lessc plugins/Admin/webroot/less/sb-admin-2/sb-admin-2.less > plugins/Admin/webroot/css/sb-admin-2.custom.css
-
-## Admin Backend
-
-The password to enter the admin backend under /admin/login is "asdfyxcv"
-
-## Environment Variables
-
-Copy `.env.default` and rename it to `.env`. Be sure that FULL_BASE_URL and MAIN_DOMAIN are set to your local domain.
-
-## To Be Documented
-
-- DBSchema.mwb
-- schema shell & data seeding
-- custom font awesome
-- list used third-party libraries
-- cake monitor
