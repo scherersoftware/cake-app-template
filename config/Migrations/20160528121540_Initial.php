@@ -513,10 +513,11 @@ class Initial extends AbstractMigration
                 'limit' => null,
                 'null' => true,
             ])
-            ->addColumn('status', 'string', [
-                'default' => 'active',
-                'limit' => 255,
-                'null' => false
+            ->addColumn('status', 'integer', [
+                'default' => 1,
+                'limit' => 3,
+                'null' => false,
+                'signed' => false,
             ])
             ->addColumn('created', 'datetime', [
                 'default' => null,
