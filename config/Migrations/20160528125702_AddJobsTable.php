@@ -34,9 +34,14 @@ class AddJobsTable extends AbstractMigration
                 'null' => true,
             ])
             ->addColumn('locked', 'integer', [
-                'default' => null,
+                'default' => 0,
                 'limit' => 1,
                 'null' => false,
+            ])
+            ->addColumn('attempts', 'integer', [
+                'default' => null,
+                'limit' => 11,
+                'null' => true,
             ])
             ->addIndex(
                 [
