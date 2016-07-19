@@ -50,6 +50,7 @@ class UsersTable extends Table
                         return true;
                     }
                 }
+
                 return false;
             }
         ]);
@@ -123,6 +124,7 @@ class UsersTable extends Table
         $validator->add('current_password', 'custom', [
             'rule' => function ($value, $context) {
                 $user = $this->get($context['data']['id']);
+
                 return (new DefaultPasswordHasher)->check($value, $user->password);
             },
             'message' => __('validation.user.old_password_wrong')
@@ -174,6 +176,7 @@ class UsersTable extends Table
             if ($force) {
                 return true;
             }
+
             return $context['newRecord'] || !empty($context['data']['password']);
         };
         $validator
@@ -205,6 +208,7 @@ class UsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['email']));
+
         return $rules;
     }
 
@@ -218,6 +222,7 @@ class UsersTable extends Table
     {
         $user->failed_login_count = 0;
         $user->failed_login_timestamp = null;
+
         return $this->save($user);
     }
 
@@ -236,6 +241,7 @@ class UsersTable extends Table
                 return true;
             }
         }
+
         return false;
     }
 
@@ -290,8 +296,10 @@ class UsersTable extends Table
             $this->updateAll($expression, [
                 'email' => $requestData['email']
             ]);
+
             return true;
         }
+
         return false;
     }
 
@@ -311,8 +319,10 @@ class UsersTable extends Table
         if (empty($user->errors())) {
             $user->accessible('password', true);
             $user->password = $postData['new_password'];
+
             return $this->save($user);
         }
+
         return $user;
     }
 
@@ -333,6 +343,7 @@ class UsersTable extends Table
         ];
         $secretStr = implode('', $vars);
         $hash = \Cake\Utility\Security::hash($secretStr, 'sha512', true);
+
         return $hash;
     }
 }

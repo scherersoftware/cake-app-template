@@ -42,6 +42,7 @@ class Status
         foreach ($states as $state) {
             $group[$state] = self::getDescription($state);
         }
+
         return $group;
     }
 
@@ -60,6 +61,7 @@ class Status
         if (isset(self::$descriptions[$status])) {
             return self::$descriptions[$status];
         }
+
         return null;
     }
 }

@@ -43,6 +43,7 @@ class LoginController extends AppController
                     $this->AuthUtils->addRememberMeCookie($userData['id']);
                 }
                 $this->Auth->setUser($userData);
+
                 return $this->redirect($this->Auth->redirectUrl());
             } elseif ($this->Users->hasLoginRetriesLock($this->request->data)) {
                 $this->Flash->error(__('login.login_retries_lock'));
@@ -66,6 +67,7 @@ class LoginController extends AppController
             $this->request->session()->destroy();
         }
         $this->AuthUtils->destroyRememberMeCookie();
+
         return $this->redirect($this->Auth->logout());
     }
 
@@ -124,6 +126,7 @@ class LoginController extends AppController
 
                 if (!($hash === $userHash && $time->wasWithinLast($expire))) {
                     $this->Flash->error(__('login.restore_password_link_invalid'));
+
                     return $this->redirect(['action' => 'login']);
                 }
             }
@@ -132,6 +135,7 @@ class LoginController extends AppController
                 if (empty($this->Users->changePassword($user, $this->request->data)->errors())) {
                     $this->Users->resetLoginRetries($user);
                     $this->Flash->success(__('login.new_password_saved'));
+
                     return $this->redirect(['action' => 'login']);
                 } else {
                     $this->Flash->error(__('login.invalid_password'));

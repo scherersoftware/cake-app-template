@@ -24,6 +24,7 @@ class HomeController extends AppController
     public function getJsonData()
     {
         $code = ApiReturnCode::SUCCESS;
+
         return $this->Api->response($code, [
             'foo' => 'bar',
             'baz' => 'buff'

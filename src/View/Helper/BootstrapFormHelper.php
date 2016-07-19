@@ -18,6 +18,7 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
     public function create($model = null, array $options = [])
     {
         $options['novalidate'] = true;
+        
         return parent::create($model, $options);
     }
 }

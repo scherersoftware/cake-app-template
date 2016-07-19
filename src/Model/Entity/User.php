@@ -75,6 +75,7 @@ class User extends Entity
         if (!empty($password)) {
             $password = (new DefaultPasswordHasher)->hash($password);
         }
+
         return $password;
     }
 }

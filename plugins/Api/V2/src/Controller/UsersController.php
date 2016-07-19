@@ -39,6 +39,7 @@ class UsersController extends AppController
                 $user['api_token'] = $userEntity->api_token;
             }
             $this->Auth->setUser($user);
+
             return $this->Api->response(ApiReturnCode::SUCCESS, [
                 'user' => [
                     'id' => $user['id'],
@@ -47,6 +48,7 @@ class UsersController extends AppController
             ]);
         } else {
             $this->Users->increaseLoginRetries($this->request->data);
+
             return $this->Api->response(ApiReturnCode::INVALID_CREDENTIALS);
         }
     }
@@ -60,6 +62,7 @@ class UsersController extends AppController
     {
         $this->request->allowMethod('get');
         $this->Auth->logout();
+
         return $this->Api->response(ApiReturnCode::SUCCESS);
     }
 
@@ -75,6 +78,7 @@ class UsersController extends AppController
             return $this->Api->response(ApiReturnCode::NOT_AUTHENTICATED);
         }
         $user = $this->Users->get($this->Auth->user('id'));
+        
         return $this->Api->response(ApiReturnCode::SUCCESS, [
             'user' => $user->toArray()
         ]);

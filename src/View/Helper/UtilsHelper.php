@@ -30,6 +30,7 @@ class UtilsHelper extends Helper
             default:
                 $classes[] = 'label-primary';
         }
+
         return sprintf('<span class="%s">%s</span>', implode(' ', $classes), $caption);
     }
 }

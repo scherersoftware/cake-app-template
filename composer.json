@@ -13,7 +13,7 @@
         "codekanzlei/cake-auth-actions": "dev-master",
         "codekanzlei/cake-list-filter": "dev-master",
         "codekanzlei/cake-cktools": "dev-master",
-        "codekanzlei/cake-frontend-bridge": "dev-master",
+        "codekanzlei/cake-frontend-bridge": "1.0.*",
         "codekanzlei/cake-attachments": "dev-master",
         "codekanzlei/cake-notifications": "dev-master",
         "codekanzlei/cake-model-history": "dev-master",

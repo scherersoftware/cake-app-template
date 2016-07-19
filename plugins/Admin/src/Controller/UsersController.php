@@ -46,6 +46,7 @@ class UsersController extends AppController
                 ]
             ];
         }
+
         return $filters;
     }
 
@@ -87,6 +88,7 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('forms.data_saved'));
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('forms.data_not_saved'));
@@ -111,6 +113,7 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('forms.data_saved'));
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->success(__('forms.data_not_saved'));
@@ -137,6 +140,7 @@ class UsersController extends AppController
         } else {
             $this->Flash->error(__('forms.data_not_deleted'));
         }
+
         return $this->redirect(['action' => 'index']);
     }
 }
