@@ -37,6 +37,8 @@ class UsersTable extends Table
         $this->displayField('email');
         $this->primaryKey('id');
 
+        $this->addBehavior('CkTools.StrictPassword');
+
         $this->addBehavior('Attachments.Attachments', [
             'downloadAuthorizeCallback' => function (Attachment $attachment, User $user, Request $request) {
                 $loggedIn = $request->session()->check('Auth.User');

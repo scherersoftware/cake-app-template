@@ -39,3 +39,9 @@ For the Admin Plugin we have a custom Bootstrap LESS file (same system as for th
 
     lessc plugins/Admin/webroot/less/custom_bootstrap.less > plugins/Admin/webroot/css/bootstrap.custom.css
     lessc plugins/Admin/webroot/less/sb-admin-2/sb-admin-2.less > plugins/Admin/webroot/css/sb-admin-2.custom.css
+
+
+## StrictPasswordBehavior
+
+Active the strict password requirements by setting the StrictPasswordBehavior in UsersTable
+$this->addBehavior('CkTools.StrictPassword');
