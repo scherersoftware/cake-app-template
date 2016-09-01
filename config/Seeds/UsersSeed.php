@@ -27,6 +27,7 @@ class UsersSeed extends AbstractSeed
                 'lastname' => 'Doe',
                 'email' => 'john.doe@example.com',
                 'password' => '$2y$10$Im.6sVvfio4Z.9MK1ceTzOoNAnxuxirVEkGVcbgIWXUC/OJ0KIJHK',
+                'last_passwords' => '',
                 'failed_login_count' => 0,
                 'failed_login_timestamp' => null,
                 'api_token' => null,
