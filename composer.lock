@@ -555,12 +555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scherersoftware/cake-cktools.git",
-                "reference": "2f79b94aca59a90a619a0a2e8f09c8c9c940241a"
+                "reference": "96cce4f9d5cc4d5780eaec40fccd7e2905d34e73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/2f79b94aca59a90a619a0a2e8f09c8c9c940241a",
-                "reference": "2f79b94aca59a90a619a0a2e8f09c8c9c940241a",
+                "url": "https://api.github.com/repos/scherersoftware/cake-cktools/zipball/96cce4f9d5cc4d5780eaec40fccd7e2905d34e73",
+                "reference": "96cce4f9d5cc4d5780eaec40fccd7e2905d34e73",
                 "shasum": ""
             },
             "require": {
@@ -585,7 +585,7 @@
                 "MIT"
             ],
             "description": "codekanzlei Tools & Utilities collection",
-            "time": "2016-09-01 08:33:22"
+            "time": "2016-09-01 08:38:31"
         },
         {
             "name": "codekanzlei/cake-frontend-bridge",
