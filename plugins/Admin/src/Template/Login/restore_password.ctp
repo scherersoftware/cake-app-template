@@ -13,11 +13,12 @@
                             'role' => 'form',
                             'novalidate'
                         ]);
-                        echo $this->Form->input('new_password', [
+                        echo $this->Form->input('password', [
                             'placeholder' => __('login.new_password'),
                             'class' => 'form-control autofocus',
                             'label' => false,
-                            'type' => 'password'
+                            'type' => 'password',
+                            'value' => ''
                         ]);
                         echo $this->Form->input('password_confirm', [
                             'placeholder' => __('login.confirm_new_password'),

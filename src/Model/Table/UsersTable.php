@@ -130,6 +130,24 @@ class UsersTable extends Table
             'message' => __('validation.user.old_password_wrong')
         ]);
         $this->validationPassword($validator, true);
+
+        return $validator;
+    }
+
+    /**
+     * Validation for the reset password process
+     *
+     * @param Validator $validator Validator
+     * @return Validator
+     */
+    public function validationResetPassword(Validator $validator)
+    {
+        $validator->requirePresence('password');
+        $validator->requirePresence('password_confirm');
+        $validator->notEmpty('password');
+        $validator->notEmpty('password_confirm');
+        $this->validationPassword($validator, true);
+
         return $validator;
     }
 
@@ -195,6 +213,7 @@ class UsersTable extends Table
                 },
                 'message' => __('validation.user.password_confirmation_must_match')
             ]);
+
         return $validator;
     }
 
@@ -263,7 +282,7 @@ class UsersTable extends Table
     /**
      * return User data by Email
      *
-     * @param string $id id
+     * @param string $email id
      * @return object
      */
     public function getUserByEmail($email)
@@ -314,11 +333,10 @@ class UsersTable extends Table
     public function changePassword(User $user, array $postData)
     {
         $user->accessible('*', false);
-        $user->accessible(['new_password', 'password_confirm'], true);
-        $this->patchEntity($user, $postData, ['validate' => 'changePassword']);
+        $user->accessible(['password', 'password_confirm'], true);
+        $this->patchEntity($user, $postData, ['validate' => 'resetPassword']);
         if (empty($user->errors())) {
-            $user->accessible('password', true);
-            $user->password = $postData['new_password'];
+            $user->password = $postData['password'];
 
             return $this->save($user);
         }

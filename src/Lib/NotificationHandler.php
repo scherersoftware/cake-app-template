@@ -54,7 +54,7 @@ class NotificationHandler
         $hash = $this->Users->getHash($user);
         $token = ($hash . strtotime('now'));
         $restoreLink = Router::url([
-            'plugin' => false,
+            'plugin' => 'Admin',
             'controller' => 'Login',
             'action' => 'restorePassword',
             $user->id,
