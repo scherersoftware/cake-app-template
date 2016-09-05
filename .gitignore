@@ -4,3 +4,4 @@ config/schema/DBSchema.mwb.bak
 .DS_Store
 
 /.env
+.tags
