@@ -22,7 +22,6 @@ use Cake\Validation\Validator;
  */
 class UsersTable extends Table
 {
-
     /**
      * Initialize method
      *
@@ -37,7 +36,15 @@ class UsersTable extends Table
         $this->displayField('email');
         $this->primaryKey('id');
 
-        $this->addBehavior('CkTools.StrictPassword');
+        $this->addBehavior('CkTools.StrictPassword', [
+            'minPasswordLength' => 10,
+            'noUserName' => true,
+            'specialChars' => true,
+            'upperCase' => true,
+            'lowerCase' => true,
+            'numericValue' => true,
+            'oldPasswordCount' => 4
+        ]);
 
         $this->addBehavior('Attachments.Attachments', [
             'downloadAuthorizeCallback' => function (Attachment $attachment, User $user, Request $request) {
