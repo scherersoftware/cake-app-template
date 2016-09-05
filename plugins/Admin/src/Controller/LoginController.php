@@ -132,7 +132,8 @@ class LoginController extends AppController
             }
             // Save new Password
             if ($this->request->is(['patch', 'post', 'put'])) {
-                if (empty($this->Users->changePassword($user, $this->request->data)->errors())) {
+                $user = $this->Users->changePassword($user, $this->request->data);
+                if (empty($user->errors())) {
                     $this->Users->resetLoginRetries($user);
                     $this->Flash->success(__('login.new_password_saved'));
 
