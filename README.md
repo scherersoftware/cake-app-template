@@ -44,19 +44,19 @@ For the Admin Plugin we have a custom Bootstrap LESS file (same system as for th
 ## Strict Passwords with StrictPasswordBehavior
 Activate the strict password requirements by setting the StrictPasswordBehavior in UsersTable; default Configuration is set in this example
 
-$this->addBehavior('CkTools.StrictPassword', [
-    // minimal password length
-    'minPasswordLength' => 10,
-    // fistname and surname are not allowed in password (case insensitive)
-    'noUserName' => true,
-    // at least one special char is needed in password
-    'specialChars' => true,
-    // at least one char in upper case is needed in password
-    'upperCase' => true,
-    // at least one char in lower case is needed in password
-    'lowerCase' => true,
-    // at least one numeric value is needed in password
-    'numericValue' => true,
-    // reuse of old passwords is not allowed: number of old passwords to preserve
-    'oldPasswordCount' => 4
-]);
+    $this->addBehavior('CkTools.StrictPassword', [
+        // minimal password length
+        'minPasswordLength' => 10,
+        // fistname and surname are not allowed in password (case insensitive)
+        'noUserName' => true,
+        // at least one special char is needed in password
+        'specialChars' => true,
+        // at least one char in upper case is needed in password
+        'upperCase' => true,
+        // at least one char in lower case is needed in password
+        'lowerCase' => true,
+        // at least one numeric value is needed in password
+        'numericValue' => true,
+        // reuse of old passwords is not allowed: number of old passwords to preserve
+        'oldPasswordCount' => 4
+    ]);
