@@ -21,7 +21,7 @@ class ProfileController extends AppController
             $this->Users->patchEntity($user, $this->request->data, ['validate' => 'changePassword']);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('profile.password_change_success'));
-                
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('profile.password_change_failure'));

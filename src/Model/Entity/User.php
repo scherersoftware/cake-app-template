@@ -78,4 +78,14 @@ class User extends Entity
 
         return $password;
     }
+
+    /**
+     * Getter for the full name
+     *
+     * @return string
+     */
+    protected function _getFullName()
+    {
+        return $this->firstname . ' ' . $this->lastname;
+    }
 }

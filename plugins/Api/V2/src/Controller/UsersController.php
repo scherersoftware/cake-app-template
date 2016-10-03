@@ -78,7 +78,7 @@ class UsersController extends AppController
             return $this->Api->response(ApiReturnCode::NOT_AUTHENTICATED);
         }
         $user = $this->Users->get($this->Auth->user('id'));
-        
+
         return $this->Api->response(ApiReturnCode::SUCCESS, [
             'user' => $user->toArray()
         ]);

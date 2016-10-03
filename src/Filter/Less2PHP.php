@@ -48,6 +48,7 @@ class Less2PHP extends AssetFilter
         }
         $parser = new Less_Parser();
         $parser->parseFile($filename);
+
         return $parser->getCss();
     }
 }

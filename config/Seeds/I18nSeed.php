@@ -33,7 +33,7 @@ class I18nSeed extends AbstractSeed
                 'model' => 'NotificationContents',
                 'foreign_key' => 'fd77e860-dbe0-4e60-8939-56cc841cc3eb',
                 'field' => 'email_html',
-                'content' => 'Dear {{user.firstname}} {{user.lastname}},
+                'content' => 'Dear {{user.fullname}},
     <br><br>
     here\'s the link to reset your password: {{reset_password_link}}'
             ],

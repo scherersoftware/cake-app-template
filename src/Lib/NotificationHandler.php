@@ -62,12 +62,11 @@ class NotificationHandler
         ], true);
 
         $data = [
-            'locale' => 'de',
+            'locale' => 'en',
             'recipient_user_id' => $user->id,
             'transport' => 'email',
             'config' => [
                 'reset_password_link' => $restoreLink,
-                'user.salutation' => $user->salutation,
                 'user.fullname' => $user->full_name,
             ]
         ];

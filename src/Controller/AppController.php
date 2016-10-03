@@ -121,6 +121,7 @@ class AppController extends Controller
         if ($this->_isJsonActionRequest()) {
             return $this->renderJsonAction($view, $layout);
         }
+
         return parent::render($view, $layout);
     }
 
