@@ -34,8 +34,12 @@ class AppController extends Controller
         'Flash' => [
             'className' => 'BootstrapUI.Flash'
         ],
-        'Auth' => ['className' => 'AuthActions.Auth'],
-        'FrontendBridge' => ['className' => 'FrontendBridge.FrontendBridge'],
+        'Auth' => [
+            'className' => 'AuthActions.Auth'
+        ],
+        'FrontendBridge' => [
+            'className' => 'FrontendBridge.FrontendBridge'
+        ],
         'ModelHistory.ModelHistory',
         'CkTools.CkTools',
         'CkTools.TinyMce',
@@ -79,7 +83,7 @@ class AppController extends Controller
             'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
             'loginRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'index'],
             'logoutRedirect' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
-            'authError' => __('auht.not_allowed'),
+            'authError' => __('auth.not_allowed'),
             'flash' => [
                 'params' => [
                     'class' => 'alert alert-warning'
