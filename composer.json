@@ -30,8 +30,15 @@
         "admad/cakephp-glide": "~1.0",
         "jdorn/sql-formatter": "^1.2",
         "josegonzalez/dotenv": "^2.0",
-        "josegonzalez/cakephp-queuesadilla": "dev-master"
+        "josegonzalez/cakephp-queuesadilla": "dev-master",
+        "scherersoftware/cake-wysiwyg": "*"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@gitlab.scherer-software.de:scherersoftware/cake-wysiwyg.git"
+        }
+    ],
     "require-dev": {
         "psy/psysh": "@stable",
         "cakephp/debug_kit": "~3.2",
@@ -44,7 +51,10 @@
             "Admin\\": "./plugins/Admin/src",
             "Api\\V1\\": "./plugins/Api/V1/src",
             "Api\\V2\\": "./plugins/Api/V2/src"
-        }
+        },
+        "files": [
+            "vendor/studio-42/elfinder/php/autoload.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
