@@ -34,7 +34,7 @@
             <h3>Form Components</h3>
 
             <?php
-            $this->TinyMce->includeAssets();
+            $this->Wysiwyg->loadAssets();
 
             function renderInputs($view) {
                 echo $view->Form->input('start_date', [
@@ -96,11 +96,8 @@
                 echo $view->Form->input('textarea', [
                     'type' => 'textarea',
                 ]);
-                echo $view->Form->input('textarea_' . rand(), [
-                    'type' => 'textarea',
-                    'class' => 'tinymce'
-                ]);
-                echo $view->TinyMce->picker('logo_' . rand());
+                echo $view->Wysiwyg->editor('textarea_' . rand());
+                echo $view->Wysiwyg->picker('logo_' . rand());
                 echo $view->CkTools->formButtons();
             }
             ?>

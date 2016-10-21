@@ -209,6 +209,7 @@ Plugin::load('Api/V1', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Api/V2', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Scherersoftware/Wiki', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Josegonzalez/CakeQueuesadilla');
+Plugin::load('CakeWysiwyg', ['autoload' => true, 'routes' => true, 'bootstrap' => true]);
 
 Queue::config(Configure::consume('Queuesadilla'));
 

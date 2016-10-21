@@ -120,6 +120,15 @@ class AppController extends Controller
     /**
      * {@inheritDoc}
      */
+    public function beforeRender(\Cake\Event\Event $event)
+    {
+        parent::beforeRender($event);
+        $this->viewBuilder()->helpers(['CakeWysiwyg.Wysiwyg']);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function render($view = null, $layout = null)
     {
         if ($this->_isJsonActionRequest()) {

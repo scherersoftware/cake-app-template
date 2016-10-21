@@ -1,5 +1,5 @@
 Frontend.AppController = Frontend.Controller.extend({
-    baseComponents: ['Attachments', 'ModelHistory', 'DatePicker', 'TinyMce', 'MoxmanPicker'],
+    baseComponents: ['Attachments', 'ModelHistory', 'DatePicker', 'Wysiwyg'],
     _initialize: function() {
         this.initGlobalFunctionality();
         if (this.isAdminArea()) {
@@ -11,8 +11,6 @@ Frontend.AppController = Frontend.Controller.extend({
         $('input.autofocus').focus();
 
         this.DatePicker.setup(this.$('.form-group.dateTime, .form-group.date'));
-
-        this.TinyMce.initEditors(this._dom);
 
         // Place functionality which should _not_ run again when executing a jsonAction request below this
         if (this.getVar('isAjax')) {
