@@ -2240,7 +2240,7 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.scherer-software.de:scherersoftware/cake-wysiwyg.git",
-                "reference": "d6044e3a6400168f7d1ccb96cf700a13055aba47"
+                "reference": "fc2e53deb6789046b67bdc3e3a22d1358220d6d0"
             },
             "require": {
                 "cakephp/cakephp": ">=3.2.0 <4.0.0",
@@ -2264,7 +2264,7 @@
                 }
             },
             "description": "CakeWysiwyg plugin for CakePHP",
-            "time": "2016-10-26 09:14:26"
+            "time": "2016-10-26 10:30:42"
         },
         {
             "name": "seld/cli-prompt",
