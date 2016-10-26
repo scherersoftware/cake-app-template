@@ -68,7 +68,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => '__SALT__',
+        'salt' => '8622b8ec7ee26fe98fcb3939f02ce1fc70095851b35f49395c3e7f508f24d905',
     ],
 
     /**
@@ -457,6 +457,26 @@ return [
             'host' => Environment::read('MYSQL_HOST'),
             'user' => Environment::read('MYSQL_USERNAME'),
             'pass' => Environment::read('MYSQL_PASSWORD')
+        ]
+    ],
+    'Wysiwyg' => [
+        'volumes' => [
+            [
+                'driver' => 'LocalFileSystem',
+                'path' => WWW_ROOT . 'files',
+                'readPermissionCallback' => function (Request $request) {
+                    if ($request->Session->get('User.name') == 'User') {
+                        return true;
+                    }
+                    return false;
+                },
+                'writePermissionCallback' => function (Request $request) {
+                    if ($request->Session->get('User.name') == 'User') {
+                        return true;
+                    }
+                    return false;
+                },
+            ]
         ]
     ]
 ];

@@ -46,7 +46,8 @@ class AppController extends Controller
         'ListFilter.ListFilter',
         'AssetCompress.AssetCompress',
         'Attachments.Attachments',
-        'ADmad/Glide.Glide'
+        'ADmad/Glide.Glide',
+        'CakeWysiwyg.Wysiwyg'
     ];
 
     public $components = [
@@ -115,15 +116,6 @@ class AppController extends Controller
         }
         $this->FrontendBridge->setJson('locale', 'de');
         parent::beforeFilter($event);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function beforeRender(\Cake\Event\Event $event)
-    {
-        parent::beforeRender($event);
-        $this->viewBuilder()->helpers(['CakeWysiwyg.Wysiwyg']);
     }
 
     /**
