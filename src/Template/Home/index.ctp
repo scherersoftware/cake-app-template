@@ -96,12 +96,14 @@
                 echo $view->Form->input('textarea', [
                     'type' => 'textarea',
                 ]);
+
                 echo $view->Wysiwyg->editor('textarea_' . rand(), [
                     'label' => 'WYSIWYG Editor'
                 ]);
                 echo $view->Wysiwyg->picker('logo_' . rand(), [
                     'label' => 'Filepicker'
                 ]);
+
                 echo $view->CkTools->formButtons();
             }
             ?>
