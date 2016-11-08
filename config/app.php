@@ -460,6 +460,26 @@ return [
         ]
     ],
     'Wysiwyg' => [
+        'editorConfig' => [
+            'redactor' => [
+                'plugins' => [
+                    'alignment',
+                    'source',
+                    'table',
+                    'tablesize',
+                    'video',
+                    'elfinder',
+                    'bufferbuttons'
+                ],
+                'focus' => true,
+                'imageResizable' => true,
+            ],
+            'elFinder' => [
+                'url' => '/cake-wysiwyg/wysiwyg/elfinder',
+                'resizable' => false,
+                'height' => 700
+            ]
+        ],
         'volumes' => [
             [
                 'driver' => 'LocalFileSystem',

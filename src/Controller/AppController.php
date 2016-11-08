@@ -56,7 +56,8 @@ class AppController extends Controller
         'ListFilter.ListFilter',
         'Cookie',
         'AuthActions.AuthUtils',
-        'CkTools.Api'
+        'CkTools.Api',
+        'CakeWysiwyg.Wysiwyg'
     ];
 
     /**
