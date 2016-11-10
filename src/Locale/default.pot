@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-11-10 16:18+0000\n"
+"POT-Creation-Date: 2016-11-10 16:29+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -75,19 +75,19 @@ msgid "user.status"
 msgstr ""
 
 #: /Users/cleptric/Sites/techno/Controller/UsersController.php:94;120
-msgid "The user has been saved."
+msgid "forms.data_saved"
 msgstr ""
 
 #: /Users/cleptric/Sites/techno/Controller/UsersController.php:98;124
-msgid "The user could not be saved. Please, try again."
+msgid "forms.data_not_saved"
 msgstr ""
 
 #: /Users/cleptric/Sites/techno/Controller/UsersController.php:143
-msgid "The user has been deleted."
+msgid "forms.data_deleted"
 msgstr ""
 
 #: /Users/cleptric/Sites/techno/Controller/UsersController.php:145
-msgid "The user could not be deleted. Please, try again."
+msgid "forms.data_not_deleted"
 msgstr ""
 
 #: /Users/cleptric/Sites/techno/Lib/Status.php:21
