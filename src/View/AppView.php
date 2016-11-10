@@ -38,7 +38,7 @@ class AppView extends View
     {
         $this->loadHelper('Html', [
             'className' => 'BootstrapUI.Html'
-        ]); 
+        ]);
         $this->loadHelper('Form', [
             'className' => 'BootstrapForm'
         ]);

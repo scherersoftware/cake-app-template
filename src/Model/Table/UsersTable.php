@@ -399,7 +399,6 @@ class UsersTable extends Table
      * Softdeletes an user
      *
      * @param EntityInterface $user User Entity
-     * @param string $options Options
      * @return mixed
      */
     public function softDelete(User $user)
