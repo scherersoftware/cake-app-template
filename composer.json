@@ -37,6 +37,7 @@
     },
     "require-dev": {
         "psy/psysh": "@stable",
+        "phpunit/phpunit": "*",
         "cakephp/debug_kit": "~3.2",
         "cakephp/bake": "~1.1"
     },
