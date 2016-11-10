@@ -1,0 +1,9 @@
+.DS_Store
+.tags
+/vendor/*
+/tmp/*
+/logs/*
+/.env
+
+config/Migrations/schema-dump-default.lock
+webroot/vendors/bower_components

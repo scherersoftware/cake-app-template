@@ -1,0 +1,16 @@
+sh php70:
+  tags:
+    - php70
+  before_script:
+    - composer install -q
+    - mysql -uroot -e "DROP DATABASE IF EXISTS <test_db_name>; CREATE DATABASE <test_db_name>;"
+  script:
+    - vendor/bin/phpunit --configuration phpunit.xml
+    - vendor/bin/phpcs -n --extensions=php --warning-severity=50 --standard=vendor/cakephp/cakephp-codesniffer/CakePHP "src" "tests" "plugins"
+
+node_js_tests:
+  tags:
+    - nodejs
+  script:
+    - npm install
+    - sh bin/js-ci.sh
