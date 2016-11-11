@@ -248,6 +248,7 @@ Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('Josegonzalez/CakeQueuesadilla');
 Plugin::load('ADmad/Glide');
 Plugin::load('Schema', ['bootstrap' => true]);
+Plugin::load('CakeApiBaselayer', ['bootstrap' => true, 'routes' => true]);
 
 /** 
  * Datasource Type Mappings
@@ -261,7 +262,7 @@ Type::map('json', 'CkTools\Database\Type\JsonType');
 
 Configure::write('AssetCompress.rawMode', false);
 if (ENVIRONMENT === Environment::DEVELOPMENT) {
-    Configure::write('AssetCompress.rawMode', true);
+    Configure::write('AssetCompress.rawMode', false);
 }
 
 /**

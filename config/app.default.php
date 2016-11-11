@@ -372,4 +372,16 @@ return [
             'pass' => Environment::read('MYSQL_PASSWORD')
         ]
     ],
+    'Glide' => [
+        'server' => [
+            'source' => WWW_ROOT . 'files',
+            'cache' => WWW_ROOT . 'cache_img',
+            'base_url' => '/images/',
+        ],
+        'security' => [
+            'secureUrls' => true,
+            'signKey' => null,
+        ],
+        'cacheTime' => '+1 days',
+    ]
 ];

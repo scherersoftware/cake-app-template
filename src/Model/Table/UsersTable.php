@@ -217,7 +217,7 @@ class UsersTable extends Table
      * Reset the login retries counter
      *
      * @param User $user User Entity
-     * @return void
+     * @return mixed
      */
     public function resetLoginRetries(User $user)
     {

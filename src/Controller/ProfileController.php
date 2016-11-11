@@ -8,7 +8,7 @@ class ProfileController extends AppController
     /**
      * Index action, check old password and change it
      *
-     * @return void
+     * @return \Cake\Network\Response|void Redirects on successful user update, renders view otherwise.
      */
     public function index()
     {

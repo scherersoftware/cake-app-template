@@ -1,6 +1,7 @@
 .DS_Store
 .tags
 composer.lock
+/node_modules/*
 /vendor/*
 /tmp/*
 /logs/*

@@ -5,14 +5,14 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.0.0",
         "cakephp/cakephp": "3.3.*",
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
         "codekanzlei/cake-auth-actions": "1.0.*",
         "codekanzlei/cake-list-filter": "1.2.*",
-        "codekanzlei/cake-cktools": "dev-master",
+        "codekanzlei/cake-cktools": "1.2.*",
         "codekanzlei/cake-frontend-bridge": "1.0.*",
         "codekanzlei/cake-attachments": "1.0.*",
         "codekanzlei/cake-notifications": "v2.0.6",
@@ -33,7 +33,8 @@
         "phpoffice/phpexcel": "dev-master",
         "beberlei/assert": "^2.5",
         "php-http/guzzle6-adapter": "^1.1",
-        "scherersoftware/cakephp-schema": "dev-master"
+        "scherersoftware/cakephp-schema": "dev-master",
+        "scherersoftware/cake-api-baselayer": "^1.0"
     },
     "require-dev": {
         "psy/psysh": "@stable",

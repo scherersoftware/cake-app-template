@@ -7,9 +7,11 @@ $this->assign('adminLTETheme', 'skin-blue-light');
 <head>
     <?php echo $this->element('Layout/head') ?>
 </head>
-<body class="<?php echo $this->FrontendBridge->getMainContentClasses() ?> <?= $this->fetch('bodyClasses') ?>">
-    <?= $this->Flash->render() ?>
-    <?= $this->Flash->render('auth') ?>
-    <?= $this->fetch('content') ?>
+<body class="<?= $this->fetch('bodyClasses') ?>">
+    <div class="container <?php echo $this->FrontendBridge->getMainContentClasses() ?>">
+        <?= $this->Flash->render() ?>
+        <?= $this->Flash->render('auth') ?>
+        <?= $this->fetch('content') ?>
+    </div>
 </body>
 </html>

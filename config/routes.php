@@ -45,7 +45,7 @@ Router::defaultRouteClass(DashedRoute::class);
 
 Router::scope('/', function (RouteBuilder $routes) {
 
-    $routes->connect('/', ['controller' => 'Dashboard', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

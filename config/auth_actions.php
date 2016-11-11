@@ -11,7 +11,8 @@ $config = [
             'logout',
             'forgotPassword',
             'restorePassword'
-        ]
+        ],
+        'Home' => '*'
     ],
     'auth_actions' => [
         'Dashboard' => [

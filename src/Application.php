@@ -47,6 +47,10 @@ class Application extends BaseApplication
             // Apply routing
             ->add(new RoutingMiddleware());
 
+        $middleware->push(new \ADmad\Glide\Middleware\GlideMiddleware(
+            Configure::read('Glide')
+        ));
+
         return $middleware;
     }
 }

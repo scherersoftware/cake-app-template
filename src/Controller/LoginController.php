@@ -23,7 +23,7 @@ class LoginController extends AppController
     /**
      * login method
      *
-     * @return void
+     * @return \Cake\Network\Response|void Redirects on successful login, renders view otherwise.
      */
     public function login()
     {
@@ -56,7 +56,7 @@ class LoginController extends AppController
     /**
      * logout method
      *
-     * @return void
+     * @return \Cake\Network\Response|void Redirects on logout.
      */
     public function logout()
     {
@@ -72,7 +72,7 @@ class LoginController extends AppController
     /**
      * new password for users
      *
-     * @return void
+     * @return \Cake\Network\Response|void Redirects when email was passed, renders view otherwise.
      */
     public function forgotPassword()
     {
@@ -102,7 +102,7 @@ class LoginController extends AppController
      *
      * @param int $userId userId
      * @param string $token token
-     * @return void
+     * @return \Cake\Network\Response|void Redirects on successful restore, renders view otherwise.
      */
     public function restorePassword($userId, $token)
     {

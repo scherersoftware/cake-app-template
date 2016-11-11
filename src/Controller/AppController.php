@@ -37,7 +37,7 @@ class AppController extends Controller
         'ListFilter.ListFilter',
         'Cookie',
         'AuthActions.AuthUtils',
-        'CkTools.Api'
+        'CakeApiBaselayer.Api'
     ];
 
     /**
@@ -61,7 +61,7 @@ class AppController extends Controller
             'authorize' => ['Controller'],
             'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
             'loginRedirect' => ['plugin' => false, 'controller' => 'Dashboard', 'action' => 'index'],
-            'logoutRedirect' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
+            'logoutRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'index'],
             'authError' => __('auth.not_allowed'),
             'flash' => [
                 'params' => [

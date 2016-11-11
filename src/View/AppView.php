@@ -52,7 +52,8 @@ class AppView extends View
             'className' => 'AuthActions.Auth'
         ]);
         $this->loadHelper('ADmad/Glide.Glide', [
-            'baseUrl' => '/images/'
+            'baseUrl' => '/images/',
+            'secureUrls' => true,
         ]);
         $this->loadHelper('AdminLteListFilter');
         $this->loadHelper('AssetCompress.AssetCompress');
