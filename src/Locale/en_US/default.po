@@ -2,220 +2,221 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: EMAIL@ADDRESS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2016-11-10 17:20+0100\n"
-"PO-Revision-Date: 2016-11-10 17:21+0100\n"
+"POT-Creation-Date: 2016-02-02 16:06+0000\n"
+"PO-Revision-Date: 2016-11-11 22:54+0100\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.11\n"
+": msgid \"login.logut\"msgstr \"logout\"msgid \"login.password\"msgstr \"password\"\n"
 
 msgid "auth.not_allowed"
-msgstr ""
+msgstr "Your are not allowed to access this"
 
 msgid "login.login_retries_lock"
-msgstr ""
+msgstr "Your account is blocked because you tried to login too often"
 
 msgid "login.wrong_credentials"
-msgstr ""
+msgstr "Wrong email or password"
 
 msgid "login.you_have_been_logged_out"
-msgstr ""
+msgstr "You have been logged out"
 
 msgid "login.restore_password_email_sent"
-msgstr ""
+msgstr "An email with a link to restore you password has been send to you"
 
 msgid "login.email_required"
-msgstr ""
+msgstr "Please enter an email"
 
 msgid "login.restore_password_link_invalid"
-msgstr ""
+msgstr "This link has been expired"
 
 msgid "login.new_password_saved"
-msgstr ""
+msgstr "New Password was saved"
 
 msgid "login.invalid_password"
-msgstr ""
+msgstr "Invalid Password"
 
 msgid "profile.password_change_success"
-msgstr ""
+msgstr "Your password has been updated"
 
 msgid "profile.password_change_failure"
-msgstr ""
+msgstr "Your password hasn't been changed"
 
 msgid "user.role"
-msgstr ""
+msgstr "role"
 
 msgid "user.status"
-msgstr ""
+msgstr "status "
 
 msgid "forms.data_saved"
-msgstr ""
+msgstr "You data has been saved"
 
 msgid "forms.data_not_saved"
-msgstr ""
+msgstr "You data hasn't been saved "
 
 msgid "forms.data_deleted"
-msgstr ""
+msgstr "You data has been deleted"
 
 msgid "forms.data_not_deleted"
-msgstr ""
+msgstr "Your data hasn't been deleted"
 
 msgid "status.active"
-msgstr ""
+msgstr "active"
 
 msgid "status.deleted"
-msgstr ""
+msgstr "deleted"
 
 msgid "status.suspended"
-msgstr ""
+msgstr "suspended"
 
 msgid "user.role.admin"
-msgstr ""
+msgstr "admin"
 
 msgid "user.role.user"
-msgstr ""
+msgstr "user"
 
 msgid "validation.user.old_password_wrong"
-msgstr ""
+msgstr "Your old password isn't correct"
 
 msgid "validation.user.password_min_length"
-msgstr ""
+msgstr "The password must be 8 characters long"
 
 msgid "validation.user.password_confirmation_must_match"
-msgstr ""
+msgstr "Both passwords must be equal "
 
 msgid "email.subject.forgot_password"
-msgstr ""
+msgstr "Reset Your Password"
 
 msgid "dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 msgid "my_profile"
-msgstr ""
+msgstr "My Profile"
 
 msgid "logout"
-msgstr ""
+msgstr "Logout"
 
 msgid "forgot_password.salutation {0}"
-msgstr ""
+msgstr "Dear {0}"
 
 msgid "forgot_password.new_password_requested"
-msgstr ""
+msgstr "you’ve requested a new password."
 
 msgid "forgot_password.click_on_link_below"
-msgstr ""
+msgstr "To do so, please click the link below."
 
 msgid "forgot_password.click_here"
-msgstr ""
+msgstr "Update Your Password"
 
 msgid "login.forgot_password"
-msgstr ""
+msgstr "Forgot password?"
 
 msgid "restore_password_text"
-msgstr ""
+msgstr "Enter your email to receive an email to restore your password"
 
 msgid "login.email"
-msgstr ""
+msgstr "email"
 
 msgid "login.restore_password"
-msgstr ""
+msgstr "Restore Password"
 
 msgid "login.or"
-msgstr ""
+msgstr "or"
 
 msgid "login.login"
-msgstr ""
+msgstr "Login"
 
 msgid "login.please_login"
-msgstr ""
+msgstr "Please login"
 
 msgid "user.email"
-msgstr ""
+msgstr "email"
 
 msgid "user.password"
-msgstr ""
+msgstr "password"
 
 msgid "login.login_for_two_weeks"
-msgstr ""
+msgstr "Keep logged in for two weeks"
 
 msgid "login.new_password"
-msgstr ""
+msgstr "New Password"
 
 msgid "login.confirm_new_password"
-msgstr ""
+msgstr "Confirm New Password"
 
 msgid "login.set_password"
-msgstr ""
+msgstr "Set Password"
 
 msgid "profile.index.title"
-msgstr ""
+msgstr "Profile"
 
 msgid "profile.my_data"
-msgstr ""
+msgstr "My data"
 
 msgid "user.firstname"
-msgstr ""
+msgstr "firstname"
 
 msgid "user.lastname"
-msgstr ""
+msgstr "lastname"
 
 msgid "profile.change_password"
-msgstr ""
+msgstr "Change password"
 
 msgid "profile.current_password"
-msgstr ""
+msgstr "current password"
 
 msgid "profile.new_password"
-msgstr ""
+msgstr "new password "
 
 msgid "profile.repeat_password"
-msgstr ""
+msgstr "repeat new password"
 
 msgid "profile.save"
-msgstr ""
+msgstr "save"
 
 msgid "users.add"
-msgstr ""
+msgstr "User add"
 
 msgid "users.edit"
-msgstr ""
+msgstr "Edit user"
 
 msgid "user.password_confirm"
-msgstr ""
+msgstr "confirm password"
 
 msgid "user.attachments"
-msgstr ""
+msgstr "attachments "
 
 msgid "users"
-msgstr ""
+msgstr "List of all users"
 
 msgid "lists.actions"
-msgstr ""
+msgstr "actions"
 
 msgid "user"
-msgstr ""
+msgstr "User details "
 
 msgid "user.id"
-msgstr ""
+msgstr "id"
 
 msgid "user.failed_login_count"
-msgstr ""
+msgstr "login retries"
 
 msgid "user.failed_login_timestamp"
-msgstr ""
+msgstr "last login retry"
 
 msgid "created"
-msgstr ""
+msgstr "created"
 
 msgid "modified"
-msgstr ""
+msgstr "modified"
 
 msgid "dashboard.index.title"
-msgstr ""
+msgstr "Dashboard"
 
 msgid "user.index.title"
-msgstr ""
+msgstr "Users"

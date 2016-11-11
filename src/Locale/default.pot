@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-11-10 16:29+0000\n"
+"POT-Creation-Date: 2016-11-11 22:50+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -110,19 +110,19 @@ msgstr ""
 msgid "user.role.user"
 msgstr ""
 
-#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:126
+#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:133
 msgid "validation.user.old_password_wrong"
 msgstr ""
 
-#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:173
+#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:180
 msgid "validation.user.password_min_length"
 msgstr ""
 
-#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:180
+#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:187
 msgid "validation.user.password_confirmation_must_match"
 msgstr ""
 
-#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:390
+#: /Users/cleptric/Sites/techno/Model/Table/UsersTable.php:397
 msgid "email.subject.forgot_password"
 msgstr ""
 
