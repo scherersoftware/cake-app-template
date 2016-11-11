@@ -8,214 +8,214 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2016-11-10 17:19+0100\n"
-"PO-Revision-Date: 2016-11-10 17:19+0100\n"
+"PO-Revision-Date: 2016-11-11 22:23+0100\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.11\n"
 
 msgid "auth.not_allowed"
-msgstr ""
+msgstr "Diese Aktion ist nicht erlaubt"
 
 msgid "login.login_retries_lock"
-msgstr ""
+msgstr "Sie haben zu oft falsche Daten eingegeben. Versuchen Sie es in einer Stunde erneut oder setzen Sie Ihr Passwort mittels Email zurück."
 
 msgid "login.wrong_credentials"
-msgstr ""
+msgstr "Falscher Benutzername oder Passwort."
 
 msgid "login.you_have_been_logged_out"
-msgstr ""
+msgstr "Sie wurden ausgeloggt."
 
 msgid "login.restore_password_email_sent"
-msgstr ""
+msgstr "Wir haben Ihnen eine E-Mail mit weiteren Instruktionen um Ihr Passwort zurückzusetzen zugesandt."
 
 msgid "login.email_required"
-msgstr ""
+msgstr "Bitte geben Sie eine E-Mail Adresse ein"
 
 msgid "login.restore_password_link_invalid"
-msgstr ""
+msgstr "Dieser Link ist nicht mehr gültig."
 
 msgid "login.new_password_saved"
-msgstr ""
+msgstr "Ihr neues Passwort wurde gespeichert."
 
 msgid "login.invalid_password"
-msgstr ""
+msgstr "Dieses Passwort ist nicht zulässig."
 
 msgid "profile.password_change_success"
-msgstr ""
+msgstr "Das Passwort wurde erfolgreich geändert."
 
 msgid "profile.password_change_failure"
-msgstr ""
+msgstr "Es gab einen Fehler beim ändern des Passworts."
 
 msgid "user.role"
-msgstr ""
+msgstr "Rolle"
 
 msgid "user.status"
-msgstr ""
+msgstr "Status"
 
 msgid "forms.data_saved"
-msgstr ""
+msgstr "Eingaben wurden gespeichert."
 
 msgid "forms.data_not_saved"
-msgstr ""
+msgstr "Die Daten wurden nicht gelöscht."
 
 msgid "forms.data_deleted"
-msgstr ""
+msgstr "Die Daten wurden gelöscht."
 
 msgid "forms.data_not_deleted"
-msgstr ""
+msgstr "Die Daten wurden nicht gelöscht."
 
 msgid "status.active"
-msgstr ""
+msgstr "Aktiv"
 
 msgid "status.deleted"
-msgstr ""
+msgstr "Gelöscht"
 
 msgid "status.suspended"
-msgstr ""
+msgstr "Gesperrt"
 
 msgid "user.role.admin"
-msgstr ""
+msgstr "Administrator"
 
 msgid "user.role.user"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "validation.user.old_password_wrong"
-msgstr ""
+msgstr "Aktuelles Passwort ist nicht korrekt."
 
 msgid "validation.user.password_min_length"
-msgstr ""
+msgstr "Das Password muss mindestens acht Zeichen lang sein."
 
 msgid "validation.user.password_confirmation_must_match"
-msgstr ""
+msgstr "Die Passwörter müssen übereinstimmen."
 
 msgid "email.subject.forgot_password"
-msgstr ""
+msgstr "Passwort zurücksetzen"
 
 msgid "dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 msgid "my_profile"
-msgstr ""
+msgstr "Mein Profil"
 
 msgid "logout"
-msgstr ""
+msgstr "Logout"
 
 msgid "forgot_password.salutation {0}"
-msgstr ""
+msgstr "Hallo {0}"
 
 msgid "forgot_password.new_password_requested"
-msgstr ""
+msgstr "Sie möchten Ihr Passwort zurücksetzen."
 
 msgid "forgot_password.click_on_link_below"
-msgstr ""
+msgstr "Klicken Sie dazu bitte auf den nachfolgenden Link."
 
 msgid "forgot_password.click_here"
-msgstr ""
+msgstr "Neues Passwort vergeben"
 
 msgid "login.forgot_password"
-msgstr ""
+msgstr "Passwort vergessen"
 
 msgid "restore_password_text"
-msgstr ""
+msgstr "Bitte geben Sie die E-Mail Adresse Ihres Accounts ein um Ihr Passwort zurückzusetzen."
 
 msgid "login.email"
-msgstr ""
+msgstr "E-Mail Adresse"
 
 msgid "login.restore_password"
-msgstr ""
+msgstr "Passwort zurücksetzen"
 
 msgid "login.or"
-msgstr ""
+msgstr "oder"
 
 msgid "login.login"
-msgstr ""
+msgstr "Einloggen"
 
 msgid "login.please_login"
-msgstr ""
+msgstr "Bitte loggen Sie sich ein"
 
 msgid "user.email"
-msgstr ""
+msgstr "E-Mail"
 
 msgid "user.password"
-msgstr ""
+msgstr "Passwort"
 
 msgid "login.login_for_two_weeks"
-msgstr ""
+msgstr "Für zwei Wochen eingeloggt bleiben."
 
 msgid "login.new_password"
-msgstr ""
+msgstr "Neues Passwort"
 
 msgid "login.confirm_new_password"
-msgstr ""
+msgstr "Neues Passwort bestätigen"
 
 msgid "login.set_password"
-msgstr ""
+msgstr "Passwort setzen"
 
 msgid "profile.index.title"
-msgstr ""
+msgstr "Mein Profil"
 
 msgid "profile.my_data"
-msgstr ""
+msgstr "Meine Daten"
 
 msgid "user.firstname"
-msgstr ""
+msgstr "Vorname"
 
 msgid "user.lastname"
-msgstr ""
+msgstr "Nachname"
 
 msgid "profile.change_password"
-msgstr ""
+msgstr "Passwort ändern"
 
 msgid "profile.current_password"
-msgstr ""
+msgstr "Aktuelles Passwort"
 
 msgid "profile.new_password"
-msgstr ""
+msgstr "Neues Passwort"
 
 msgid "profile.repeat_password"
-msgstr ""
+msgstr "Passwort wiederholen"
 
 msgid "profile.save"
-msgstr ""
+msgstr "Speichern"
 
 msgid "users.add"
-msgstr ""
+msgstr "Hinzufügen"
 
 msgid "users.edit"
-msgstr ""
+msgstr "Benutzer bearbeiten"
 
 msgid "user.password_confirm"
-msgstr ""
+msgstr "Passwort bestätigen"
 
 msgid "user.attachments"
-msgstr ""
+msgstr "Anhänge"
 
 msgid "users"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "lists.actions"
-msgstr ""
+msgstr "Aktionen"
 
 msgid "user"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "user.id"
-msgstr ""
+msgstr "ID"
 
 msgid "user.failed_login_count"
-msgstr ""
+msgstr "Loginversuche"
 
 msgid "user.failed_login_timestamp"
-msgstr ""
+msgstr "Zurücksetzung Loginversuche"
 
 msgid "created"
-msgstr ""
+msgstr "erstellt"
 
 msgid "modified"
-msgstr ""
+msgstr "geändert"
 
 msgid "dashboard.index.title"
-msgstr ""
+msgstr "Dashboard"
 
 msgid "user.index.title"
-msgstr ""
+msgstr "Benutzerverwaltung"
