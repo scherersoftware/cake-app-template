@@ -262,7 +262,7 @@ Type::map('json', 'CkTools\Database\Type\JsonType');
 
 Configure::write('AssetCompress.rawMode', false);
 if (ENVIRONMENT === Environment::DEVELOPMENT) {
-    Configure::write('AssetCompress.rawMode', false);
+    Configure::write('AssetCompress.rawMode', true);
 }
 
 /**
