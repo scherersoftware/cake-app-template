@@ -48,3 +48,18 @@ Now seed the database with a default user
 Please also run the provided SQL-Query on the top of the demo page to enable the login.
 
 Default email: `john.doe@example.com`, default password: `password`
+
+## Credits
+
+This template is based on the [CakePHP Application Skeleton](https://github.com/cakephp/app)
+
+Also, we're using the following awesome open-source projects:
+- [CakePHP Framework](https://github.com/cakephp/cakephp)
+- [Asset Compress by Mark Story](https://github.com/markstory/asset_compress)
+- [Bootstrap UI by FriendsOfCake](https://github.com/FriendsOfCake/bootstrap-ui)
+- [CakePHP Glide by ADmad](https://github.com/admad/cakephp-glide)
+- [PHP Dotenv by Jose Diaz-Gonzalez](https://github.com/josegonzalez)
+- [JShrink by Robert Hafner](https://github.com/tedivm/jshrink)
+- [Assert by Benjamin Eberlei](https://github.com/beberlei/assert)
+
+
