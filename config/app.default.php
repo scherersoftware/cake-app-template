@@ -383,5 +383,10 @@ return [
             'signKey' => null,
         ],
         'cacheTime' => '+1 days',
+    ],
+    'Attachments' => [
+        'tmpUploadsPath' => ROOT . '/tmp/uploads/',
+        'path' => ROOT . '/app_data/attachments/',
+        'acceptedFileTypes' => '/\.(gif|jpe?g|png|pdf|docx|doc|xls|xlsx|tif|tiff|zip)$/i'
     ]
 ];
