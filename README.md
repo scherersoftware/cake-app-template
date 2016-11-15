@@ -11,7 +11,7 @@ This is just a brief installation guide. A much more detailed version will be av
 
 Use composer to install the package:
 
-`$ composer create-project --stability dev scherersoftware/cakephp-app-template <project-name>`
+`$ composer create-project scherersoftware/cakephp-app-template <project-name>`
 
 First, we have to install sass and some npm packages
 
