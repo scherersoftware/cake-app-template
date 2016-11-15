@@ -131,11 +131,13 @@ ini_set('intl.default_locale', Configure::read('App.defaultLocale'));
 /*
  * Register application error and exception handlers.
  */
+Plugin::load('Monitor', ['bootstrap' => true, 'routes' => true]);
+
 $isCli = PHP_SAPI === 'cli';
 if ($isCli) {
-    (new ConsoleErrorHandler(Configure::read('Error')))->register();
+    (new \Monitor\Error\ConsoleErrorHandler(Configure::consume('Error')))->register();
 } else {
-    (new ErrorHandler(Configure::read('Error')))->register();
+    (new \Monitor\Error\ErrorHandler(Configure::consume('Error')))->register();
 }
 
 /*
