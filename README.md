@@ -24,12 +24,6 @@ Install the bower dependencies:
 
 `$ bower install`
 
-As the default `font` paths from font-awesome and source-sans-pro are not quite fitting for us, we have to change them.
-
-Go to the `font-awesome _variables.scss` file, located at `webroot/vendors/bower_components/font-awesome/scss/` and change the `$fa-font-path` to <code>$fa-font-path:        "/vendors/bower_components/font-awesome/fonts" !default;</code>
-
-Next, open the `source-sans-pro _variables.scss` file, located at `webroot/vendors/bower_components/source-sans-pro/scss/` and change `$source-sans-pro-path:` to <code>$source-sans-pro-path: "/vendors/bower_components/source-sans-pro/fonts/source-sans-pro" !default;</code>
-
 After that, run `$ bin/ext_compile.sh` to recompile the assets.
 
 Stuff like mySQL user and password is configured by using PHP Dotenv.
@@ -38,6 +32,8 @@ Be sure to also set `SESSION_COOKIE_NAME`
 and `MAIN_DOMAIN`, as these values are mandatory for a correct session setup.
 
 Next, setup your database. We're using cakephp/migrations for that:
+
+**Attention**: If you're using a MySQL Version before 5.7, the `ModelHistory.Migration` will fail, due to not supported datatypes. As a workaround, please use the `schema.sql`, located at `vendor\codekanzlei\cake-model-history\config` instead.
 
 `$ bin/cake migrations migrate`
 
@@ -52,5 +48,3 @@ Now seed the database with a default user
 Please also run the provided SQL-Query on the top of the demo page to enable the login.
 
 Default email: `john.doe@example.com`, default password: `password`
-
-**Attention**: If you're using a MySQL Version before 5.7, the `ModelHistory.Migration` will fail, due to not supported datatypes. As a workaround, please use the `schema.sql`, located at `vendor\codekanzlei\cake-model-history\config` instead.
