@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-11-11 22:50+0100\n"
+"POT-Creation-Date: 2016-11-15 13:10+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,11 +14,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /Users/cleptric/Sites/techno/Template/Error/error500.ctp:39
 msgid "An Internal Error Has Occurred"
 msgstr ""
 
-#: /Users/cleptric/Sites/techno/Template/Error/error500.ctp:41
 msgid "Error"
 msgstr ""
 
