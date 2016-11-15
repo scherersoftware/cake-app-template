@@ -33,8 +33,6 @@ and `MAIN_DOMAIN`, as these values are mandatory for a correct session setup.
 
 Next, setup your database. We're using cakephp/migrations for that:
 
-**Attention**: If you're using a MySQL Version before 5.7, the `ModelHistory.Migration` will fail, due to not supported datatypes. As a workaround, please use the `schema.sql`, located at `vendor\codekanzlei\cake-model-history\config` instead.
-
 `$ bin/cake migrations migrate`
 
 Also run the migrations from Josegonzalez/CakeQueuesadilla, as we use this plugin to send out the restore password emails.
@@ -44,6 +42,9 @@ Also run the migrations from Josegonzalez/CakeQueuesadilla, as we use this plugi
 Now seed the database with a default user
 
 `$ bin/cake migrations seed`
+
+To setup the ModelHistory-Plugin, run the SQL-Query, located in the schema.sql file under `vendor/codekanzlei/cake-model-history/config/schema.sql`.
+To setup the Attachments-Plugin, run the SQL-Query, located in the schema.sql file under `vendor/codekanzlei/cake-attachments/config/schema.sql`.
 
 Please also run the provided SQL-Query on the top of the demo page to enable the login.
 

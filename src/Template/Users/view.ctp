@@ -47,9 +47,6 @@
             'mode' => 'readonly'
         ]);
     ?>
-    <?=
-        $this->ModelHistory->modelHistoryArea($user, ['commentBox' => true]);
-    ?>
 </div>
 
 
