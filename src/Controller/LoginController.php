@@ -5,6 +5,7 @@ use App\Lib\Status;
 use App\Model\Entity\User;
 use Cake\Event\EventManager;
 use Cake\Routing\Router;
+use Cake\Validation\Validation;
 
 class LoginController extends AppController
 {
@@ -78,7 +79,7 @@ class LoginController extends AppController
     {
         $this->viewBuilder()->layout('plain');
         if ($this->request->is('post')) {
-            if (!empty($this->request->data['email'])) {
+            if (!empty($this->request->data['email']) && Validation::email($this->request->data['email'])) {
                 $user = $this->Users->getUserByEmail($this->request->data['email']);
 
                 if (!empty($user)) {
