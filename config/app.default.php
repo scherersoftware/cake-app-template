@@ -357,6 +357,27 @@ return [
         'max_login_retries' => 5,
         'login_lock_duration' => '1 hour'
     ],
+    'CakeMonitor' => [
+        'accessToken' => '',
+        'projectName' => '',
+        'Sentry' => [
+            'enabled' => !empty(Environment::read('SENTRY_DSN')),
+            'dsn' => Environment::read('SENTRY_DSN'),
+            'sanitizeFields' => [
+                'password',
+                'rememberuser',
+                'auth_token',
+                'api_token',
+                'mysql_password',
+                'mysql_host',
+                'mysql_username',
+                'mysql_database',
+                'email_username',
+                'email_password',
+                'cookie'
+            ]
+        ],
+    ],
     'Notifications' => [
         'defaultLocale' => 'en_US',
         'queueOptions' => [
