@@ -99,7 +99,8 @@ class Environment
             'MYSQL_PASSWORD',
             'MAIN_DOMAIN',
             'SENTRY_DSN',
-            'SENTRY_DSN_PUBLIC'
+            'SENTRY_DSN_PUBLIC',
+            'SESSION_COOKIE_NAME'
         ];
     }
 }
