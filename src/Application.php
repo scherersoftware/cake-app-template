@@ -15,10 +15,10 @@
 namespace App;
 
 use Cake\Core\Configure;
-use Cake\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Http\BaseApplication;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+use Monitor\Middleware\ErrorHandlerMiddleware;
 
 /**
  * Application setup class.
