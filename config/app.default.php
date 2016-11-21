@@ -11,7 +11,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
 
     /**
      * Configure basic information about the application.
@@ -356,6 +356,27 @@ return [
     'Authentication' => [
         'max_login_retries' => 5,
         'login_lock_duration' => '1 hour'
+    ],
+    'CakeMonitor' => [
+        'accessToken' => '',
+        'projectName' => '',
+        'Sentry' => [
+            'enabled' => !empty(Environment::read('SENTRY_DSN')),
+            'dsn' => Environment::read('SENTRY_DSN'),
+            'sanitizeFields' => [
+                'password',
+                'rememberuser',
+                'auth_token',
+                'api_token',
+                'mysql_password',
+                'mysql_host',
+                'mysql_username',
+                'mysql_database',
+                'email_username',
+                'email_password',
+                'cookie'
+            ]
+        ],
     ],
     'Notifications' => [
         'defaultLocale' => 'en_US',
