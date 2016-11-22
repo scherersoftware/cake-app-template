@@ -252,7 +252,7 @@ Plugin::load('ADmad/Glide');
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('CakeApiBaselayer', ['bootstrap' => true, 'routes' => true]);
 
-/** 
+/**
  * Datasource Type Mappings
  */
 Type::map('json', 'CkTools\Database\Type\JsonType');
@@ -288,3 +288,5 @@ function dlog()
         \Cake\Log\Log::write('debug', print_r($arg, true));
     }
 }
+
+Plugin::load('Api/V1', ['bootstrap' => false, 'routes' => true]);

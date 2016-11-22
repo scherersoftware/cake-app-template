@@ -111,4 +111,22 @@ class User extends Entity
     {
         return $this->firstname . ' ' . $this->lastname;
     }
+
+    /**
+     * Api transform for user
+     *
+     * @return array
+     */
+    public function apiTransform()
+    {
+        return [
+            'id' => $this->id,
+            'api_token' => $this->api_token,
+            'status' => $this->status,
+            'role' => $this->role,
+            'firstname' => $this->firstname,
+            'lastname' => $this->lastname,
+            'email' => $this->email,
+        ];
+    }
 }

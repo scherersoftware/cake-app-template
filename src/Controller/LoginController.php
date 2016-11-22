@@ -86,7 +86,7 @@ class LoginController extends AppController
                     $this->Users->sendForgotPasswordEmail($user);
                 }
                 $this->Flash->default(__('login.restore_password_email_sent'), true);
-                
+
                 return $this->redirect([
                     'plugin' => null,
                     'controller' => 'login',
@@ -126,7 +126,7 @@ class LoginController extends AppController
             }
             // Save new Password
             if ($this->request->is(['patch', 'post', 'put'])) {
-                $user = $this->Users->changePassword($user, $this->request->data);
+                $user = $this->Users->resetPassword($user, $this->request->data);
                 if (empty($user->errors())) {
                     $this->Users->resetLoginRetries($user);
                     $this->Flash->success(__('login.new_password_saved'));
