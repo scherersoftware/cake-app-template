@@ -27,7 +27,8 @@
         "friendsofcake/bootstrap-ui": "0.5.*",
         "admad/cakephp-glide": "2.0.*",
         "josegonzalez/dotenv": "2.0.*",
-        "beberlei/assert": "2.6."
+        "beberlei/assert": "2.6.",
+        "scherersoftware/cake-language-switcher": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
@@ -61,5 +62,11 @@
         "test": "vendor/bin/phpunit --colors=always"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git@github.com:scherersoftware/cake-language-switcher.git"
+        }
+    ]
 }
