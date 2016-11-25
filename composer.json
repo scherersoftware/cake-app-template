@@ -22,13 +22,13 @@
         "scherersoftware/cake-monitor": "1.1.*",
         "scherersoftware/cakephp-schema": "1.0.*",
         "scherersoftware/cake-api-baselayer": "1.0.*",
+        "scherersoftware/cake-language-switcher": "dev-master",
         "markstory/asset_compress": "3.2.*",
         "tedivm/jshrink": "1.1.*",
         "friendsofcake/bootstrap-ui": "0.5.*",
         "admad/cakephp-glide": "2.0.*",
         "josegonzalez/dotenv": "2.0.*",
-        "beberlei/assert": "2.6.",
-        "scherersoftware/cake-language-switcher": "dev-master"
+        "beberlei/assert": "2.6."
     },
     "require-dev": {
         "psy/psysh": "@stable",
@@ -62,11 +62,5 @@
         "test": "vendor/bin/phpunit --colors=always"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "git",
-            "url":  "git@github.com:scherersoftware/cake-language-switcher.git"
-        }
-    ]
+    "prefer-stable": true
 }
