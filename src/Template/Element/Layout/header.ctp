@@ -13,6 +13,7 @@ use App\Model\Entity\User;
         </a>
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+                <?= $this->LanguageSwitcher->renderLanguageSwitcher(); ?>
                 <?php if ($this->Auth->loggedIn()): ?>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">

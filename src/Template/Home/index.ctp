@@ -6,7 +6,7 @@
         <h1>
             Demos
             <div class="pull-right">
-                <?= 
+                <?=
                     $this->Html->link('Go to the Login-Page', [
                         'controller' => 'Login',
                         'action' => 'login'
@@ -25,7 +25,7 @@
                 <p>
                     To ensure that you're able to login, run the following SQL-Statement. This will set the password for the default user to <code>password</code>.
                     <br>
-                    This is neccesarry, as the <code>security salt</code> is generated after <code>compsoer install</code>.
+                    This is neccesarry, as the <code>security salt</code> is generated after <code>composer install</code>.
                 </p>
                 <pre>UPDATE users SET password = "<?= (new \Cake\Auth\DefaultPasswordHasher)->hash('password'); ?>" WHERE email = "john.doe@example.com";</pre>
             </div>
