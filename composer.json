@@ -17,7 +17,7 @@
         "codekanzlei/cake-frontend-bridge": "1.0.*",
         "codekanzlei/cake-attachments": "1.0.*",
         "codekanzlei/cake-notifications": "v2.0.*",
-        "codekanzlei/cake-model-history": "1.0.*",
+        "codekanzlei/cake-model-history": "2.0.*",
         "codekanzlei/cake-bootstrap3": "1.0.*",
         "scherersoftware/cake-monitor": "1.1.*",
         "scherersoftware/cakephp-schema": "1.0.*",
