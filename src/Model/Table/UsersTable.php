@@ -337,11 +337,33 @@ class UsersTable extends Table
      * @param array $postData Array containing new_password and password_confirm keys
      * @return User
      */
-    public function changePassword(User $user, array $postData)
+    public function resetPassword(User $user, array $postData)
     {
         $user->accessible('*', false);
         $user->accessible(['password', 'password_confirm'], true);
         $this->patchEntity($user, $postData, ['validate' => 'resetPassword']);
+        if (empty($user->errors())) {
+            $user->password = $postData['password'];
+
+            return $this->save($user);
+        }
+
+        return $user;
+    }
+
+    /**
+     * Validates the new_password and password_confirm fields for a user and
+     * saves them if valid.
+     *
+     * @param User $user User entity
+     * @param array $postData Array containing new_password and password_confirm keys
+     * @return User
+     */
+    public function changePassword(User $user, array $postData)
+    {
+        $user->accessible('*', false);
+        $user->accessible(['password', 'password_confirm', 'current_password'], true);
+        $this->patchEntity($user, $postData, ['validate' => 'changePassword']);
         if (empty($user->errors())) {
             $user->password = $postData['password'];
 

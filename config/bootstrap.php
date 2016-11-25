@@ -251,8 +251,10 @@ Plugin::load('Josegonzalez/CakeQueuesadilla');
 Plugin::load('ADmad/Glide');
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('CakeApiBaselayer', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('Api/V1', ['bootstrap' => false, 'routes' => true]);
+Plugin::load('LanguageSwitcher', ['bootstrap' => true, 'routes' => true]);
 
-/** 
+/**
  * Datasource Type Mappings
  */
 Type::map('json', 'CkTools\Database\Type\JsonType');

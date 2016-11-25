@@ -12,7 +12,11 @@ $config = [
             'forgotPassword',
             'restorePassword'
         ],
-        'Home' => '*'
+        'Home' => '*',
+        'Api/V1.Users' => [
+            'authorize',
+            'forgotPassword'
+        ]
     ],
     'auth_actions' => [
         'Dashboard' => [
@@ -29,5 +33,8 @@ $config = [
             'download' => '*',
             '*' => [User::ROLE_ADMIN]
         ],
+        'Api/V1.Users' => [
+            '*' => [User::ROLE_ADMIN]
+        ]
     ]
 ];

@@ -16,10 +16,8 @@ class ProfileController extends AppController
         $user = $this->Users->get($this->Auth->user('id'));
         unset($user->password);
         if ($this->request->is('put')) {
-            $user->accessible('*', false);
-            $user->accessible(['password', 'password_confirm', 'current_password'], true);
-            $this->Users->patchEntity($user, $this->request->data, ['validate' => 'changePassword']);
-            if ($this->Users->save($user)) {
+            $this->Users->changePassword($user, $this->request->data);
+            if (empty($user->errors())) {
                 $this->Flash->success(__('profile.password_change_success'));
 
                 return $this->redirect(['action' => 'index']);

@@ -109,7 +109,6 @@ class AppController extends Controller
             $this->Auth->config('authError', false);
         }
 
-        $this->FrontendBridge->setJson('locale', 'de');
         parent::beforeFilter($event);
     }
 
