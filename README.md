@@ -38,11 +38,13 @@ Also run the migrations from Josegonzalez/CakeQueuesadilla, as we use this plugi
 
 `$ bin/cake migrations migrate -p Josegonzalez/CakeQueuesadilla`
 
+For the ModelHistory you have to run these migrations:
+
+`$ bin/cake migrations migrate -p ModelHistory`
+
 Now seed the database with a default user
 
 `$ bin/cake migrations seed`
-
-To setup the ModelHistory-Plugin, run the SQL-Query, located in the schema.sql file under `vendor/codekanzlei/cake-model-history/config/schema.sql`.
 
 To setup the Attachments-Plugin, run the SQL-Query, located in the schema.sql file under `vendor/codekanzlei/cake-attachments/config/schema.sql`.
 
@@ -62,5 +64,3 @@ Also, we're using the following awesome open-source projects:
 - [PHP Dotenv by Jose Diaz-Gonzalez](https://github.com/josegonzalez)
 - [JShrink by Robert Hafner](https://github.com/tedivm/jshrink)
 - [Assert by Benjamin Eberlei](https://github.com/beberlei/assert)
-
-
