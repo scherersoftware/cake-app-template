@@ -340,7 +340,7 @@ class UsersTable extends Table
     public function resetPassword(User $user, array $postData)
     {
         $user->accessible('*', false);
-        $user->accessible(['password', 'password_confirm'], true);
+        $user->accessible(['password'], true);
         $this->patchEntity($user, $postData, ['validate' => 'resetPassword']);
         if (empty($user->errors())) {
             $user->password = $postData['password'];
@@ -362,7 +362,7 @@ class UsersTable extends Table
     public function changePassword(User $user, array $postData)
     {
         $user->accessible('*', false);
-        $user->accessible(['password', 'password_confirm', 'current_password'], true);
+        $user->accessible(['password'], true);
         $this->patchEntity($user, $postData, ['validate' => 'changePassword']);
         if (empty($user->errors())) {
             $user->password = $postData['password'];

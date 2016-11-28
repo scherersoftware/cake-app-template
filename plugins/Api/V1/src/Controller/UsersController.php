@@ -60,9 +60,6 @@ class UsersController extends AppController
     public function current()
     {
         $this->request->allowMethod('get');
-        if (!$this->Auth->user()) {
-            return $this->Api->response(ApiReturnCode::NOT_AUTHENTICATED);
-        }
         $user = $this->Users->get($this->Auth->user('id'));
 
         return $this->Api->response(ApiReturnCode::SUCCESS, [
@@ -105,9 +102,6 @@ class UsersController extends AppController
 
         if (!isset($this->request->data['current_password']) || !isset($this->request->data['password']) || !isset($this->request->data['password_confirm'])) {
             return $this->Api->response(ApiReturnCode::INVALID_PARAMS);
-        }
-        if (!$this->Auth->user()) {
-            return $this->Api->response(ApiReturnCode::NOT_AUTHENTICATED);
         }
 
         $user = $this->Users->get($this->Auth->user('id'));

@@ -87,7 +87,6 @@ class Environment
     {
         return [
             'APP_ENVIRONMENT',
-            'FULL_BASE_URL',
             'EMAIL_HOST',
             'EMAIL_PORT',
             'EMAIL_USERNAME',
@@ -98,9 +97,11 @@ class Environment
             'MYSQL_DATABASE',
             'MYSQL_PASSWORD',
             'MAIN_DOMAIN',
+            'FULL_BASE_URL',
+            'SESSION_COOKIE_NAME',
             'SENTRY_DSN',
             'SENTRY_DSN_PUBLIC',
-            'SESSION_COOKIE_NAME'
+            'DEPLOY_PATH'
         ];
     }
 }
