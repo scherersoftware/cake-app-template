@@ -65,5 +65,6 @@ class AppView extends View
         $this->loadHelper('Attachments.Attachments');
         $this->loadHelper('CkTools.Menu');
         $this->loadHelper('LanguageSwitcher.LanguageSwitcher');
+        $this->loadHelper('ModelHistory.ModelHistory');
     }
 }

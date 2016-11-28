@@ -13,22 +13,10 @@ Use composer to install the package:
 
 `$ composer create-project scherersoftware/cakephp-app-template <project-name>`
 
-First, we have to install sass and some npm packages
-
-```
-$ npm install
-```
-
-Install the bower dependencies:
-
-`$ bower install`
-
 Stuff like mySQL user and password is configured by using PHP Dotenv.
 Just rename the `.env.deault` to `.env` and set the values.
 Be sure to also set `SESSION_COOKIE_NAME`
 and `MAIN_DOMAIN`, as these values are mandatory for a correct session setup.
-
-After that, run `$ bin/ext_compile.sh` to recompile the assets.
 
 Next, setup your database. We're using cakephp/migrations for that:
 
@@ -51,6 +39,18 @@ To setup the Attachments-Plugin, run the SQL-Query, located in the schema.sql fi
 Please also run the provided SQL-Query on the top of the demo page to enable the login.
 
 Default email: `john.doe@example.com`, default password: `password`
+
+Now we have to install some npm packages and the bower dependencies:
+
+```
+$ npm install
+```
+
+Install the bower dependencies:
+
+`$ bower install`
+
+After that, run `$ bin/ext_compile.sh` to recompile the assets.
 
 ## Credits
 

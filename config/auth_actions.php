@@ -35,6 +35,9 @@ $config = [
         ],
         'Api/V1.Users' => [
             '*' => [User::ROLE_ADMIN]
+        ],
+        'ModelHistory.ModelHistory' => [
+            '*' => [User::ROLE_ADMIN]
         ]
     ]
 ];

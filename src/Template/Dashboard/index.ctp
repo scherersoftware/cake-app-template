@@ -6,7 +6,7 @@
 
 <div class="dashboard index">
     <class="row">
-    <div class="col-lg-3 col-xs-6">
+    <div class="col-lg-3 col-xs-12">
         <div class="info-box">
             <span class="info-box-icon bg-yellow">
                 <i class="fa fa-user"></i>

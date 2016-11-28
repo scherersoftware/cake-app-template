@@ -237,7 +237,6 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
-Plugin::load('Migrations');
 Plugin::load('BootstrapUI');
 Plugin::load('CkTools', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('FrontendBridge', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
@@ -252,7 +251,7 @@ Plugin::load('ADmad/Glide');
 Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('CakeApiBaselayer', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Api/V1', ['bootstrap' => false, 'routes' => true]);
-Plugin::load('LanguageSwitcher', ['bootstrap' => true, 'routes' => true]);
+Plugin::load('LanguageSwitcher', ['bootstrap' => true]);
 
 /**
  * Datasource Type Mappings

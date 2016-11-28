@@ -19,7 +19,6 @@ use App\Model\Entity\User;
             echo $this->Form->input('lastname', ['label' => __('user.lastname')]);
             echo $this->Form->input('email', ['label' => __('user.email')]);
             echo $this->Form->input('password', ['label' => __('user.password')]);
-            echo $this->Form->input('password_confirm', ['label' => __('user.password_confirm'), 'type' => 'password']);
         ?>
         <?=
             $this->Attachments->attachmentsArea($user, [
