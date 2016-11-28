@@ -49,9 +49,94 @@ class UsersTable extends Table
         $this->addBehavior('Timestamp');
         $this->addBehavior('ModelHistory.Historizable', [
             'userNameFields' => [
-                'firstname' => 'firstname',
-                'lastname' => 'lastname',
-                'id' => 'Users.id'
+                'firstname' => 'Users.firstname',
+                'lastname' => 'Users.lastname'
+            ],
+            'fields' => [
+                [
+                    'name' => 'firstname',
+                    'translation' => __('user.forename'),
+                    'searchable' => true,
+                    'saveable' => true,
+                    'obfuscated' => false,
+                    'type' => 'string',
+                    'displayParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    },
+                    'saveParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    }
+                ],
+                [
+                    'name' => 'lastname',
+                    'translation' => __('user.lastname'),
+                    'searchable' => true,
+                    'saveable' => true,
+                    'obfuscated' => false,
+                    'type' => 'string',
+                    'displayParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    },
+                    'saveParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    }
+                ],
+                [
+                    'name' => 'status',
+                    'translation' => __('user.status'),
+                    'searchable' => true,
+                    'saveable' => true,
+                    'obfuscated' => false,
+                    'type' => 'string',
+                    'displayParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    },
+                    'saveParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    }
+                ],
+                [
+                    'name' => 'role',
+                    'translation' => __('user.role'),
+                    'searchable' => true,
+                    'saveable' => true,
+                    'obfuscated' => false,
+                    'type' => 'string',
+                    'displayParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    },
+                    'saveParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    }
+                ],
+                [
+                    'name' => 'email',
+                    'translation' => __('user.email'),
+                    'searchable' => true,
+                    'saveable' => true,
+                    'obfuscated' => false,
+                    'type' => 'string',
+                    'displayParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    },
+                    'saveParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    }
+                ],
+                [
+                    'name' => 'password',
+                    'translation' => __('user.password'),
+                    'searchable' => true,
+                    'saveable' => true,
+                    'obfuscated' => true,
+                    'type' => 'string',
+                    'displayParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    },
+                    'saveParser' => function ($fieldname, $value, $entity) {
+                        return $value;
+                    }
+                ]
             ]
         ]);
     }
