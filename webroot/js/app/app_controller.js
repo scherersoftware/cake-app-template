@@ -23,13 +23,14 @@ Frontend.AppController = Frontend.Controller.extend({
         });
 
         // Bootstrap Tabs Toggling via URL hash.
-        if (location.hash !== '') {
-            $('a[href="' + location.hash + '"]').tab('show');
-        } else {
+        if (location.hash === '') {
             $('ul.nav-tabs > li:first > a[data-toggle="tab"]').tab('show');
+        } else {
+            $('a[href="' + location.hash + '"]').tab('show');
         }
         $('a[data-toggle="tab"]').on('click', function(e) {
-            return location.hash = $(e.target).attr('href').substr(1);
+            location.hash = $(e.target).attr('href').substr(1);
+            return location.hash;
         });
     }
 });
