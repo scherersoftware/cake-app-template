@@ -22,7 +22,7 @@
         "scherersoftware/cake-monitor": "1.1.*",
         "scherersoftware/cakephp-schema": "1.0.*",
         "scherersoftware/cake-api-baselayer": "1.0.*",
-        "scherersoftware/cake-language-switcher": "dev-master",
+        "scherersoftware/cake-language-switcher": "1.0.*",
         "markstory/asset_compress": "3.2.*",
         "tedivm/jshrink": "1.1.*",
         "friendsofcake/bootstrap-ui": "0.5.*",
