@@ -10,5 +10,4 @@ composer.lock
 /.env
 
 /config/app.php
-/config/Migrations/schema-dump-default.lock
 /webroot/vendors/bower_components
