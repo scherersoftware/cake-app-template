@@ -11,7 +11,7 @@ This is just a brief installation guide. A much more detailed version will be av
 
 Use composer to install the package:
 
-`$ composer create-project scherersoftware/cakephp-app-template <project-name>`
+`$ composer create-project scherersoftware/cake-app-template <project-name>`
 
 Stuff like mySQL user and password is configured by using PHP Dotenv.
 Just rename the `.env.deault` to `.env` and set the values.
