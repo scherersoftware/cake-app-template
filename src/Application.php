@@ -47,6 +47,12 @@ class Application extends BaseApplication
             // Apply routing
             ->add(new RoutingMiddleware());
 
+        $middleware->push(new \LanguageSwitcher\Middleware\LocalisationMiddleware([
+            'Cookie' => [
+                'domain' => 'template.dev'
+            ]
+        ]));
+
         $middleware->push(new \ADmad\Glide\Middleware\GlideMiddleware(
             Configure::read('Glide')
         ));
