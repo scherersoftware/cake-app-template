@@ -1,6 +1,6 @@
-![CakePHP 3 Notifications Plugin](https://raw.githubusercontent.com/scherersoftware/cakephp-app-template/master/app-template.png)
+![CakePHP 3 Notifications Plugin](https://raw.githubusercontent.com/scherersoftware/cake-app-template/master/app-template.png)
 
-[![Build Status](https://travis-ci.org/scherersoftware/cakephp-app-template.svg?branch=master)](https://travis-ci.org/scherersoftware/cakephp-app-template)
+[![Build Status](https://travis-ci.org/scherersoftware/cakephp-app-template.svg?branch=master)](https://travis-ci.org/scherersoftware/cake-app-template)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
 
 Pre-Configured Application Template for CakePHP 3
@@ -11,7 +11,7 @@ This is just a brief installation guide. A much more detailed version will be av
 
 Use composer to install the package:
 
-`$ composer create-project scherersoftware/cakephp-app-template <project-name>`
+`$ composer create-project scherersoftware/cake-app-template <project-name>`
 
 Stuff like mySQL user and password is configured by using PHP Dotenv.
 Just rename the `.env.deault` to `.env` and set the values.
