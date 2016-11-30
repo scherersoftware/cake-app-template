@@ -40,6 +40,12 @@ Please also run the provided SQL-Query on the top of the demo page to enable the
 
 Default email: `john.doe@example.com`, default password: `password`
 
+Be sure to have `npm` installed and make sure afterwards `bower` is installed globally:
+
+```
+$ npm install -g bower
+```
+
 Now we have to install some npm packages and the bower dependencies:
 
 ```
