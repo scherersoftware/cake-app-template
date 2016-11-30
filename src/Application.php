@@ -47,7 +47,7 @@ class Application extends BaseApplication
             // Apply routing
             ->add(new RoutingMiddleware());
 
-        $middleware->push(new \LanguageSwitcher\Middleware\LocalisationMiddleware([
+        $middleware->push(new \LanguageSwitcher\Middleware\LanguageSwitcherMiddleware([
             'Cookie' => [
                 'domain' => 'template.dev'
             ]
