@@ -63,7 +63,7 @@ class User extends Entity
     {
         return [
             self::ROLE_ADMIN => __('user.role.admin'),
-            self::ROLE_ADMIN => __('user.role.user'),
+            self::ROLE_USER => __('user.role.user'),
         ];
     }
 
