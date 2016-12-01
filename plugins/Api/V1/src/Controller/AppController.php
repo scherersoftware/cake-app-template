@@ -13,5 +13,7 @@ class AppController extends BaseController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
+        // only as long as this is not done in CakeApiBaselayer\ApiComponent:
+        $this->Api->apiTokenAuthentication();
     }
 }

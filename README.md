@@ -13,7 +13,7 @@ Use composer to install the package:
 
 `$ composer create-project scherersoftware/cake-app-template <project-name>`
 
-Stuff like mySQL user and password is configured by using PHP Dotenv.
+Stuff like MySQL user and password is configured by using PHP Dotenv.
 Just rename the `.env.deault` to `.env` and set the values.
 Be sure to also set `SESSION_COOKIE_NAME`
 and `MAIN_DOMAIN`, as these values are mandatory for a correct session setup.
