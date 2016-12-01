@@ -69,6 +69,13 @@ class AppController extends Controller
                 ]
             ],
         ]);
+        /*
+         * Enable the following components for recommended CakePHP security settings.
+         * see http://book.cakephp.org/3.0/en/controllers/components/security.html
+         */
+        //$this->loadComponent('Security');
+        //$this->loadComponent('Csrf');
+
         parent::initialize();
     }
 
@@ -99,9 +106,6 @@ class AppController extends Controller
         if (!$this->AuthUtils->loggedIn() && $userId = $this->AuthUtils->checkRememberMeCookie()) {
             $this->loadModel('Users');
             $user = $this->Users->get($userId)->toArray();
-            if (!empty($user['mandator_id'])) {
-                $user['mandator'] = $this->Users->Mandators->get($user['mandator_id']);
-            }
             $this->Auth->setUser($user);
         }
 

@@ -13,6 +13,25 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
 {
 
     /**
+     * Construct the widgets and binds the default context providers.
+     *
+     * @param \Cake\View\View $View The View this helper is being attached to.
+     * @param array $config Configuration settings for the helper.
+     */
+    public function __construct(View $View, array $config = [])
+    {
+        $config = Hash::merge($config, [
+            'grid' => [
+                'left' => 3,
+                'middle' => 6,
+                'right' => 3
+            ],
+        ]);
+
+        parent::__construct($View, $config);
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function create($model = null, array $options = [])
@@ -66,7 +85,8 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
 
         if ($this->context() instanceof \Cake\View\Form\EntityContext
             && count($parts) > 1
-            && (is_array($this->context()->entity()->get($parts[0])) || isset($this->request->data[$parts[0]]))) {
+            && (is_array($this->context()->entity()->get($parts[0])) || isset($this->request->data[$parts[0]]))
+        ) {
             $errors = $this->context()->entity()->errors();
             if (Hash::check($errors, $field)) {
                 $error = Hash::extract($errors, $field);
