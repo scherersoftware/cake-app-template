@@ -1,9 +1,19 @@
-<h1 class="page-header">
-    <?= __('users.add') ?>
-    <div class="pull-right">
-        <?= $this->CkTools->viewButton($user) ?>
-        <?= $this->ListFilter->backToListButton() ?>
-    </div>
-</h1>
+<?php
+$this->assign('title', __('users.add.title'));
+?>
 
-<?= $this->element('../Users/form') ?>
+<div class="users form box">
+    <div class="box-header with-border">
+        <h3 class="box-title">
+            <?= __('users.add.title') ?>
+        </h3>
+        <div class="box-tools pull-right">
+            <div class="pull-right">
+                <?= $this->ListFilter->backToListButton() ?>
+            </div>
+        </div>
+    </div>
+
+    <?= $this->element('../Users/form') ?>
+
+</div>

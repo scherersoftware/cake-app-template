@@ -1,0 +1,61 @@
+/*
+This is a customized version of the AdminLTE.less file, v2.3.7.
+
+- Removed Google Fonts Source Sans Pro reference, as we serve it ourselves as a bower dependency
+- Adapted paths to bootstrap inclusions
+- Removed unused files
+*/
+
+@import (reference) "../../vendors/bower_components/bootstrap/less/mixins.less";
+@import (reference) "../../vendors/bower_components/bootstrap/less/variables.less";
+
+@AdminLTEPath: '../../vendors/bower_components/admin-lte/build/less';
+
+//MISC
+//----
+@import "@{AdminLTEPath}/core.less";
+@import "@{AdminLTEPath}/variables.less";
+@import "@{AdminLTEPath}/mixins.less";
+
+//COMPONENTS
+//-----------
+@import "@{AdminLTEPath}/header.less";
+@import "@{AdminLTEPath}/sidebar.less";
+@import "@{AdminLTEPath}/sidebar-mini.less";
+@import "@{AdminLTEPath}/control-sidebar.less";
+@import "@{AdminLTEPath}/dropdown.less";
+@import "@{AdminLTEPath}/forms.less";
+@import "@{AdminLTEPath}/progress-bars.less";
+@import "@{AdminLTEPath}/small-box.less";
+@import "@{AdminLTEPath}/boxes.less";
+@import "@{AdminLTEPath}/info-box.less";
+@import "@{AdminLTEPath}/timeline.less";
+@import "@{AdminLTEPath}/buttons.less";
+@import "@{AdminLTEPath}/callout.less";
+@import "@{AdminLTEPath}/alerts.less";
+@import "@{AdminLTEPath}/navs.less";
+@import "@{AdminLTEPath}/products.less";
+@import "@{AdminLTEPath}/table.less";
+@import "@{AdminLTEPath}/labels.less";
+@import "@{AdminLTEPath}/direct-chat.less";
+@import "@{AdminLTEPath}/users-list.less";
+@import "@{AdminLTEPath}/carousel.less";
+@import "@{AdminLTEPath}/modal.less";
+@import "@{AdminLTEPath}/social-widgets.less";
+//PAGES
+//------
+@import "@{AdminLTEPath}/mailbox.less";
+@import "@{AdminLTEPath}/lockscreen.less";
+@import "@{AdminLTEPath}/login_and_register.less";
+@import "@{AdminLTEPath}/404_500_errors.less";
+@import "@{AdminLTEPath}/invoice.less";
+@import "@{AdminLTEPath}/profile";
+//Plugins
+//--------
+@import "@{AdminLTEPath}/bootstrap-social.less";
+@import "@{AdminLTEPath}/fullcalendar.less";
+@import "@{AdminLTEPath}/select2.less";
+//Miscellaneous
+//-------------
+@import "@{AdminLTEPath}/miscellaneous.less";
+@import "@{AdminLTEPath}/print.less";

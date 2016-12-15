@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-11-15 13:10+0100\n"
+"POT-Creation-Date: 2016-12-15 23:54+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -83,6 +83,12 @@ msgstr ""
 msgid "validation.user.old_password_wrong"
 msgstr ""
 
+msgid "validation.user.enter_new_password"
+msgstr ""
+
+msgid "validation.user.repeat_new_password"
+msgstr ""
+
 msgid "validation.user.password_min_length"
 msgstr ""
 
@@ -155,9 +161,6 @@ msgstr ""
 msgid "profile.index.title"
 msgstr ""
 
-msgid "profile.my_data"
-msgstr ""
-
 msgid "user.firstname"
 msgstr ""
 
@@ -179,40 +182,28 @@ msgstr ""
 msgid "profile.save"
 msgstr ""
 
-msgid "users.add"
+msgid "users.add.title"
 msgstr ""
 
-msgid "users.edit"
-msgstr ""
-
-msgid "user.password_confirm"
+msgid "users.edit.title"
 msgstr ""
 
 msgid "user.attachments"
 msgstr ""
 
-msgid "users"
+msgid "users.index.title"
+msgstr ""
+
+msgid "users.add"
 msgstr ""
 
 msgid "lists.actions"
 msgstr ""
 
-msgid "user"
-msgstr ""
-
-msgid "user.id"
+msgid "users.view.title"
 msgstr ""
 
 msgid "user.failed_login_count"
-msgstr ""
-
-msgid "user.failed_login_timestamp"
-msgstr ""
-
-msgid "created"
-msgstr ""
-
-msgid "modified"
 msgstr ""
 
 msgid "dashboard.index.title"

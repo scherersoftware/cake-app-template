@@ -244,7 +244,6 @@ Plugin::load('AuthActions', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('ListFilter', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('Notifications', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);
-Plugin::load('ModelHistory', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('Josegonzalez/CakeQueuesadilla');
 Plugin::load('ADmad/Glide');

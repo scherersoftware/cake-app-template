@@ -1,5 +1,5 @@
 Frontend.AppController = Frontend.Controller.extend({
-    baseComponents: ['Attachments', 'ModelHistory', 'DatePicker'],
+    baseComponents: ['Attachments', 'DatePicker'],
     _initialize: function() {
         this.initGlobalFunctionality();
         this.startup();

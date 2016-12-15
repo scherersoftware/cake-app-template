@@ -5,3 +5,4 @@ node_modules/
 webroot/cache_js
 tmp/
 webroot/vendors
+Gruntfile.js

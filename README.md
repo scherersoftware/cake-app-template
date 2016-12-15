@@ -14,9 +14,7 @@ Use composer to install the package:
 `$ composer create-project scherersoftware/cake-app-template <project-name>`
 
 Stuff like MySQL user and password is configured by using PHP Dotenv.
-Just rename the `.env.deault` to `.env` and set the values.
-Be sure to also set `SESSION_COOKIE_NAME`
-and `MAIN_DOMAIN`, as these values are mandatory for a correct session setup.
+Be sure to set `SESSION_COOKIE_NAME` and `MAIN_DOMAIN` in the `.env`, as these values are mandatory for a correct session setup.
 
 Next, setup your database. We're using cakephp/migrations for that:
 
@@ -33,10 +31,6 @@ For the ModelHistory you have to run these migrations:
 Now seed the database with a default user
 
 `$ bin/cake migrations seed`
-
-To setup the Attachments-Plugin, run the SQL-Query, located in the schema.sql file under `vendor/codekanzlei/cake-attachments/config/schema.sql`.
-
-Please also run the provided SQL-Query on the top of the demo page to enable the login.
 
 Default email: `john.doe@example.com`, default password: `password`
 
@@ -55,8 +49,6 @@ $ npm install
 Install the bower dependencies:
 
 `$ bower install`
-
-After that, run `$ bin/ext_compile.sh` to recompile the assets.
 
 ## Credits
 

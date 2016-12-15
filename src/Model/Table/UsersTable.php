@@ -47,98 +47,6 @@ class UsersTable extends Table
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
-        $this->addBehavior('ModelHistory.Historizable', [
-            'userNameFields' => [
-                'firstname' => 'Users.firstname',
-                'lastname' => 'Users.lastname'
-            ],
-            'fields' => [
-                [
-                    'name' => 'firstname',
-                    'translation' => __('user.forename'),
-                    'searchable' => true,
-                    'saveable' => true,
-                    'obfuscated' => false,
-                    'type' => 'string',
-                    'displayParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    },
-                    'saveParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    }
-                ],
-                [
-                    'name' => 'lastname',
-                    'translation' => __('user.lastname'),
-                    'searchable' => true,
-                    'saveable' => true,
-                    'obfuscated' => false,
-                    'type' => 'string',
-                    'displayParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    },
-                    'saveParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    }
-                ],
-                [
-                    'name' => 'status',
-                    'translation' => __('user.status'),
-                    'searchable' => true,
-                    'saveable' => true,
-                    'obfuscated' => false,
-                    'type' => 'string',
-                    'displayParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    },
-                    'saveParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    }
-                ],
-                [
-                    'name' => 'role',
-                    'translation' => __('user.role'),
-                    'searchable' => true,
-                    'saveable' => true,
-                    'obfuscated' => false,
-                    'type' => 'string',
-                    'displayParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    },
-                    'saveParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    }
-                ],
-                [
-                    'name' => 'email',
-                    'translation' => __('user.email'),
-                    'searchable' => true,
-                    'saveable' => true,
-                    'obfuscated' => false,
-                    'type' => 'string',
-                    'displayParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    },
-                    'saveParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    }
-                ],
-                [
-                    'name' => 'password',
-                    'translation' => __('user.password'),
-                    'searchable' => true,
-                    'saveable' => true,
-                    'obfuscated' => true,
-                    'type' => 'string',
-                    'displayParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    },
-                    'saveParser' => function ($fieldname, $value, $entity) {
-                        return $value;
-                    }
-                ]
-            ]
-        ]);
     }
 
     /**
@@ -175,7 +83,9 @@ class UsersTable extends Table
             ->notEmpty('email');
 
         $validator
-            ->allowEmpty('password');
+            ->allowEmpty('password', 'update');
+
+        $this->validationPassword($validator);
 
         $validator
             ->integer('failed_login_count')
@@ -256,8 +166,8 @@ class UsersTable extends Table
             return $context['newRecord'] || !empty($context['data']['password']);
         };
         $validator
-            ->notEmpty('password', 'Bitte geben Sie ein neues Passwort ein.', $shouldValidate)
-            ->notEmpty('password_confirm', 'Bitte wiederholen Sie Ihr neues Passwort.', $shouldValidate)
+            ->notEmpty('password', __('validation.user.enter_new_password'), $shouldValidate)
+            ->notEmpty('password_confirm', __('validation.user.repeat_new_password'), $shouldValidate)
             ->add('password', [
                 'minLength' => [
                     'rule' => ['minLength', 8],

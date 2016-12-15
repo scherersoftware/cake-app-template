@@ -8,11 +8,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2016-02-02 16:06+0000\n"
-"PO-Revision-Date: 2016-11-11 22:54+0100\n"
+"PO-Revision-Date: 2016-12-15 23:54+0100\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.11\n"
-": msgid \"login.logut\"msgstr \"logout\"msgid \"login.password\"msgstr \"password\"\n"
 
 msgid "auth.not_allowed"
 msgstr "Your are not allowed to access this"
@@ -48,10 +47,10 @@ msgid "profile.password_change_failure"
 msgstr "Your password hasn't been changed"
 
 msgid "user.role"
-msgstr "role"
+msgstr "Role"
 
 msgid "user.status"
-msgstr "status "
+msgstr "Status"
 
 msgid "forms.data_saved"
 msgstr "You data has been saved"
@@ -66,22 +65,28 @@ msgid "forms.data_not_deleted"
 msgstr "Your data hasn't been deleted"
 
 msgid "status.active"
-msgstr "active"
+msgstr "Active"
 
 msgid "status.deleted"
-msgstr "deleted"
+msgstr "Deleted"
 
 msgid "status.suspended"
-msgstr "suspended"
+msgstr "Suspended"
 
 msgid "user.role.admin"
-msgstr "admin"
+msgstr "Admin"
 
 msgid "user.role.user"
-msgstr "user"
+msgstr "User"
 
 msgid "validation.user.old_password_wrong"
 msgstr "Your old password isn't correct"
+
+msgid "validation.user.enter_new_password"
+msgstr "Please enter a new password."
+
+msgid "validation.user.repeat_new_password"
+msgstr "Please repeat your new password."
 
 msgid "validation.user.password_min_length"
 msgstr "The password must be 8 characters long"
@@ -120,7 +125,7 @@ msgid "restore_password_text"
 msgstr "Enter your email to receive an email to restore your password"
 
 msgid "login.email"
-msgstr "email"
+msgstr "Email"
 
 msgid "login.restore_password"
 msgstr "Restore Password"
@@ -135,10 +140,10 @@ msgid "login.please_login"
 msgstr "Please login"
 
 msgid "user.email"
-msgstr "email"
+msgstr "Email"
 
 msgid "user.password"
-msgstr "password"
+msgstr "Password"
 
 msgid "login.login_for_two_weeks"
 msgstr "Keep logged in for two weeks"
@@ -155,65 +160,50 @@ msgstr "Set Password"
 msgid "profile.index.title"
 msgstr "Profile"
 
-msgid "profile.my_data"
-msgstr "My data"
-
 msgid "user.firstname"
-msgstr "firstname"
+msgstr "Firstname"
 
 msgid "user.lastname"
-msgstr "lastname"
+msgstr "Lastname"
 
 msgid "profile.change_password"
 msgstr "Change password"
 
 msgid "profile.current_password"
-msgstr "current password"
+msgstr "Current Password"
 
 msgid "profile.new_password"
-msgstr "new password "
+msgstr "New Password"
 
 msgid "profile.repeat_password"
-msgstr "repeat new password"
+msgstr "Repeat New Password"
 
 msgid "profile.save"
-msgstr "save"
+msgstr "Save"
 
-msgid "users.add"
-msgstr "User add"
+msgid "users.add.title"
+msgstr "Add User"
 
-msgid "users.edit"
-msgstr "Edit user"
-
-msgid "user.password_confirm"
-msgstr "confirm password"
+msgid "users.edit.title"
+msgstr "Edit User"
 
 msgid "user.attachments"
-msgstr "attachments "
+msgstr "Attachments"
 
-msgid "users"
-msgstr "List of all users"
+msgid "users.index.title"
+msgstr "Users"
+
+msgid "users.add"
+msgstr "Add User"
 
 msgid "lists.actions"
-msgstr "actions"
+msgstr "Actions"
 
-msgid "user"
-msgstr "User details "
-
-msgid "user.id"
-msgstr "id"
+msgid "users.view.title"
+msgstr "User Detail"
 
 msgid "user.failed_login_count"
-msgstr "login retries"
-
-msgid "user.failed_login_timestamp"
-msgstr "last login retry"
-
-msgid "created"
-msgstr "created"
-
-msgid "modified"
-msgstr "modified"
+msgstr "Login Retries"
 
 msgid "dashboard.index.title"
 msgstr "Dashboard"

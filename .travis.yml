@@ -9,4 +9,5 @@ before_script:
   - composer install --prefer-dist
 
 script:
-  - vendor/bin/phpcs -pn --extensions=php --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests
+  - composer cs-check
+  - composer php-syntax

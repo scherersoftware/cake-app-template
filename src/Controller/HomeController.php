@@ -1,7 +1,8 @@
 <?php
 namespace App\Controller;
 
-use CakeApiBaselayer\Lib\ApiReturnCode;
+use Cake\Datasource\ConnectionManager;
+use Cake\ORM\TableRegistry;
 
 class HomeController extends AppController
 {
@@ -12,31 +13,32 @@ class HomeController extends AppController
      */
     public function index()
     {
-        $this->viewBuilder()->layout('plain');
-        $this->FrontendBridge->setJson('demoText', 'I was passed from the Backend to the Frontend via FrontendBridge');
-    }
-    /**
-     * Returns a JSON response
-     *
-     * @return Response
-     */
-    public function getJsonData()
-    {
-        $code = ApiReturnCode::SUCCESS;
-        return $this->Api->response($code, [
-            'foo' => 'bar',
-            'baz' => 'buff'
-        ]);
-    }
-    /**
-     * jsonAction Demo Action.
-     *
-     * @return void
-     */
-    public function listUsers()
-    {
-        $this->loadModel('Users');
-        $users = $this->Users->find('list')->toArray();
-        $this->FrontendBridge->setJson('users', $users);
+        $this->viewBuilder()->layout(false);
+        try {
+            $phinxTable = TableRegistry::get('Phinxlog');
+            $migratedApp = $phinxTable->find()
+                ->where([
+                    'migration_name' => 'Initial'
+                ])
+                ->count();
+
+            $phinxJobsTable = TableRegistry::get('josegonzalez_cake_queuesadilla_phinxlog');
+            $migratedQueue = $phinxJobsTable->find()
+                ->where([
+                    'migration_name' => 'CreateJobs'
+                ])
+                ->count();
+            $userTable = TableRegistry::get('Users');
+            $seeded = $userTable->find()
+                ->where([
+                    'email' => 'john.doe@example.com'
+                ])
+                ->count();
+        } catch (\Exception $e) {
+            $migratedApp = false;
+            $migratedQueue = false;
+            $seeded = false;
+        }
+        $this->set(compact('migratedApp', 'migratedQueue', 'seeded'));
     }
 }
