@@ -10,3 +10,4 @@ before_script:
 
 script:
   - composer cs-check
+  - composer php-syntax
