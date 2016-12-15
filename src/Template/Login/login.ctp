@@ -1,4 +1,5 @@
 <?php
+use App\Lib\Environment;
 $this->assign('bodyClasses', 'login-page');
 ?>
 
@@ -33,6 +34,15 @@ $this->assign('bodyClasses', 'login-page');
             <p>- <?= __('login.or') ?> -</p>
             <?= $this->Html->link(__('login.forgot_password'), ['plugin' => null, 'controller' => 'login', 'action' => 'forgot-password']) ?><br>
         </div>
+        <?php if (ENVIRONMENT === Environment::DEVELOPMENT) : ?>
+            <hr>
+            <dl>
+                <dt><?= __('user.email') ?></dt>
+                <dd><code>john.doe@example.com</code></dd>
+                <dt><?= __('user.password') ?></dt>
+                <dd><code>password</code></dd>
+            </dl>
+        <?php endif; ?>
     </div>
 </div>
 
