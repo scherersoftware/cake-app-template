@@ -18,6 +18,7 @@ use Cake\Core\Configure;
 use Cake\Http\BaseApplication;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+use LanguageSwitcher\Middleware\LanguageSwitcherMiddleware;
 use Monitor\Middleware\ErrorHandlerMiddleware;
 
 /**
@@ -47,11 +48,7 @@ class Application extends BaseApplication
             // Apply routing
             ->add(new RoutingMiddleware());
 
-        $middleware->push(new \LanguageSwitcher\Middleware\LanguageSwitcherMiddleware([
-            'Cookie' => [
-                'domain' => 'template.dev'
-            ]
-        ]));
+        $middleware->push(new LanguageSwitcherMiddleware(Configure::read('LanguageSwitcher.Middleware')));
 
         $middleware->push(new \ADmad\Glide\Middleware\GlideMiddleware(
             Configure::read('Glide')

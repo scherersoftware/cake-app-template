@@ -2,8 +2,7 @@
 namespace App\View\Helper;
 
 use App\Lib\Status;
-use App\Model\Entity\GemasFaultCatalog;
-use App\Model\Entity\Inventory;
+use App\Model\Entity\User;
 use Cake\Utility\Hash;
 use Cake\View\Helper;
 
@@ -43,6 +42,29 @@ class UtilsHelper extends Helper
                 $classes[] = 'label-primary';
         }
         return sprintf('<span class="%s">%s</span>', implode(' ', $classes), $caption);
+    }
+
+    /**
+     * Renders a role label with the appropriate color
+     *
+     * @param string $role One of the Role constants
+     * @return string
+     */
+    public function roleLabel($role)
+    {
+        $classes = ['label'];
+        $caption = User::getTypeDescription($role);
+        switch ($role) {
+            case User::ROLE_ADMIN:
+                $classes[] = 'label label-primary';
+                break;
+            case User::ROLE_USER:
+                $classes[] = 'label label-warning';
+                break;
+            default:
+                $classes[] = 'label-default';
+        }
+        return sprintf('<span class="%s">%s</span>', implode(' ', $classes), h($caption));
     }
 
     /**

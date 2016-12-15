@@ -13,6 +13,7 @@
  */
 namespace App\View;
 
+use Cake\Core\Configure;
 use Cake\View\View;
 
 /**
@@ -42,9 +43,6 @@ class AppView extends View
         $this->loadHelper('Form', [
             'className' => 'BootstrapForm'
         ]);
-        $this->loadHelper('Paginator', [
-            'className' => 'BootstrapUI.Paginator'
-        ]);
         $this->loadHelper('Flash', [
             'className' => 'BootstrapUI.Flash'
         ]);
@@ -54,7 +52,9 @@ class AppView extends View
         $this->loadHelper('ADmad/Glide.Glide', [
             'baseUrl' => '/images/',
             'secureUrls' => true,
+            'signKey' => Configure::read('Security.salt'),
         ]);
+        $this->loadHelper('Paginator');
         $this->loadHelper('AdminLteListFilter');
         $this->loadHelper('AssetCompress.AssetCompress');
         $this->loadHelper('FrontendBridge.FrontendBridge');
@@ -64,7 +64,7 @@ class AppView extends View
         $this->loadHelper('AssetCompress.AssetCompress');
         $this->loadHelper('Attachments.Attachments');
         $this->loadHelper('CkTools.Menu');
-        $this->loadHelper('LanguageSwitcher.LanguageSwitcher');
+        $this->loadHelper('LanguageSwitcher.LanguageSwitcher', Configure::read('LanguageSwitcher.Helper'));
         $this->loadHelper('ModelHistory.ModelHistory');
     }
 }

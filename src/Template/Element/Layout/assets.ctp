@@ -10,7 +10,7 @@ echo $this->AssetCompress->css('styles.css', [
 ]);
 echo $this->fetch('meta');
 
-echo $this->Html->css('admin-lte-custom/skins/' . $this->fetch('adminLTETheme') . '.css');
+echo $this->Html->css('skins/' . $this->fetch('adminLTETheme') . '.css');
 
 echo $this->fetch('css');
 

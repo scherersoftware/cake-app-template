@@ -26,7 +26,7 @@ class UsersSeed extends AbstractSeed
                 'firstname' => 'John',
                 'lastname' => 'Doe',
                 'email' => 'john.doe@example.com',
-                'password' => null,
+                'password' => $this->_getDefaultPassword(),
                 'last_passwords' => null,
                 'failed_login_count' => 0,
                 'failed_login_timestamp' => null,
@@ -38,5 +38,15 @@ class UsersSeed extends AbstractSeed
 
         $table = $this->table('users');
         $table->insert($data)->save();
+    }
+
+    /**
+     * Get the default password
+     *
+     * @return string
+     */
+    protected function _getDefaultPassword()
+    {
+        return (new \Cake\Auth\DefaultPasswordHasher())->hash('password');
     }
 }

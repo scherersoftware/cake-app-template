@@ -1,9 +1,8 @@
 <?php
 use App\Model\Entity\User;
-
 ?>
 
-<div class="users form">
+<div class="box-body">
     <?= $this->Form->create($user, ['align' => 'horizontal', 'novalidate']); ?>
     <fieldset>
         <?php

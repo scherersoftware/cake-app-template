@@ -1,19 +1,22 @@
 <?php
     use App\Lib\Status;
     use App\Model\Entity\User;
-
-    $this->Utils->contentHeader(__('users'), [
-        'backToListButton' => false,
-        'actions' => [
-            $this->CkTools->addButton(__('users.add'))
-        ]
-    ]);
 ?>
 
 <?= $this->AdminLteListFilter->renderFilterbox() ?>
 
 <div class="users index">
     <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">
+                <?= __('users.index.title') ?>
+            </h3>
+            <div class="box-tools pull-right">
+                <?= $this->CkTools->addButton(__('users.add'), [
+                    'class' => 'btn btn-default btn-add btn-xs'
+                ]) ?>
+            </div>
+        </div>
         <div class="box-body">
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -24,7 +27,7 @@
                             <th><?= $this->Paginator->sort('email', __('user.email')) ?></th>
                             <th><?= $this->Paginator->sort('status', __('user.status')) ?></th>
                             <th><?= $this->Paginator->sort('role', __('user.role')) ?></th>
-                            <th class="actions"><?= __('lists.actions') ?></th>
+                            <th class="actions text-right"><?= __('lists.actions') ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,13 +37,9 @@
                                 <td><?= h($user->lastname) ?></td>
                                 <td><?= h($user->email) ?></td>
                                 <td><?= $this->Utils->statusLabel($user->status) ?></td>
-                                <td><?= User::getTypeDescription($user->role) ?></td>
-                                <td class="actions">
+                                <td><?= $this->Utils->roleLabel($user->role) ?></td>
+                                <td class="actions text-right">
                                     <?= $this->CkTools->viewButton($user) ?>
-                                    <?= $this->CkTools->editButton($user) ?>
-                                    <?php if($user->status !== Status::DELETED): ?>
-                                        <?= $this->CkTools->deleteButton($user, ['usePostLink' => true]) ?>
-                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

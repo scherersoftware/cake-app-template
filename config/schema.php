@@ -47,49 +47,6 @@ return [
 'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
-        'language_switcher_phinxlog' => [
-            'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'start_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            'end_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'model_history' => [
-            'id' => ['type' => 'uuid', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'model' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"Installation\\"', 'precision' => null, 'fixed' => null],
-            'foreign_key' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => 'uuid', 'precision' => null],
-            'user_id' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'action' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"create\\", \\"update\\", \\"delete\\"', 'precision' => null, 'fixed' => null],
-            'data' => ['type' => 'binary', 'length' => 16777215, 'null' => true, 'default' => null, 'comment' => 'JSON blob, schema per action', 'precision' => null],
-            'context' => ['type' => 'binary', 'length' => 16777215, 'null' => true, 'default' => null, 'comment' => 'JSON blob, schema per action', 'precision' => null],
-            'context_type' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"controller\\", \\"shell\\"', 'precision' => null, 'fixed' => null],
-            'context_slug' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"Admin/Users/reset_password\\"', 'precision' => null, 'fixed' => null],
-            'revision' => ['type' => 'integer', 'length' => 8, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'model_history_phinxlog' => [
-            'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'start_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            'end_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
         'phinxlog' => [
             'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
@@ -116,7 +73,6 @@ return [
             'api_token' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
             'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'language' => ['type' => 'string', 'length' => 20, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
