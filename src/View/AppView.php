@@ -58,7 +58,6 @@ class AppView extends View
         $this->loadHelper('AdminLteListFilter');
         $this->loadHelper('AssetCompress.AssetCompress');
         $this->loadHelper('FrontendBridge.FrontendBridge');
-        $this->loadHelper('ModelHistory.ModelHistory');
         $this->loadHelper('CkTools.CkTools');
         $this->loadHelper('ListFilter.ListFilter');
         $this->loadHelper('AssetCompress.AssetCompress');

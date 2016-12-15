@@ -409,5 +409,31 @@ return [
         'tmpUploadsPath' => ROOT . '/tmp/uploads/',
         'path' => ROOT . '/app_data/attachments/',
         'acceptedFileTypes' => '/\.(gif|jpe?g|png|pdf|docx|doc|xls|xlsx|tif|tiff|zip)$/i'
+    ],
+    'LanguageSwitcher' => [
+        'Helper' => [
+            'availableLanguages' => [
+                'de_DE' => 'de_DE',
+                'en_US' => 'en_US'
+            ],
+            'displayNames' => [
+                'de_DE' => 'Deutsch',
+                'en_US' => 'English'
+            ],
+            'imageMapping' => [
+                'de_DE' => 'Germany',
+                'en_US' => 'United-States'
+            ]
+        ],
+        'Middleware' => [
+            'field' => 'language_code',
+            'Cookie' => [
+                'domain' => Environment::read('MAIN_DOMAIN')
+            ],
+            'availableLanguages' => [
+                'de_DE' => 'de_DE',
+                'en_US' => 'en_US'
+            ]
+        ]
     ]
 ];
