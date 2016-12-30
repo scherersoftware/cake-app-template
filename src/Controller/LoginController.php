@@ -43,6 +43,7 @@ class LoginController extends AppController
                     $this->AuthUtils->addRememberMeCookie($userData['id']);
                 }
                 $this->Auth->setUser($userData);
+
                 return $this->redirect($this->Auth->redirectUrl());
             } elseif ($this->Users->hasLoginRetriesLock($this->request->data)) {
                 $this->Flash->error(__('login.login_retries_lock'));

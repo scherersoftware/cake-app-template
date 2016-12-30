@@ -33,6 +33,7 @@ class Environment
         ])) {
             throw new RuntimeException('Invalid Environment: ' . $environment);
         };
+
         return $environment;
     }
 
@@ -75,6 +76,7 @@ class Environment
         if (!array_key_exists($variable, static::$_variables)) {
             throw new RuntimeException("Environment variable {$variable} is not set.");
         }
+
         return static::$_variables[$variable];
     }
 

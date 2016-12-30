@@ -38,9 +38,9 @@ class ExtendedGlideHelper extends GlideHelper
                 $srcset .= $this->Url->image($this->url($path, $params + ['_base' => false, 'dpr' => $i]), $options) . ' ' . $i . 'x,';
             }
             $srcset = str_replace('&amp;', '&', $srcset);
+
             return $this->Html->image($baseUrl, $options + ['srcset' => $srcset]);
         }
-
 
         return $this->Html->image($this->url($path, $params + ['_base' => false]), $options);
     }
