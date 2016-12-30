@@ -96,7 +96,7 @@ return [
          * Translation cache files are stored with this configuration.
          * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
          * If you set 'className' => 'Null' core cache will be disabled.
-         */true
+         */
         '_cake_core_' => [
             'className' => 'File',
             'prefix' => 'myapp_cake_core_',
