@@ -30,17 +30,17 @@ if (Configure::read('debug')):
 
     $this->end();
 endif;
+
+$this->assign('title', __('error.404'));
+$this->assign('bodyClasses', 'error-page');
 ?>
 
-<div class="error-page">
-    <h2 class="headline text-yellow"> 404</h2>
-
+<div class="error-page-container">
+    <h2 class="headline text-techno-alpin">404</h2>
     <div class="error-content">
-        <h3><i class="fa fa-warning text-yellow"></i> <?= h($message) ?></h3>
-
+        <h3><i class="fa fa-warning text-techno-alpin"></i> <?= __('error.404.not_found') ?></h3>
         <p>
-            We could not find the page you were looking for.
-            Meanwhile, you may <?= $this->Html->link('Go Back to the Dashboard', ['controller' => 'Dashboard', 'action' => 'index'])?>.
+            <?= __('error.404.message') ?>
         </p>
     </div>
 </div>

@@ -35,9 +35,19 @@ if (Configure::read('debug')):
 
     $this->end();
 endif;
+
+$this->assign('title', $message);
+$this->assign('bodyClasses', 'error-page');
 ?>
-<h2><?= __d('cake', 'An Internal Error Has Occurred') ?></h2>
-<p class="error">
-    <strong><?= __d('cake', 'Error') ?>: </strong>
-    <?= h($message) ?>
-</p>
+
+<div class="error-page">
+    <div class="error-page-container">
+        <h2 class="headline text-danger">505</h2>
+        <div class="error-content">
+            <h3><i class="fa fa-warning text-danger"></i> <?= __('error.505.internal_server_error') ?></h3>
+            <p>
+                <?= __('error.505.message') ?>
+            </p>
+        </div>
+    </div>
+</div>
