@@ -39,6 +39,7 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
         if (!isset($options['novalidate'])) {
             $options['novalidate'] = true;
         }
+
         return parent::create($model, $options);
     }
 
@@ -68,6 +69,7 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
         $this->templates([
             'inputGroupContainer' => $oldInputGroupContainer
         ]);
+
         return $input;
     }
 
@@ -103,9 +105,11 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
                         $error = array_pop($error);
                     }
                 }
+
                 return $this->formatTemplate('error', ['content' => $error]);
             }
         }
+
         return parent::error($field, $text, $options);
     }
 }

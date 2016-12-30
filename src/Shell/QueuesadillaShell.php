@@ -36,6 +36,7 @@ class QueuesadillaShell extends \Josegonzalez\CakeQueuesadilla\Shell\Queuesadill
             Queue::push($failedItem['class'], $failedJob->data(), $options);
             ConnectionManager::get('default')->disconnect();
         });
+
         return $worker;
     }
 }

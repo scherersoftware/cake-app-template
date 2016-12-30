@@ -428,6 +428,7 @@ class UsersTable extends Table
     public function softDelete(User $user)
     {
         $user = $this->patchEntity($user, ['status' => Status::DELETED]);
+
         return $this->save($user);
     }
 }

@@ -23,7 +23,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
             'first' => 1,
             'last' => 1
         ], $options);
-        
+
         parent::templates([
             'ellipsis' => '<li class="disabled"><a>...</a></li>',
         ]);
