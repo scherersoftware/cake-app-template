@@ -36,9 +36,9 @@ $this->assign('bodyClasses', 'error-page');
 ?>
 
 <div class="error-page-container">
-    <h2 class="headline text-techno-alpin">404</h2>
+    <h2 class="headline warning">404</h2>
     <div class="error-content">
-        <h3><i class="fa fa-warning text-techno-alpin"></i> <?= __('error.404.not_found') ?></h3>
+        <h3><i class="fa fa-warning warning"></i> <?= __('error.404.not_found') ?></h3>
         <p>
             <?= __('error.404.message') ?>
         </p>

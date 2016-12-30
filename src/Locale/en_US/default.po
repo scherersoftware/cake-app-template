@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2016-02-02 16:06+0000\n"
-"PO-Revision-Date: 2016-12-15 23:54+0100\n"
+"PO-Revision-Date: 2016-12-30 17:14+0100\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.11\n"
@@ -117,6 +117,21 @@ msgstr "To do so, please click the link below."
 
 msgid "forgot_password.click_here"
 msgstr "Update Your Password"
+
+msgid "error.404"
+msgstr "Error 404"
+
+msgid "error.404.not_found"
+msgstr "Page not found"
+
+msgid "error.404.message"
+msgstr "Sorry, the page you're looking for can't be found."
+
+msgid "error.505.internal_server_error"
+msgstr "Server Error"
+
+msgid "error.505.message"
+msgstr "Sorry, the page doesn’t work right now."
 
 msgid "login.forgot_password"
 msgstr "Forgot password?"

@@ -21,6 +21,12 @@
     }
     //For the error number e.g: 404
     > .headline {
+      &.warning {
+        color: @brand-warning;
+      }
+      &.danger {
+        color: @brand-danger;
+      }
       float: left;
       font-size: 100px;
       font-weight: 300;
@@ -49,6 +55,12 @@
         @media (max-width: @screen-sm-max) {
           text-align: center;
         }
+      }
+      .warning {
+        color: @brand-warning;
+      }
+      .danger {
+        color: @brand-danger;
       }
       display: block;
     }
