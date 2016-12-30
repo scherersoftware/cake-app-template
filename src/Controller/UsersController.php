@@ -1,8 +1,10 @@
 <?php
+declare(strict_types = 1);
 namespace App\Controller;
 
 use App\Controller\AppController;
 use App\Model\Entity\User;
+use Cake\Network\Response;
 
 /**
  * Users Controller
@@ -55,7 +57,7 @@ class UsersController extends AppController
      *
      * @return void
      */
-    public function index()
+    public function index(): void
     {
         $users = $this->paginate($this->Users);
 
@@ -70,7 +72,7 @@ class UsersController extends AppController
      * @return void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view(string $id = null): void
     {
         $user = $this->Users->get($id, [
             'contain' => []
@@ -109,7 +111,7 @@ class UsersController extends AppController
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit(string $id = null)
     {
         $user = $this->Users->get($id, [
             'contain' => []
@@ -135,7 +137,7 @@ class UsersController extends AppController
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function delete(string $id = null): Response
     {
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);

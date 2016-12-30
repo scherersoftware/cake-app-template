@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\View\Helper;
 
 use Cake\Utility\Hash;
@@ -17,7 +18,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
      * @param array $options Options
      * @return string Markup
      */
-    public function numbers(array $options = [])
+    public function numbers(array $options = []): string
     {
         $options = Hash::merge([
             'first' => 1,

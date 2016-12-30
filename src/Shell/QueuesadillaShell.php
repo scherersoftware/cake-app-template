@@ -1,9 +1,13 @@
 <?php
+declare(strict_types = 1);
 namespace App\Shell;
 
 use Cake\Datasource\ConnectionManager;
 use Josegonzalez\CakeQueuesadilla\Queue\Queue;
+use josegonzalez\Queuesadilla\Engine\Base as BaseEngine;
+use josegonzalez\Queuesadilla\Worker\Base as BaseWorker;
 use Monitor\Error\SentryHandler;
+use Psr\Log\LoggerInterface;
 
 class QueuesadillaShell extends \Josegonzalez\CakeQueuesadilla\Shell\QueuesadillaShell
 {
@@ -14,7 +18,7 @@ class QueuesadillaShell extends \Josegonzalez\CakeQueuesadilla\Shell\Queuesadill
      * @param \Psr\Log\LoggerInterface $logger logger
      * @return \josegonzalez\Queuesadilla\Worker\Base
      */
-    public function getWorker($engine, $logger)
+    public function getWorker($engine, $logger): BaseWorker
     {
         $worker = parent::getWorker($engine, $logger);
         $worker->attachListener('Worker.job.exception', function ($event) {

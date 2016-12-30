@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types = 1);
 namespace Api\V1\Controller;
 
 use CakeApiBaselayer\Controller\AppController as BaseController;

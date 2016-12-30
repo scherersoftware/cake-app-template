@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -16,6 +17,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Network\Response;
 
 /**
  * Application Controller

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\Shell;
 
 use Cake\Console\Shell;
@@ -16,7 +17,7 @@ class ResetFailedLoginLockShell extends Shell
      *
      * @return void
      */
-    public function main()
+    public function main(): void
     {
         $this->loadModel('Users');
         $timeAgo = '-' . Configure::read('Authentication.login_lock_duration');

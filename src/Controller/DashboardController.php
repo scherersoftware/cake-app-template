@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\Controller;
 
 class DashboardController extends AppController
@@ -9,7 +10,7 @@ class DashboardController extends AppController
      *
      * @return void
      */
-    public function index()
+    public function index(): void
     {
     }
 }

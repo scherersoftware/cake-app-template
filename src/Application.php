@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -16,6 +17,7 @@ namespace App;
 
 use Cake\Core\Configure;
 use Cake\Http\BaseApplication;
+use Cake\Http\MiddlewareQueue;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
 use LanguageSwitcher\Middleware\LanguageSwitcherMiddleware;
@@ -35,7 +37,7 @@ class Application extends BaseApplication
      * @param \Cake\Http\MiddlewareQueue $middleware The middleware queue to setup.
      * @return \Cake\Http\MiddlewareQueue The updated middleware.
      */
-    public function middleware($middleware)
+    public function middleware($middleware): MiddlewareQueue
     {
         $middleware
             // Catch any exceptions in the lower layers,

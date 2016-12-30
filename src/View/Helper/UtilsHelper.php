@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\View\Helper;
 
 use App\Lib\Status;
@@ -21,10 +22,10 @@ class UtilsHelper extends Helper
     /**
      * Renders a status label with the appropriate color
      *
-     * @param int $status One of the Status constants
+     * @param string $status One of the Status constants
      * @return string
      */
-    public function statusLabel($status)
+    public function statusLabel(string $status): string
     {
         $classes = ['label'];
         $caption = Status::getDescription($status);
@@ -51,7 +52,7 @@ class UtilsHelper extends Helper
      * @param string $role One of the Role constants
      * @return string
      */
-    public function roleLabel($role)
+    public function roleLabel(string $role): string
     {
         $classes = ['label'];
         $caption = User::getTypeDescription($role);
@@ -76,7 +77,7 @@ class UtilsHelper extends Helper
      * @param array $options Options
      * @return void
      */
-    public function contentHeader($headline = null, array $options = [])
+    public function contentHeader(string $headline = null, array $options = []): void
     {
         $options = Hash::merge([
             'backToListButton' => true,

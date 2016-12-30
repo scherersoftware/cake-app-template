@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\View\Helper;
 
 use Cake\Utility\Hash;
@@ -50,7 +51,7 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
      * @param array $options Options
      * @return string
      */
-    public function colorPickerInput($field, array $options = [])
+    public function colorPickerInput(string $field, array $options = []): string
     {
         $options = Hash::merge([
             'append' => '<i></i>',

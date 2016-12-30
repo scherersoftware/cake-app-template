@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\Model\Entity;
 
 use App\Lib\Status;
@@ -28,8 +29,8 @@ class User extends Entity
 
     use TypeAwareTrait;
 
-    const ROLE_ADMIN = 'admin';
-    const ROLE_USER = 'user';
+    public const ROLE_ADMIN = 'admin';
+    public const ROLE_USER = 'user';
 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -59,7 +60,7 @@ class User extends Entity
      *
      * @return array
      */
-    public static function typeDescriptions()
+    public static function typeDescriptions(): array
     {
         return [
             self::ROLE_ADMIN => __('user.role.admin'),
@@ -72,7 +73,7 @@ class User extends Entity
      *
      * @return array
      */
-    public static function getRoles()
+    public static function getRoles(): array
     {
         return self::getTypeMap(self::ROLE_USER, self::ROLE_ADMIN);
     }
@@ -82,7 +83,7 @@ class User extends Entity
      *
      * @return array
      */
-    public static function getStatuses()
+    public static function getStatuses(): array
     {
         return Status::getMap(Status::ACTIVE, Status::SUSPENDED, Status::DELETED);
     }
@@ -93,7 +94,7 @@ class User extends Entity
      * @param string $password not hashed password
      * @return string
      */
-    protected function _setPassword($password)
+    protected function _setPassword(string $password): string
     {
         if (!empty($password)) {
             $password = (new DefaultPasswordHasher)->hash($password);
@@ -107,7 +108,7 @@ class User extends Entity
      *
      * @return string
      */
-    protected function _getFullName()
+    protected function _getFullName(): string
     {
         return $this->firstname . ' ' . $this->lastname;
     }
@@ -117,7 +118,7 @@ class User extends Entity
      *
      * @return array
      */
-    public function apiTransform()
+    public function apiTransform(): array
     {
         return [
             'id' => $this->id,

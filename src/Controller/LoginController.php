@@ -1,9 +1,11 @@
 <?php
+declare(strict_types = 1);
 namespace App\Controller;
 
 use App\Lib\Status;
 use App\Model\Entity\User;
 use Cake\Event\EventManager;
+use Cake\Network\Response;
 use Cake\Routing\Router;
 use Cake\Validation\Validation;
 
@@ -60,7 +62,7 @@ class LoginController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on logout.
      */
-    public function logout()
+    public function logout(): Response
     {
         $this->Flash->success(__('login.you_have_been_logged_out'));
         if ($this->request->session()->started()) {
@@ -102,11 +104,11 @@ class LoginController extends AppController
     /**
      * restores password
      *
-     * @param int $userId userId
+     * @param string $userId userId
      * @param string $token token
      * @return \Cake\Network\Response|void Redirects on successful restore, renders view otherwise.
      */
-    public function restorePassword($userId, $token)
+    public function restorePassword(string $userId, string $token)
     {
         $this->viewBuilder()->layout('plain');
         if (!empty($userId) && !empty($token)) {

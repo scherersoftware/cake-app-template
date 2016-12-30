@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\Controller;
 
 use Cake\Datasource\ConnectionManager;
@@ -11,7 +12,7 @@ class HomeController extends AppController
      *
      * @return void
      */
-    public function index()
+    public function index(): void
     {
         $this->viewBuilder()->layout(false);
         try {

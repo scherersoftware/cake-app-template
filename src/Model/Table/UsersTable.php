@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\Model\Table;
 
 use App\Lib\Status;
@@ -15,6 +16,7 @@ use Cake\ORM\Table;
 use Cake\Routing\Router;
 use Cake\Validation\Validator;
 use Notifications\Notification\EmailNotification;
+use \ArrayObject;
 
 /**
  * Users Model
@@ -38,7 +40,7 @@ class UsersTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
+    public function initialize(array $config): void
     {
         parent::initialize($config);
 
@@ -55,7 +57,7 @@ class UsersTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
+    public function validationDefault(Validator $validator): Validator
     {
         $validator
             ->uuid('id')
@@ -89,8 +91,7 @@ class UsersTable extends Table
 
         $validator
             ->integer('failed_login_count')
-            ->requirePresence('failed_login_count', 'create')
-            ->notEmpty('failed_login_count');
+            ->allowEmpty('failed_login_count');
 
         $validator
             ->dateTime('failed_login_timestamp')
@@ -111,7 +112,7 @@ class UsersTable extends Table
      * @param Validator $validator Validator
      * @return Validator
      */
-    public function validationChangePassword(Validator $validator)
+    public function validationChangePassword(Validator $validator): Validator
     {
         $validator->requirePresence('password');
         $validator->requirePresence('password_confirm');
@@ -138,7 +139,7 @@ class UsersTable extends Table
      * @param Validator $validator Validator
      * @return Validator
      */
-    public function validationResetPassword(Validator $validator)
+    public function validationResetPassword(Validator $validator): Validator
     {
         $validator->requirePresence('password');
         $validator->requirePresence('password_confirm');
@@ -156,7 +157,7 @@ class UsersTable extends Table
      * @param bool $force Whether to require validation in all cases
      * @return Validator
      */
-    public function validationPassword(Validator $validator, $force = false)
+    public function validationPassword(Validator $validator, bool $force = false): Validator
     {
         $shouldValidate = function ($context) use ($force) {
             if ($force) {
@@ -192,7 +193,7 @@ class UsersTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules)
+    public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->isUnique(['email']));
 
@@ -207,7 +208,7 @@ class UsersTable extends Table
      * @param ArrayObject $options Additional options
      * @return void
      */
-    public function beforeSave(Event $event, EntityInterface $entity, \ArrayObject $options)
+    public function beforeSave(Event $event, EntityInterface $entity, ArrayObject $options): void
     {
         // When editing, remove passwords if nothing was entered
         if (empty($entity->password)) {
@@ -236,7 +237,7 @@ class UsersTable extends Table
      * @param  array $requestData the request data array
      * @return bool
      */
-    public function hasLoginRetriesLock($requestData)
+    public function hasLoginRetriesLock(array $requestData): bool
     {
         if (!empty($requestData['email'])) {
             $user = $this->getUserByEmail($requestData['email']);
@@ -255,7 +256,7 @@ class UsersTable extends Table
      * @param array $userData Array with user data
      * @return void
      */
-    public function resetLoginRetriesListener(\Cake\Event\Event $event, array $userData)
+    public function resetLoginRetriesListener(\Cake\Event\Event $event, array $userData): void
     {
         if (isset($userData['id'])) {
             $user = $this->get($userData['id']);
@@ -269,7 +270,7 @@ class UsersTable extends Table
      * @param string $email id
      * @return object
      */
-    public function getUserByEmail($email)
+    public function getUserByEmail(string $email)
     {
         return $this->find()
             ->where([
@@ -287,7 +288,7 @@ class UsersTable extends Table
      * @param array $requestData Request Data
      * @return bool Returns true if a user was found and the failed_login_count was increased
      */
-    public function increaseLoginRetries(array $requestData)
+    public function increaseLoginRetries(array $requestData): bool
     {
         if (!empty($requestData['email'])) {
             $now = Time::now()->i18nFormat('YYYY-MM-dd HH:mm:ss');
@@ -313,7 +314,7 @@ class UsersTable extends Table
      * @param array $options Options
      * @return Query
      */
-    public function findAuth(\Cake\ORM\Query $query, array $options)
+    public function findAuth(\Cake\ORM\Query $query, array $options): Query
     {
         $query
             ->where([
@@ -374,7 +375,7 @@ class UsersTable extends Table
      * @param  User $user the user entity
      * @return string
      */
-    public function getHash(User $user)
+    public function getHash(User $user): string
     {
         $vars = [
             $user->email,
@@ -395,7 +396,7 @@ class UsersTable extends Table
      * @param  User $user the user entity
      * @return void
      */
-    public function sendForgotPasswordEmail(User $user)
+    public function sendForgotPasswordEmail(User $user): void
     {
         $hash = $this->getHash($user);
         $token = ($hash . strtotime('now'));
