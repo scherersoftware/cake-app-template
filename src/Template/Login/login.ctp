@@ -12,16 +12,16 @@ $this->assign('bodyClasses', 'login-page');
         <p class="login-box-msg"><?= __('login.please_login') ?></p>
         <?php
             echo $this->Form->create($user);
-            echo $this->Form->input('email', [
+            echo $this->Form->control('email', [
                 'placeholder' => __('user.email'),
                 'class' => 'form-control autofocus',
                 'label' => false,
             ]);
-            echo $this->Form->input('password', [
+            echo $this->Form->control('password', [
                 'placeholder' => __('user.password'),
                 'label' => false,
             ]);
-            echo $this->Form->input('cookie', [
+            echo $this->Form->control('cookie', [
                 'type' => 'checkbox',
                 'label' => __('login.login_for_two_weeks'),
             ]);

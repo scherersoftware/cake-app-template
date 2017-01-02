@@ -6,18 +6,18 @@ use App\Model\Entity\User;
     <?= $this->Form->create($user, ['align' => 'horizontal', 'novalidate']); ?>
     <fieldset>
         <?php
-            echo $this->Form->input('status', [
+            echo $this->Form->control('status', [
                 'label' => __('user.status'),
                 'options' => User::getStatuses()
             ]);
-            echo $this->Form->input('role', [
+            echo $this->Form->control('role', [
                 'label' => __('user.role'),
                 'options' => User::getRoles()
             ]);
-            echo $this->Form->input('firstname', ['label' => __('user.firstname')]);
-            echo $this->Form->input('lastname', ['label' => __('user.lastname')]);
-            echo $this->Form->input('email', ['label' => __('user.email')]);
-            echo $this->Form->input('password', ['label' => __('user.password')]);
+            echo $this->Form->control('firstname', ['label' => __('user.firstname')]);
+            echo $this->Form->control('lastname', ['label' => __('user.lastname')]);
+            echo $this->Form->control('email', ['label' => __('user.email')]);
+            echo $this->Form->control('password', ['label' => __('user.password')]);
         ?>
         <?=
             $this->Attachments->attachmentsArea($user, [
