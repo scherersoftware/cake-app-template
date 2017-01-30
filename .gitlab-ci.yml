@@ -1,4 +1,7 @@
 sh php70:
+  variables:
+    APP_ENVIRONMENT: "development_test"
+    MAIN_DOMAIN: "template.dev"
   tags:
     - php70
   before_script:
@@ -9,6 +12,9 @@ sh php70:
     - vendor/bin/phpcs -n --extensions=php --warning-severity=50 --standard=vendor/cakephp/cakephp-codesniffer/CakePHP "src" "tests" "plugins"
 
 node_js_tests:
+  variables:
+    APP_ENVIRONMENT: "development_test"
+    MAIN_DOMAIN: "template.dev"
   tags:
     - nodejs
   script:
