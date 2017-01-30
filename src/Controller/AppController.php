@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -16,6 +17,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Network\Response;
 
 /**
  * Application Controller
@@ -31,6 +33,11 @@ class AppController extends Controller
     use \AuthActions\Lib\AuthActionsTrait;
     use \FrontendBridge\Lib\FrontendBridgeTrait;
 
+    /**
+     * Load components
+     *
+     * @var array
+     */
     public $components = [
         'Flash',
         'FrontendBridge.FrontendBridge',
@@ -47,7 +54,7 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
+    public function initialize(): void
     {
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Auth', [
@@ -95,7 +102,11 @@ class AppController extends Controller
     }
 
     /**
-     * {@inheritDoc}
+     * Called before the controller action. You can use this method to configure and customize components
+     * or perform logic that needs to happen before each controller action.
+     *
+     * @param \Cake\Event\Event $event An Event instance
+     * @return \Cake\Network\Response|null|void
      */
     public function beforeFilter(\Cake\Event\Event $event)
     {
@@ -117,9 +128,13 @@ class AppController extends Controller
     }
 
     /**
-     * {@inheritDoc}
+     * Instantiates the correct view class, hands it its data, and uses it to render the view output.
+     *
+     * @param mixed $view View to use for rendering
+     * @param mixed $layout Layout to use
+     * @return \Cake\Network\Response A response object containing the rendered view.
      */
-    public function render($view = null, $layout = null)
+    public function render($view = null, $layout = null): Response
     {
         if ($this->_isJsonActionRequest()) {
             return $this->renderJsonAction($view, $layout);

@@ -9,7 +9,8 @@ Frontend.AppController = Frontend.Controller.extend({
 
         this.DatePicker.setup(this.$('.form-group.dateTime, .form-group.date'));
 
-        // Place functionality which should _not_ run again when executing a jsonAction request below this
+        /* Place functionality which should _not_ run again
+           when executing a jsonAction request below this */
         if (this.getVar('isAjax')) {
             return;
         }

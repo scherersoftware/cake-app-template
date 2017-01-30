@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\View\Helper;
 
 use ADmad\Glide\View\Helper\GlideHelper;
@@ -28,7 +29,7 @@ class ExtendedGlideHelper extends GlideHelper
      *
      * @see http://glide.thephpleague.com/1.0/api/quick-reference/
      */
-    public function retinaImage($path, array $params = [], array $options = [], $pixelDensity = 2)
+    public function retinaImage(string $path, array $params = [], array $options = [], int $pixelDensity = 2): string
     {
         if ($pixelDensity > 1) {
             $baseUrl = $this->url($path, $params + ['_base' => false]);

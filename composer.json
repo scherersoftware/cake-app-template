@@ -5,10 +5,11 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": ">=7.0.0",
+        "php": ">=7.1.0",
         "cakephp/cakephp": "3.3.*",
         "mobiledetect/mobiledetectlib": "2.*",
-        "cakephp/migrations": "1.6.*",
+        "cakephp/migrations": "~1.0",
+        "cakephp/bake": "~1.2",
         "cakephp/plugin-installer": "*",
         "codekanzlei/cake-auth-actions": "1.0.*",
         "codekanzlei/cake-list-filter": "1.2.*",
@@ -24,7 +25,7 @@
         "scherersoftware/cake-language-switcher": "1.0.*",
         "markstory/asset_compress": "3.2.*",
         "tedivm/jshrink": "1.1.*",
-        "friendsofcake/bootstrap-ui": "0.5.*",
+        "friendsofcake/bootstrap-ui": "0.6.*",
         "admad/cakephp-glide": "2.0.*",
         "josegonzalez/dotenv": "2.0.*",
         "beberlei/assert": "2.6."
@@ -33,8 +34,9 @@
         "psy/psysh": "@stable",
         "phpunit/phpunit": "*",
         "cakephp/debug_kit": "~3.2",
-        "cakephp/bake": "~1.1",
-        "cakephp/cakephp-codesniffer": "2.3.*"
+        "cakephp/cakephp-codesniffer": "2.3.*",
+        "slevomat/coding-standard": "dev-2.0-dev",
+        "squizlabs/php_codesniffer": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -55,11 +57,16 @@
         "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
         "check": [
             "@test",
-            "@js-check",
             "@cs-check",
-            "@php-syntax"
+            "@php-syntax",
+            "@js-check"
         ],
-        "cs-check": "phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "check-php": [
+            "@test",
+            "@php-syntax",
+            "@cs-check"
+        ],
+        "cs-check": "vendor/bin/phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP --extensions=php ./src ./tests ./plugins && vendor/bin/phpcs --colors -p --standard=ruleset.xml --extensions=php ./src ./plugins",
         "cs-fix": "phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
         "js-check": "node_modules/.bin/eslint .",
         "js-fix": "node_modules/.bin/eslint . --fix",

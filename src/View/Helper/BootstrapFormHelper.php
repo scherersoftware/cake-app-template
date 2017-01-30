@@ -1,6 +1,8 @@
 <?php
+declare(strict_types = 1);
 namespace App\View\Helper;
 
+use BootstrapUI\View\Helper\FormHelper;
 use Cake\Utility\Hash;
 use Cake\View\View;
 
@@ -9,7 +11,7 @@ use Cake\View\View;
  *
  * @package default
  */
-class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
+class BootstrapFormHelper extends FormHelper
 {
 
     /**
@@ -32,9 +34,15 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
     }
 
     /**
-     * {@inheritDoc}
+     * Returns an HTML FORM element.
+     *
+     * @param mixed $model The context for which the form is being defined. Can
+     *   be an ORM entity, ORM resultset, or an array of meta data. You can use false or null
+     *   to make a model-less form.
+     * @param array $options An array of html attributes and options.
+     * @return string An formatted opening FORM tag.
      */
-    public function create($model = null, array $options = [])
+    public function create($model = null, array $options = []): string
     {
         if (!isset($options['novalidate'])) {
             $options['novalidate'] = true;
@@ -50,7 +58,7 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
      * @param array $options Options
      * @return string
      */
-    public function colorPickerInput($field, array $options = [])
+    public function colorPickerInput(string $field, array $options = []): string
     {
         $options = Hash::merge([
             'append' => '<i></i>',
@@ -74,14 +82,11 @@ class BootstrapFormHelper extends \BootstrapUI\View\Helper\FormHelper
     }
 
     /**
-     * Workaround for not supported display of nested errors
+     * {@inheritDoc}
      *
-     * @param string $field Field Name
-     * @param string $text Text
-     * @param array $options Options
-     * @return string
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
      */
-    public function error($field, $text = null, array $options = [])
+    public function error($field, $text = null, array $options = []): string
     {
         $parts = explode('.', $field);
 

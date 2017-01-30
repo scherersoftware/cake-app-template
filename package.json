@@ -4,40 +4,36 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "less": "^2.5.1",
-    "less-plugin-clean-css": "^1.5.1",
-    "eslint": "^3.7.1",
-    "eslint-config-google": "^0.6.0"
   },
   "eslintConfig": {
-      "extends": "google",
-      "globals": {
-          "Frontend": false,
-          "App": false,
-          "$": false,
-          "google": false,
-          "navigator": false,
-          "window": false,
-          "location": false,
-          "document": false,
-          "console": false,
-          "FormData": false,
-          "appData": false
-      },
-      "rules": {
-          "max-len": [
-              "warn",
-              80
-          ],
-          "max-statements": [
-              "warn",
-              25
-          ],
-          "indent": [
-              "error",
-              4
-          ]
-      }
+    "extends": "google",
+    "globals": {
+      "Frontend": false,
+      "App": false,
+      "$": false,
+      "google": false,
+      "navigator": false,
+      "window": false,
+      "location": false,
+      "document": false,
+      "console": false,
+      "FormData": false,
+      "appData": false
+    },
+    "rules": {
+      "max-len": [
+        "warn",
+        80
+      ],
+      "max-statements": [
+        "warn",
+        25
+      ],
+      "indent": [
+        "error",
+        4
+      ]
+    }
   },
   "devDependencies": {
     "eslint": "^3.7.1",

@@ -1,8 +1,10 @@
 <?php
+declare(strict_types = 1);
 
 namespace Api\V1\Controller;
 
 use CakeApiBaselayer\Lib\ApiReturnCode;
+use Cake\Network\Response;
 
 class UsersController extends AppController
 {
@@ -12,7 +14,7 @@ class UsersController extends AppController
      *
      * @return ServiceResponse
      */
-    public function authorize()
+    public function authorize(): Response
     {
         $this->request->allowMethod('post');
         if (!isset($this->request->data['email']) || !isset($this->request->data['password'])) {
@@ -45,10 +47,11 @@ class UsersController extends AppController
      *
      * @return ServiceResponse
      */
-    public function revoke()
+    public function revoke(): Response
     {
         $this->request->allowMethod('patch');
         $this->Api->logout();
+
         return $this->Api->response(ApiReturnCode::SUCCESS);
     }
 
@@ -57,7 +60,7 @@ class UsersController extends AppController
      *
      * @return ServiceResponse
      */
-    public function current()
+    public function current(): Response
     {
         $this->request->allowMethod('get');
         $user = $this->Users->get($this->Auth->user('id'));
@@ -72,7 +75,7 @@ class UsersController extends AppController
      *
      * @return ServiceResponse
      */
-    public function forgotPassword()
+    public function forgotPassword(): Response
     {
         $this->loadModel('Users');
         $this->request->allowMethod('post');
@@ -95,7 +98,7 @@ class UsersController extends AppController
      *
      * @return ServiceResponse
      */
-    public function changePassword()
+    public function changePassword(): Response
     {
         $this->loadModel('Users');
         $this->request->allowMethod('post');

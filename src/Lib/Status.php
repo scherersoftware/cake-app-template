@@ -1,13 +1,19 @@
 <?php
+declare(strict_types = 1);
 namespace App\Lib;
 
 class Status
 {
 
-    const ACTIVE = 'active';
-    const DELETED = 'deleted';
-    const SUSPENDED = 'suspended';
+    public const ACTIVE = 'active';
+    public const DELETED = 'deleted';
+    public const SUSPENDED = 'suspended';
 
+    /**
+     * Descriptions
+     *
+     * @var array
+     */
     public static $descriptions = [];
 
     /**
@@ -15,7 +21,7 @@ class Status
      *
      * @return array
      */
-    public static function getDescriptions()
+    public static function getDescriptions(): array
     {
         return [
             self::ACTIVE => __('status.active'),
@@ -30,7 +36,7 @@ class Status
      * @param string|array $states states to get mapped
      * @return array
      */
-    public static function getMap($states = null)
+    public static function getMap($states = null): array
     {
         if (!is_array($states)) {
             $states = func_get_args();
@@ -52,7 +58,7 @@ class Status
      * @param string $status status to get description of
      * @return string|null
      */
-    public static function getDescription($status)
+    public static function getDescription(string $status): ?string
     {
         if (!self::$descriptions) {
             self::$descriptions = self::getDescriptions();

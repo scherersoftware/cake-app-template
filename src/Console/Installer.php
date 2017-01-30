@@ -1,20 +1,9 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link      http://cakephp.org CakePHP(tm) Project
- * @since     3.0.0
- * @license   http://www.opensource.org/licenses/mit-license.php MIT License
- */
+declare(strict_types = 1);
 namespace App\Console;
 
 use Cake\Utility\Security;
+use Composer\IO\IOInterface;
 use Composer\Script\Event;
 use Exception;
 
@@ -32,14 +21,13 @@ class Installer
      * @throws \Exception Exception raised by validator.
      * @return void
      */
-    public static function postInstall(Event $event)
+    public static function postInstall(Event $event): void
     {
         $io = $event->getIO();
 
         $rootDir = dirname(dirname(__DIR__));
 
         static::createAppConfig($rootDir, $io);
-        static::createEnvConfig($rootDir, $io);
         static::createWritableDirectories($rootDir, $io);
 
         // ask if the permissions should be changed
@@ -78,7 +66,7 @@ class Installer
      * @param \Composer\IO\IOInterface $io IO interface to write to console.
      * @return void
      */
-    public static function createAppConfig($dir, $io)
+    public static function createAppConfig(string $dir, IOInterface $io): void
     {
         $appConfig = $dir . '/config/app.php';
         $defaultConfig = $dir . '/config/app.default.php';
@@ -89,30 +77,13 @@ class Installer
     }
 
     /**
-     * Create the .env file if it does not exist.
-     *
-     * @param string $dir The application's root directory.
-     * @param \Composer\IO\IOInterface $io IO interface to write to console.
-     * @return void
-     */
-    public static function createEnvConfig($dir, $io)
-    {
-        $appConfig = $dir . '/.env';
-        $defaultConfig = $dir . '/.env.default';
-        if (!file_exists($appConfig)) {
-            copy($defaultConfig, $appConfig);
-            $io->write('Created `.env file');
-        }
-    }
-
-    /**
      * Create the `logs` and `tmp` directories.
      *
      * @param string $dir The application's root directory.
      * @param \Composer\IO\IOInterface $io IO interface to write to console.
      * @return void
      */
-    public static function createWritableDirectories($dir, $io)
+    public static function createWritableDirectories(string $dir, IOInterface $io): void
     {
         $paths = [
             'logs',
@@ -143,7 +114,7 @@ class Installer
      * @param \Composer\IO\IOInterface $io IO interface to write to console.
      * @return void
      */
-    public static function setFolderPermissions($dir, $io)
+    public static function setFolderPermissions(string $dir, IOInterface $io): void
     {
         // Change the permissions on a path and output the results.
         $changePerms = function ($path, $perms, $io) {
@@ -188,7 +159,7 @@ class Installer
      * @param \Composer\IO\IOInterface $io IO interface to write to console.
      * @return void
      */
-    public static function setSecuritySalt($dir, $io)
+    public static function setSecuritySalt(string $dir, IOInterface $io): void
     {
         $config = $dir . '/config/app.php';
         $content = file_get_contents($config);

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace App\Lib;
 
 use RuntimeException;
@@ -10,11 +11,16 @@ use RuntimeException;
  */
 class Environment
 {
-    const DEVELOPMENT = 'development';
-    const DEVELOPMENT_TEST = 'development_test';
-    const STAGING = 'staging';
-    const PRODUCTION = 'production';
+    public const DEVELOPMENT = 'development';
+    public const DEVELOPMENT_TEST = 'development_test';
+    public const STAGING = 'staging';
+    public const PRODUCTION = 'production';
 
+    /**
+     * Environment variables
+     *
+     * @var array
+     */
     protected static $_variables = [];
 
     /**
@@ -22,7 +28,7 @@ class Environment
      *
      * @return string
      */
-    public static function detect()
+    public static function detect(): string
     {
         $environment = static::read('APP_ENVIRONMENT');
         if (!in_array($environment, [
@@ -44,7 +50,7 @@ class Environment
      * @return void
      * @throws RuntimeException if not all required environment variables were set.
      */
-    public static function loadVariables()
+    public static function loadVariables(): void
     {
         $variables = [];
         if (!env('APP_ENVIRONMENT') || env('APP_ENVIRONMENT') == 'development') {
@@ -71,7 +77,7 @@ class Environment
      * @return mixed
      * @throws RuntimeException if the variable isn't set.
      */
-    public static function read($variable)
+    public static function read(string $variable)
     {
         if (!array_key_exists($variable, static::$_variables)) {
             throw new RuntimeException("Environment variable {$variable} is not set.");
@@ -85,7 +91,7 @@ class Environment
      *
      * @return array
      */
-    public static function getRequiredEnvironmentVariables()
+    public static function getRequiredEnvironmentVariables(): array
     {
         return [
             'APP_ENVIRONMENT',
