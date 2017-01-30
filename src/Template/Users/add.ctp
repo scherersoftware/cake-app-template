@@ -13,7 +13,5 @@ $this->assign('title', __('users.add.title'));
             </div>
         </div>
     </div>
-
-    <?= $this->element('../Users/form') ?>
-
+    <?= $this->element('Forms/user_form') ?>
 </div>
