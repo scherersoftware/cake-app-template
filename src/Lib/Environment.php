@@ -16,6 +16,11 @@ class Environment
     public const STAGING = 'staging';
     public const PRODUCTION = 'production';
 
+    /**
+     * Environment variables
+     *
+     * @var array
+     */
     protected static $_variables = [];
 
     /**

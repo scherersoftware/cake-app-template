@@ -9,6 +9,11 @@ class Status
     public const DELETED = 'deleted';
     public const SUSPENDED = 'suspended';
 
+    /**
+     * Descriptions
+     *
+     * @var array
+     */
     public static $descriptions = [];
 
     /**

@@ -17,7 +17,7 @@ class LoginController extends AppController
      * @param Event $event cake event
      * @return void
      */
-    public function beforeFilter(\Cake\Event\Event $event)
+    public function beforeFilter(\Cake\Event\Event $event): void
     {
         $this->loadModel('Users');
         parent::beforeFilter($event);

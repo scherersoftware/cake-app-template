@@ -19,7 +19,7 @@ class UsersController extends AppController
      *
      * @return array
      */
-    public function getListFilters()
+    public function getListFilters(): array
     {
         $filters = [];
         if ($this->request->action == 'index') {

@@ -1,5 +1,10 @@
 language: php
 
+env:
+  global:
+    - APP_ENVIRONMENT=development_test
+    - MAIN_DOMAIN=template.dev
+
 php:
   - 7.1
 
@@ -9,5 +14,4 @@ before_script:
   - composer install --prefer-dist
 
 script:
-  - composer cs-check
-  - composer php-syntax
+  - composer check-php

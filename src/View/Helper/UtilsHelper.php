@@ -10,12 +10,17 @@ use Cake\View\Helper;
 class UtilsHelper extends Helper
 {
 
+    /**
+     * Used helpers
+     *
+     * @var array
+     */
     public $helpers = ['Form'];
 
     /**
      * Counter for the checkbox names in checkboxTree()
      *
-     * @var integer
+     * @var int
      */
     private $__checkboxTreeCounter = 0;
 

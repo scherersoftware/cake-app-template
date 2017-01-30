@@ -8,9 +8,9 @@ use Cake\Event\Event;
 class AppController extends BaseController
 {
     /**
-     * beforeFilter
+     * {@inheritDoc}
      */
-    public function beforeFilter(Event $event)
+    public function beforeFilter(Event $event): void
     {
         parent::beforeFilter($event);
         // only as long as this is not done in CakeApiBaselayer\ApiComponent:

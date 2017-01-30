@@ -331,7 +331,7 @@ class UsersTable extends Table
      *
      * @param User $user User entity
      * @param array $postData Array containing new_password and password_confirm keys
-     * @return User
+     * @return User|bool
      */
     public function resetPassword(User $user, array $postData)
     {
@@ -353,7 +353,7 @@ class UsersTable extends Table
      *
      * @param User $user User entity
      * @param array $postData Array containing new_password and password_confirm keys
-     * @return User
+     * @return User|bool
      */
     public function changePassword(User $user, array $postData)
     {

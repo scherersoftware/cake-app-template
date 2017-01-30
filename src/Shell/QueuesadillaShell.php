@@ -17,6 +17,7 @@ class QueuesadillaShell extends \Josegonzalez\CakeQueuesadilla\Shell\Queuesadill
      * @param \josegonzalez\Queuesadilla\Engine\Base $engine engine to run
      * @param \Psr\Log\LoggerInterface $logger logger
      * @return \josegonzalez\Queuesadilla\Worker\Base
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
      */
     public function getWorker($engine, $logger): BaseWorker
     {
