@@ -409,11 +409,11 @@ class UsersTable extends Table
         ], true);
 
         $email = new EmailNotification();
-        $email->template('forgot_password', 'default')
-            ->emailFormat('html')
-            ->to($user->email)
-            ->subject(__('email.subject.forgot_password'))
-            ->viewVars([
+        $email->setTemplate('forgot_password', 'default')
+            ->setEmailFormat('html')
+            ->setTo($user->email)
+            ->setSubject(__('email.subject.forgot_password'))
+            ->setViewVars([
                 'resetPasswordUrl' => $restoreLink,
                 'fullName' => $user->full_name
             ])

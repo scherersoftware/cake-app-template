@@ -12,7 +12,7 @@ $this->assign('adminLTETheme', 'skin-blue-light');
             <?= $this->element('Layout/header') ?>
             <?= $this->element('Layout/sidebar') ?>
 
-            <div class="content-wrapper <?php echo $this->FrontendBridge->getMainContentClasses() ?>">
+            <div <?= $this->FrontendBridge->getControllerAttributes(['content-wrapper']) ?>>
                 <?= $this->fetch('contentHeader') ?>
                 <section class="content">
                     <?= $this->Flash->render() ?>

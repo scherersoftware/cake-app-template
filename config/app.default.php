@@ -180,15 +180,16 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => 'Smtp',
-            'host' => Environment::read('EMAIL_HOST'),
-            'port' => Environment::read('EMAIL_PORT'),
+            'className' => 'Mail',
+            // The following keys are used in SMTP transports
+            'host' => 'localhost',
+            'port' => 25,
             'timeout' => 30,
-            'username' => Environment::read('EMAIL_USERNAME'),
-            'password' => Environment::read('EMAIL_PASSWORD'),
+            'username' => 'user',
+            'password' => 'secret',
             'client' => null,
             'tls' => null,
-            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+            'url' => Environment::read('EMAIL_TRANSPORT_DEFAULT_URL')
         ],
     ],
 
@@ -223,16 +224,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => Environment::read('MYSQL_HOST'),
+            'host' => 'localhost',
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => Environment::read('MYSQL_USERNAME'),
-            'password' => Environment::read('MYSQL_PASSWORD'),
-            'database' => Environment::read('MYSQL_DATABASE'),
+            'username' => 'my_app',
+            'password' => 'secret',
+            'database' => 'myapp',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
@@ -258,7 +259,7 @@ return [
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
 
-            'url' => env('DATABASE_URL', null),
+            'url' => Environment::read('DATABASE_URL'),
         ],
 
         /**
@@ -387,10 +388,7 @@ return [
     'Queuesadilla' => [
         'default' => [
             'engine' => 'josegonzalez\Queuesadilla\Engine\MysqlEngine',
-            'database' => Environment::read('MYSQL_DATABASE'),
-            'host' => Environment::read('MYSQL_HOST'),
-            'user' => Environment::read('MYSQL_USERNAME'),
-            'pass' => Environment::read('MYSQL_PASSWORD')
+            'url' => Environment::read('DATABASE_URL')
         ]
     ],
     'Glide' => [

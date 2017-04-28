@@ -95,15 +95,9 @@ class Environment
     {
         return [
             'APP_ENVIRONMENT',
-            'EMAIL_HOST',
-            'EMAIL_PORT',
-            'EMAIL_USERNAME',
-            'EMAIL_PASSWORD',
+            'DATABASE_URL',
+            'EMAIL_TRANSPORT_DEFAULT_URL',
             'EMAIL_FROM',
-            'MYSQL_HOST',
-            'MYSQL_USERNAME',
-            'MYSQL_DATABASE',
-            'MYSQL_PASSWORD',
             'MAIN_DOMAIN',
             'FULL_BASE_URL',
             'SESSION_COOKIE_NAME',
