@@ -12,6 +12,7 @@ before_script:
   - printf "\n" | pecl install imagick
   - composer self-update
   - composer install --prefer-dist
+  - npm install
 
 script:
   - composer check
