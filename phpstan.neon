@@ -1,0 +1,5 @@
+parameters:
+    ignoreErrors:
+        - '#Access to an undefined property App\\[a-zA-Z0-9_\\]+::\$[A-Z]#'
+        - '#Access to an undefined property Api\\[a-zA-Z0-9_\\]+::\$[A-Z]#'
+        - '#customizeCodeceptionBinary#'
