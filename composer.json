@@ -71,7 +71,7 @@
         "js-check": "node_modules/.bin/eslint .",
         "js-fix": "node_modules/.bin/eslint . --fix",
         "i18n": "bin/i18n.sh",
-        "php-syntax": "bin/php_syntax.sh",
+        "php-syntax": "bin/php_syntax.sh src/ tests/ index.php",
         "test": "phpunit --colors=always"
     },
     "minimum-stability": "dev",
