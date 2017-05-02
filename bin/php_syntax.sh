@@ -14,21 +14,33 @@ set -o errexit
 
 error=false
 
-while IFS= read -r -d '' file
-do
-    EXTENSION="${file##*.}"
+while test $# -gt 0; do
+    current=$1
+    shift
 
-    if [ "$EXTENSION" == "php" ] || [ "$EXTENSION" == "ctp" ]
-    then
-        RESULTS=`php -l $file`
+    if [ ! -d $current ] && [ ! -f $current ] ; then
+        echo "Invalid directory or file: $current"
+        error=true
 
-        if [ "$RESULTS" != "No syntax errors detected in $file" ]
-        then
-            echo $RESULTS
-            error=true
-        fi
+        continue
     fi
-done <   <(find . -print0)
+
+    while IFS= read -r -d '' file
+    do
+        EXTENSION="${file##*.}"
+
+        if [ "$EXTENSION" == "php" ] || [ "$EXTENSION" == "ctp" ]
+        then
+            RESULTS=`php -l $file`
+
+            if [ "$RESULTS" != "No syntax errors detected in $file" ]
+            then
+                echo $RESULTS
+                error=true
+            fi
+        fi
+    done <   <(find $current -print0)
+done
 
 if [ "$error" = true ] ; then
     exit 1
