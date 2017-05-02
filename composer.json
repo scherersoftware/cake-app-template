@@ -14,7 +14,7 @@
         "codekanzlei/cake-auth-actions": "1.0.*",
         "codekanzlei/cake-list-filter": "1.2.*",
         "codekanzlei/cake-cktools": "1.2.*",
-        "codekanzlei/cake-frontend-bridge": "1.0.*",
+        "codekanzlei/cake-frontend-bridge": "1.2.*",
         "codekanzlei/cake-attachments": "1.0.*",
         "codekanzlei/cake-notifications": "v2.0.*",
         "codekanzlei/cake-model-history": "2.0.*",
