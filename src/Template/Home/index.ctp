@@ -98,19 +98,19 @@ endif;
                     <hr>
                     <h4>Database</h4>
                     <?php
-                        try {
-                            $connection = ConnectionManager::get('default');
-                            $connected = $connection->connect();
-                        } catch (Exception $connectionError) {
-                            $connected = false;
-                            $errorMsg = $connectionError->getMessage();
-                            if (method_exists($connectionError, 'getAttributes')):
-                                $attributes = $connectionError->getAttributes();
-                                if (isset($errorMsg['message'])):
-                                    $errorMsg .= '<br />' . $attributes['message'];
-                                endif;
-                            endif;
+                    try {
+                        $connection = ConnectionManager::get('default');
+                        $connected = $connection->connect();
+                    } catch (Exception $connectionError) {
+                        $connected = false;
+                        $errorMsg = $connectionError->getMessage();
+                        if (method_exists($connectionError, 'getAttributes')) {
+                            $attributes = $connectionError->getAttributes();
                         }
+                        if (isset($errorMsg['message'])) {
+                            $errorMsg .= '<br />' . $attributes['message'];
+                        }
+                    }
                     ?>
                     <?php if ($connected): ?>
                         <p ><i class="fa fa-check" aria-hidden="true"></i> CakePHP is able to connect to the database.</p>

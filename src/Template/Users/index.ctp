@@ -52,5 +52,5 @@
             </div>
         </div>
     </div>
-	<?= $this->Paginator->numbers() ?>
+    <?= $this->Paginator->numbers() ?>
 </div>

@@ -17,7 +17,7 @@
                             echo $this->Html->link($this->Auth->user('firstname') . ' ' . $this->Auth->user('lastname'), [
                                 'controller' => 'profile',
                                 'action' => 'index'
-                            ]); 
+                            ]);
                         ?>
                     </p>
                     <i class="fa fa-circle text-success"></i> <?= User::getTypeDescription($this->Auth->user('role')); ?></a>
