@@ -41,7 +41,7 @@ class AppController extends Controller
     /**
      * Load components
      *
-     * @var array
+     * @var string[]
      */
     public $components = [
         'Flash',
@@ -137,12 +137,12 @@ class AppController extends Controller
     /**
      * Redirects to given $url, after turning off $this->autoRender.
      *
-     * @param string|array $url A string or array-based URL pointing to another location within the app,
+     * @param string|string[] $url A string or array-based URL pointing to another location within the app,
      *     or an absolute URL
      * @param int $status HTTP status code (eg: 301)
      * @return \Cake\Http\Response|null
      * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingReturnTypeHint
      */
     public function redirect($url, $status = 302)
     {

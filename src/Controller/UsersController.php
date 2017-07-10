@@ -17,7 +17,7 @@ class UsersController extends AppController
     /**
      * Provides ListFilter configuration
      *
-     * @return array
+     * @return string[]
      */
     public function getListFilters(): array
     {

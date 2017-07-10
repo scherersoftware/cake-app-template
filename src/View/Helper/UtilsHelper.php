@@ -17,7 +17,7 @@ class UtilsHelper extends Helper
     /**
      * Used helpers
      *
-     * @var array
+     * @var string[]
      */
     public $helpers = ['Form'];
 
@@ -83,7 +83,7 @@ class UtilsHelper extends Helper
      * Creates the contentHeader block
      *
      * @param string $headline Headline
-     * @param array $options Options
+     * @param string:mixed[] $options Options
      * @return void
      */
     public function contentHeader(string $headline = null, array $options = []): void

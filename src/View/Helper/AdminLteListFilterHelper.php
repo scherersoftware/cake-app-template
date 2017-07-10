@@ -18,7 +18,7 @@ class AdminLteListFilterHelper extends ListFilterHelper
     /**
      * Default Config
      *
-     * @var array
+     * @var string[]
      */
     protected $_defaultConfig = [
         'formOptions' => [],

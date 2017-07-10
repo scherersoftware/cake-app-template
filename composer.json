@@ -36,6 +36,7 @@
         "cakephp/debug_kit": "~3.2",
         "cakephp/bake": "~1.1",
         "cakephp/cakephp-codesniffer": "~3.0",
+        "slevomat/coding-standard": "~3.0",
         "phpstan/phpstan": "~0.7",
         "dereuromark/cakephp-ide-helper": "~0.8",
         "cakedc/mixer": "^1.1"
@@ -76,7 +77,7 @@
             "@php-check",
             "@js-check"
         ],
-        "php-check": "vendor/bin/phpcs --colors -pn --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins",
+        "php-check": "vendor/bin/phpcs --colors -pn --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins && vendor/bin/phpcs --colors -p --standard=ruleset.xml --extensions=php ./src ./plugins",
         "php-fix": "vendor/bin/phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins",
         "js-check": "node_modules/.bin/eslint . --quiet",
         "js-fix": "node_modules/.bin/eslint . --fix",

@@ -19,7 +19,7 @@ class Environment
     /**
      * Environment variables
      *
-     * @var array
+     * @var string[]
      */
     protected static $_variables = [];
 
@@ -89,7 +89,7 @@ class Environment
     /**
      * Returns a list with the required environment variables for running the application.
      *
-     * @return array
+     * @return string[]
      */
     public static function getRequiredEnvironmentVariables(): array
     {

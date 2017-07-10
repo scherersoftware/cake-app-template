@@ -19,7 +19,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
     /**
      * Paginator Widget
      *
-     * @param array $options Options
+     * @param string:mixed[] $options Options
      * @return string Markup
      */
     public function numbers(array $options = []): string

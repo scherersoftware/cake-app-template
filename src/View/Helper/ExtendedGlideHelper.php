@@ -15,7 +15,7 @@ class ExtendedGlideHelper extends GlideHelper
     /**
      * Helpers used by this helper.
      *
-     * @var array
+     * @var string[]
      */
     public $helpers = ['Html', 'Url'];
 
@@ -24,8 +24,8 @@ class ExtendedGlideHelper extends GlideHelper
      * Including the srcset attribute for high quality retina images.
      *
      * @param string $path Image path.
-     * @param array $params Image manipulation parameters.
-     * @param array $options Array of HTML attributes for image tag.
+     * @param string:mixed[] $params Image manipulation parameters.
+     * @param string:mixed[] $options Array of HTML attributes for image tag.
      * @param int $pixelDensity PPI scaling of the image.
      *
      * @return string Complete <img> tag.
