@@ -23,6 +23,18 @@ use Cake\View\View;
  * Your application’s default view class
  *
  * @link http://book.cakephp.org/3.0/en/views.html#the-app-view
+ * @property \App\View\Helper\UtilsHelper $Utils
+ * @property \Attachments\View\Helper\AttachmentsHelper $Attachments
+ * @property \CkTools\View\Helper\CkToolsHelper $CkTools
+ * @property \AssetCompress\View\Helper\AssetCompressHelper $AssetCompress
+ * @property \FrontendBridge\View\Helper\FrontendBridgeHelper $FrontendBridge
+ * @property \LanguageSwitcher\View\Helper\LanguageSwitcherHelper $LanguageSwitcher
+ * @property \AuthActions\View\Helper\AuthHelper $Auth
+ * @property \CkTools\View\Helper\MenuHelper $Menu
+ * @property \ADmad\Glide\View\Helper\GlideHelper $Glide
+ * @property \ListFilter\View\Helper\ListFilterHelper $ListFilter
+ * @property \App\View\Helper\AdminLteListFilterHelper $AdminLteListFilter
+ * @property \App\View\Helper\PaginatorHelper $Paginator
  */
 class AppView extends View
 {

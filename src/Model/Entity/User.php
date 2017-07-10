@@ -15,13 +15,14 @@ use CkTools\Utility\TypeAwareTrait;
  * @property string $role
  * @property string $firstname
  * @property string $lastname
+ * @property string $full_name
  * @property string $email
  * @property string $password
  * @property int $failed_login_count
- * @property \Cake\I18n\Time $failed_login_timestamp
+ * @property \Cake\I18n\FrozenTime $failed_login_timestamp
  * @property string $api_token
- * @property \Cake\I18n\Time $created
- * @property \Cake\I18n\Time $modified
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  * @property string $last_passwords
  */
 class User extends Entity

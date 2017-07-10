@@ -1,4 +1,8 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\User $user
+ */
 use App\Lib\Environment;
 $this->assign('bodyClasses', 'login-page');
 ?>

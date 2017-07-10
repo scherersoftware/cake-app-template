@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ */
 // This is also used to include the correct css file in assets.ctp
 $this->assign('adminLTETheme', 'skin-blue-light');
 ?>
@@ -8,7 +11,7 @@ $this->assign('adminLTETheme', 'skin-blue-light');
     <?php echo $this->element('Layout/head') ?>
 </head>
 <body class="<?= $this->fetch('bodyClasses') ?>">
-    <div class="container <?php echo $this->FrontendBridge->getMainContentClasses() ?>">
+    <div <?= $this->FrontendBridge->getControllerAttributes(['container']) ?>>
         <?= $this->Flash->render() ?>
         <?= $this->Flash->render('auth') ?>
         <?= $this->fetch('content') ?>

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ */
 // This is also used to include the correct css file in assets.ctp
 $this->assign('adminLTETheme', 'skin-blue-light');
 ?>

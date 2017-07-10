@@ -7,6 +7,10 @@ use App\Model\Entity\User;
 use Cake\Utility\Hash;
 use Cake\View\Helper;
 
+/**
+ * @property \Cake\View\Helper\FormHelper $Form
+ * @property \ListFilter\View\Helper\ListFilterHelper $ListFilter
+ */
 class UtilsHelper extends Helper
 {
 
@@ -99,7 +103,6 @@ class UtilsHelper extends Helper
         if ($options['backToListButton']) {
             $actions .= ' ' . $this->ListFilter->backToListButton();
         }
-
 
         $markup = sprintf('<section class="content-header"><h1>%s<div class="actions pull-right">%s</div></h1></section>', $headline, $actions);
         $this->_View->assign('contentHeader', $markup);

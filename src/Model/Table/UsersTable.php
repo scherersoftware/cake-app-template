@@ -27,7 +27,7 @@ use \ArrayObject;
  * @method \App\Model\Entity\User|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
  * @method \App\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\User[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null)
+ * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
@@ -44,9 +44,9 @@ class UsersTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('users');
-        $this->displayField('id');
-        $this->primaryKey('id');
+        $this->setTable('users');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
     }
@@ -335,10 +335,10 @@ class UsersTable extends Table
      */
     public function resetPassword(User $user, array $postData)
     {
-        $user->accessible('*', false);
-        $user->accessible(['password'], true);
+        $user->setAccess('*', false);
+        $user->setAccess('password', true);
         $this->patchEntity($user, $postData, ['validate' => 'resetPassword']);
-        if (empty($user->errors())) {
+        if (empty($user->getErrors())) {
             $user->password = $postData['password'];
 
             return $this->save($user);
@@ -357,10 +357,10 @@ class UsersTable extends Table
      */
     public function changePassword(User $user, array $postData)
     {
-        $user->accessible('*', false);
-        $user->accessible(['password'], true);
+        $user->setAccess('*', false);
+        $user->setAccess('password', true);
         $this->patchEntity($user, $postData, ['validate' => 'changePassword']);
-        if (empty($user->errors())) {
+        if (empty($user->getErrors())) {
             $user->password = $postData['password'];
 
             return $this->save($user);
@@ -409,11 +409,11 @@ class UsersTable extends Table
         ], true);
 
         $email = new EmailNotification();
-        $email->template('forgot_password', 'default')
+        $email->setTemplate('forgot_password', 'default')
             ->emailFormat('html')
-            ->to($user->email)
-            ->subject(__('email.subject.forgot_password'))
-            ->viewVars([
+            ->SetTo($user->email)
+            ->setSubject(__('email.subject.forgot_password'))
+            ->setViewVars([
                 'resetPasswordUrl' => $restoreLink,
                 'fullName' => $user->full_name
             ])

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ */
     $this->assign('bodyClasses', 'demo-page');
 ?>
 <div class="row">

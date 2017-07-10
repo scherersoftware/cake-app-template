@@ -6,6 +6,9 @@ use ADmad\Glide\View\Helper\GlideHelper;
 
 /**
  * Extends the GlideHelper with our custom functions.
+ *
+ * @property \Cake\View\Helper\HtmlHelper $Html
+ * @property \Cake\View\Helper\UrlHelper $Url
  */
 class ExtendedGlideHelper extends GlideHelper
 {

@@ -6,37 +6,39 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "cakephp/cakephp": "3.3.*",
+        "cakephp/cakephp": "3.4.*",
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/bake": "~1.2",
         "cakephp/plugin-installer": "*",
         "codekanzlei/cake-auth-actions": "1.0.*",
-        "codekanzlei/cake-list-filter": "1.2.*",
+        "codekanzlei/cake-list-filter": "1.3.*",
         "codekanzlei/cake-cktools": "1.2.*",
-        "codekanzlei/cake-frontend-bridge": "1.0.*",
-        "codekanzlei/cake-attachments": "1.0.*",
-        "codekanzlei/cake-notifications": "v2.0.*",
-        "codekanzlei/cake-model-history": "2.0.*",
-        "codekanzlei/cake-bootstrap3": "1.0.*",
-        "scherersoftware/cake-monitor": "1.1.*",
+        "codekanzlei/cake-frontend-bridge": "1.4.*",
+        "codekanzlei/cake-attachments": "1.1.*",
+        "codekanzlei/cake-notifications": "v2.2.*",
+        "codekanzlei/cake-model-history": "2.2.*",
+        "codekanzlei/cake-bootstrap3": "1.1.*",
+        "scherersoftware/cake-monitor": "1.2.*",
         "scherersoftware/cakephp-schema": "1.0.*",
         "scherersoftware/cake-api-baselayer": "1.0.*",
         "scherersoftware/cake-language-switcher": "1.0.*",
         "markstory/asset_compress": "3.2.*",
         "tedivm/jshrink": "1.1.*",
-        "friendsofcake/bootstrap-ui": "0.6.*",
+        "friendsofcake/bootstrap-ui": "1.2.*",
         "admad/cakephp-glide": "2.0.*",
         "josegonzalez/dotenv": "2.0.*",
         "beberlei/assert": "2.6."
     },
     "require-dev": {
         "psy/psysh": "@stable",
-        "phpunit/phpunit": "*",
+        "phpunit/phpunit": "~6.0",
         "cakephp/debug_kit": "~3.2",
-        "cakephp/cakephp-codesniffer": "2.3.*",
-        "slevomat/coding-standard": "dev-2.0-dev",
-        "squizlabs/php_codesniffer": "dev-master"
+        "cakephp/bake": "~1.1",
+        "cakephp/cakephp-codesniffer": "~3.0",
+        "phpstan/phpstan": "~0.7",
+        "dereuromark/cakephp-ide-helper": "~0.8",
+        "cakedc/mixer": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -57,23 +59,33 @@
         "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
         "check": [
             "@test",
-            "@cs-check",
             "@php-syntax",
-            "@js-check"
+            "@cs-check",
+            "@phpstan"
         ],
         "check-php": [
             "@test",
             "@php-syntax",
+            "@php-check"
+        ],
+        "check-server": [
+            "@php-syntax",
             "@cs-check"
         ],
-        "cs-check": "vendor/bin/phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP --extensions=php ./src ./tests ./plugins && vendor/bin/phpcs --colors -p --standard=ruleset.xml --extensions=php ./src ./plugins",
-        "cs-fix": "phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
-        "js-check": "node_modules/.bin/eslint .",
+        "cs-check": [
+            "@php-check",
+            "@js-check"
+        ],
+        "php-check": "vendor/bin/phpcs --colors -pn --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins",
+        "php-fix": "vendor/bin/phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins",
+        "js-check": "node_modules/.bin/eslint . --quiet",
         "js-fix": "node_modules/.bin/eslint . --fix",
+        "php-syntax": "bin/php_syntax.sh src/ tests/ plugins/",
+        "test": "vendor/bin/phpunit --colors=always",
         "i18n": "bin/i18n.sh",
-        "php-syntax": "bin/php_syntax.sh src/ tests/ index.php",
-        "test": "phpunit --colors=always"
+        "coverage": "phpunit --log-junit webroot/coverage/unitreport.xml --coverage-html webroot/coverage --coverage-clover webroot/coverage/coverage.xml",
+        "phpstan": "php -d memory_limit=-1 vendor/bin/phpstan analyse -c phpstan.neon -l 1 src plugins tests"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }

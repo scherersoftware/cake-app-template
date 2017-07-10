@@ -10,6 +10,8 @@ use Cake\View\View;
  * Wrapper class for BootstrapUI's FormHelper to modify some of the default behavior
  *
  * @package default
+ * @property \Cake\View\Helper\UrlHelper $Url
+ * @property \Cake\View\Helper\HtmlHelper $Html
  */
 class BootstrapFormHelper extends FormHelper
 {
@@ -65,16 +67,16 @@ class BootstrapFormHelper extends FormHelper
 
         ], $options);
 
-        $oldInputGroupContainer = $this->config('templates.inputGroupContainer');
+        $oldInputGroupContainer = $this->getConfig('templates.inputGroupContainer');
         $inputGroupContainer = str_replace('input-group', 'input-group colorpicker-component', $oldInputGroupContainer);
 
-        $this->templates([
+        $this->setTemplates([
             'inputGroupContainer' => $inputGroupContainer
         ]);
 
-        $input = parent::input($field, $options);
+        $input = parent::controll($field, $options);
 
-        $this->templates([
+        $this->setTemplates([
             'inputGroupContainer' => $oldInputGroupContainer
         ]);
 

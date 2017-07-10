@@ -8,6 +8,10 @@ use Cake\View\View;
 
 /**
  * Paginator helper
+ *
+ * @property \Cake\View\Helper\UrlHelper $Url
+ * @property \Cake\View\Helper\NumberHelper $Number
+ * @property \Cake\View\Helper\HtmlHelper $Html
  */
 class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
 {
@@ -25,7 +29,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
             'last' => 1
         ], $options);
 
-        parent::templates([
+        parent::setTemplates([
             'ellipsis' => '<li class="disabled"><a>...</a></li>',
         ]);
         $pagination = '';

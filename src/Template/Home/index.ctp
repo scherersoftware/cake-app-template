@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ */
 
 use App\Lib\Environment;
 use Cake\Cache\Cache;
@@ -124,6 +127,7 @@ endif;
                     <?php endif; ?>
 
                     <hr>
+
                     <h4>App Migrations</h4>
                     <?php if ($migratedApp): ?>
                         <p ><i class="fa fa-check" aria-hidden="true"></i> Database is migrated.</p>

@@ -100,6 +100,21 @@ msgstr "Passwort zurücksetzen"
 msgid "dashboard"
 msgstr "Dashboard"
 
+msgid "user.firstname"
+msgstr "Vorname"
+
+msgid "user.lastname"
+msgstr "Nachname"
+
+msgid "user.email"
+msgstr "E-Mail"
+
+msgid "user.password"
+msgstr "Passwort"
+
+msgid "user.attachments"
+msgstr "Anhänge"
+
 msgid "my_profile"
 msgstr "Mein Profil"
 
@@ -154,12 +169,6 @@ msgstr "Einloggen"
 msgid "login.please_login"
 msgstr "Bitte loggen Sie sich ein"
 
-msgid "user.email"
-msgstr "E-Mail"
-
-msgid "user.password"
-msgstr "Passwort"
-
 msgid "login.login_for_two_weeks"
 msgstr "Für zwei Wochen eingeloggt bleiben."
 
@@ -174,12 +183,6 @@ msgstr "Passwort setzen"
 
 msgid "profile.index.title"
 msgstr "Mein Profil"
-
-msgid "user.firstname"
-msgstr "Vorname"
-
-msgid "user.lastname"
-msgstr "Nachname"
 
 msgid "profile.change_password"
 msgstr "Passwort ändern"
@@ -201,9 +204,6 @@ msgstr "Benutzer Hinzufügen"
 
 msgid "users.edit.title"
 msgstr "Benutzer Editieren"
-
-msgid "user.attachments"
-msgstr "Anhänge"
 
 msgid "users.index.title"
 msgstr "Benutzer"
