@@ -74,7 +74,7 @@ class BootstrapFormHelper extends FormHelper
             'inputGroupContainer' => $inputGroupContainer
         ]);
 
-        $input = parent::controll($field, $options);
+        $input = parent::control($field, $options);
 
         $this->setTemplates([
             'inputGroupContainer' => $oldInputGroupContainer

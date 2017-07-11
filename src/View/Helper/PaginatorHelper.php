@@ -3,8 +3,7 @@ declare(strict_types = 1);
 namespace App\View\Helper;
 
 use Cake\Utility\Hash;
-use Cake\View\Helper;
-use Cake\View\View;
+use Cake\View\Helper\PaginatorHelper as BasePaginatorHelper;
 
 /**
  * Paginator helper
@@ -13,7 +12,7 @@ use Cake\View\View;
  * @property \Cake\View\Helper\NumberHelper $Number
  * @property \Cake\View\Helper\HtmlHelper $Html
  */
-class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
+class PaginatorHelper extends BasePaginatorHelper
 {
 
     /**
