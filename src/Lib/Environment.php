@@ -19,7 +19,7 @@ class Environment
     /**
      * Environment variables
      *
-     * @var array
+     * @var string[]
      */
     protected static $_variables = [];
 
@@ -89,21 +89,14 @@ class Environment
     /**
      * Returns a list with the required environment variables for running the application.
      *
-     * @return array
+     * @return string[]
      */
     public static function getRequiredEnvironmentVariables(): array
     {
         return [
             'APP_ENVIRONMENT',
-            'EMAIL_HOST',
-            'EMAIL_PORT',
-            'EMAIL_USERNAME',
-            'EMAIL_PASSWORD',
-            'EMAIL_FROM',
-            'MYSQL_HOST',
-            'MYSQL_USERNAME',
-            'MYSQL_DATABASE',
-            'MYSQL_PASSWORD',
+            'EMAIL_TRANSPORT_DEFAULT_URL',
+            'DATABASE_URL',
             'MAIN_DOMAIN',
             'FULL_BASE_URL',
             'SESSION_COOKIE_NAME',

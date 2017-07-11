@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-12-30 17:11+0100\n"
+"POT-Creation-Date: 2017-07-10 15:32+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -101,6 +101,21 @@ msgstr ""
 msgid "dashboard"
 msgstr ""
 
+msgid "user.firstname"
+msgstr ""
+
+msgid "user.lastname"
+msgstr ""
+
+msgid "user.email"
+msgstr ""
+
+msgid "user.password"
+msgstr ""
+
+msgid "user.attachments"
+msgstr ""
+
 msgid "my_profile"
 msgstr ""
 
@@ -155,12 +170,6 @@ msgstr ""
 msgid "login.please_login"
 msgstr ""
 
-msgid "user.email"
-msgstr ""
-
-msgid "user.password"
-msgstr ""
-
 msgid "login.login_for_two_weeks"
 msgstr ""
 
@@ -174,12 +183,6 @@ msgid "login.set_password"
 msgstr ""
 
 msgid "profile.index.title"
-msgstr ""
-
-msgid "user.firstname"
-msgstr ""
-
-msgid "user.lastname"
 msgstr ""
 
 msgid "profile.change_password"
@@ -201,9 +204,6 @@ msgid "users.add.title"
 msgstr ""
 
 msgid "users.edit.title"
-msgstr ""
-
-msgid "user.attachments"
 msgstr ""
 
 msgid "users.index.title"

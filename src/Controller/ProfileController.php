@@ -4,12 +4,15 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+/**
+ * @property \App\Model\Table\UsersTable $Users
+ */
 class ProfileController extends AppController
 {
     /**
      * Index action, check old password and change it
      *
-     * @return \Cake\Network\Response|void Redirects on successful user update, renders view otherwise.
+     * @return \Cake\Http\Response|void Redirects on successful user update, renders view otherwise.
      */
     public function index()
     {
@@ -17,8 +20,8 @@ class ProfileController extends AppController
         $user = $this->Users->get($this->Auth->user('id'));
         unset($user->password);
         if ($this->request->is('put')) {
-            $this->Users->changePassword($user, $this->request->data);
-            if (empty($user->errors())) {
+            $this->Users->changePassword($user, $this->request->getData());
+            if (empty($user->getErrors())) {
                 $this->Flash->success(__('profile.password_change_success'));
 
                 return $this->redirect(['action' => 'index']);

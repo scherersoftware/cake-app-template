@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -31,6 +32,7 @@ Configure::write('Log.error.file', 'cli-error');
 
 try {
     Plugin::load('Bake');
+    Plugin::load('IdeHelper');
 } catch (MissingPluginException $e) {
     // Do not halt if the plugin is missing
 }

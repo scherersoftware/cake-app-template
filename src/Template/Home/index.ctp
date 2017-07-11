@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ */
 
 use App\Lib\Environment;
 use Cake\Cache\Cache;
@@ -95,19 +98,19 @@ endif;
                     <hr>
                     <h4>Database</h4>
                     <?php
-                        try {
-                            $connection = ConnectionManager::get('default');
-                            $connected = $connection->connect();
-                        } catch (Exception $connectionError) {
-                            $connected = false;
-                            $errorMsg = $connectionError->getMessage();
-                            if (method_exists($connectionError, 'getAttributes')):
-                                $attributes = $connectionError->getAttributes();
-                                if (isset($errorMsg['message'])):
-                                    $errorMsg .= '<br />' . $attributes['message'];
-                                endif;
-                            endif;
+                    try {
+                        $connection = ConnectionManager::get('default');
+                        $connected = $connection->connect();
+                    } catch (Exception $connectionError) {
+                        $connected = false;
+                        $errorMsg = $connectionError->getMessage();
+                        if (method_exists($connectionError, 'getAttributes')) {
+                            $attributes = $connectionError->getAttributes();
                         }
+                        if (isset($errorMsg['message'])) {
+                            $errorMsg .= '<br />' . $attributes['message'];
+                        }
+                    }
                     ?>
                     <?php if ($connected): ?>
                         <p ><i class="fa fa-check" aria-hidden="true"></i> CakePHP is able to connect to the database.</p>
@@ -124,6 +127,7 @@ endif;
                     <?php endif; ?>
 
                     <hr>
+
                     <h4>App Migrations</h4>
                     <?php if ($migratedApp): ?>
                         <p ><i class="fa fa-check" aria-hidden="true"></i> Database is migrated.</p>

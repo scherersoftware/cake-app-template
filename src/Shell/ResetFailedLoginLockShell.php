@@ -8,6 +8,8 @@ use Cake\I18n\Time;
 
 /**
  * ResetFailedLoginLock shell command.
+ *
+ * @property \App\Model\Table\UsersTable $Users
  */
 class ResetFailedLoginLockShell extends Shell
 {

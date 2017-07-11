@@ -15,13 +15,14 @@ use CkTools\Utility\TypeAwareTrait;
  * @property string $role
  * @property string $firstname
  * @property string $lastname
+ * @property string $full_name
  * @property string $email
  * @property string $password
  * @property int $failed_login_count
- * @property \Cake\I18n\Time $failed_login_timestamp
+ * @property \Cake\I18n\FrozenTime $failed_login_timestamp
  * @property string $api_token
- * @property \Cake\I18n\Time $created
- * @property \Cake\I18n\Time $modified
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  * @property string $last_passwords
  */
 class User extends Entity
@@ -39,7 +40,7 @@ class User extends Entity
      * be mass assigned. For security purposes, it is advised to set '*' to false
      * (or remove it), and explicitly make individual fields accessible as needed.
      *
-     * @var array
+     * @var string:bool[]
      */
     protected $_accessible = [
         '*' => true,
@@ -49,7 +50,7 @@ class User extends Entity
     /**
      * Fields that are excluded from JSON versions of the entity.
      *
-     * @var array
+     * @var string[]
      */
     protected $_hidden = [
         'password'
@@ -58,7 +59,7 @@ class User extends Entity
     /**
      * Define type descriptions
      *
-     * @return array
+     * @return string[]
      */
     public static function typeDescriptions(): array
     {
@@ -71,7 +72,7 @@ class User extends Entity
     /**
      * Returns a map of possible roles for a user with descriptions
      *
-     * @return array
+     * @return string[]
      */
     public static function getRoles(): array
     {
@@ -81,7 +82,7 @@ class User extends Entity
     /**
      * Returns a map of possible statuses for a user with descriptions
      *
-     * @return array
+     * @return string[]
      */
     public static function getStatuses(): array
     {
@@ -116,7 +117,7 @@ class User extends Entity
     /**
      * Api transform for user
      *
-     * @return array
+     * @return string:mixed[]
      */
     public function apiTransform(): array
     {

@@ -5,10 +5,14 @@ namespace App\Controller;
 use App\Lib\Status;
 use App\Model\Entity\User;
 use Cake\Event\EventManager;
-use Cake\Network\Response;
+use Cake\Http\Response;
+use Cake\I18n\Time;
 use Cake\Routing\Router;
 use Cake\Validation\Validation;
 
+/**
+ * @property \App\Model\Table\UsersTable $Users
+ */
 class LoginController extends AppController
 {
     /**
@@ -26,7 +30,7 @@ class LoginController extends AppController
     /**
      * login method
      *
-     * @return \Cake\Network\Response|void Redirects on successful login, renders view otherwise.
+     * @return \Cake\Http\Response|void Redirects on successful login, renders view otherwise.
      */
     public function login()
     {
@@ -41,16 +45,16 @@ class LoginController extends AppController
         if ($this->request->is('post')) {
             $userData = $this->Auth->identify();
             if ($userData) {
-                if ($this->request->data['cookie']) {
+                if ($this->request->getData('cookie') !== null) {
                     $this->AuthUtils->addRememberMeCookie($userData['id']);
                 }
                 $this->Auth->setUser($userData);
 
                 return $this->redirect($this->Auth->redirectUrl());
-            } elseif ($this->Users->hasLoginRetriesLock($this->request->data)) {
+            } elseif ($this->Users->hasLoginRetriesLock($this->request->getData())) {
                 $this->Flash->error(__('login.login_retries_lock'));
             } else {
-                $this->Users->increaseLoginRetries($this->request->data);
+                $this->Users->increaseLoginRetries($this->request->getData());
                 $this->Flash->error(__('login.wrong_credentials'));
             }
         }
@@ -60,7 +64,7 @@ class LoginController extends AppController
     /**
      * logout method
      *
-     * @return \Cake\Network\Response|void Redirects on logout.
+     * @return \Cake\Http\Response|void Redirects on logout.
      */
     public function logout(): Response
     {
@@ -76,14 +80,14 @@ class LoginController extends AppController
     /**
      * new password for users
      *
-     * @return \Cake\Network\Response|void Redirects when email was passed, renders view otherwise.
+     * @return \Cake\Http\Response|void Redirects when email was passed, renders view otherwise.
      */
     public function forgotPassword()
     {
         $this->viewBuilder()->layout('plain');
         if ($this->request->is('post')) {
-            if (!empty($this->request->data['email']) && Validation::email($this->request->data['email'])) {
-                $user = $this->Users->getUserByEmail($this->request->data['email']);
+            if ($this->request->getData('email') !== null && Validation::email($this->request->getData('email'))) {
+                $user = $this->Users->getUserByEmail($this->request->getData('email'));
 
                 if (!empty($user)) {
                     $this->Users->sendForgotPasswordEmail($user);
@@ -96,7 +100,7 @@ class LoginController extends AppController
                     'action' => 'login'
                 ]);
             } else {
-                return $this->Flash->error(__('login.email_required'));
+                $this->Flash->error(__('login.email_required'));
             }
         }
     }
@@ -106,7 +110,7 @@ class LoginController extends AppController
      *
      * @param string $userId userId
      * @param string $token token
-     * @return \Cake\Network\Response|void Redirects on successful restore, renders view otherwise.
+     * @return \Cake\Http\Response|void Redirects on successful restore, renders view otherwise.
      */
     public function restorePassword(string $userId, string $token)
     {
@@ -118,7 +122,7 @@ class LoginController extends AppController
 
                 $timestamp = substr($token, -10);
                 $hash = substr($token, 0, -10);
-                $time = new \Cake\I18n\Time($timestamp);
+                $time = new Time($timestamp);
                 $expire = '1 day';
 
                 if (!($hash === $userHash && $time->wasWithinLast($expire))) {
@@ -129,8 +133,8 @@ class LoginController extends AppController
             }
             // Save new Password
             if ($this->request->is(['patch', 'post', 'put'])) {
-                $user = $this->Users->resetPassword($user, $this->request->data);
-                if (empty($user->errors())) {
+                $user = $this->Users->resetPassword($user, $this->request->getData());
+                if (empty($user->getErrors())) {
                     $this->Users->resetLoginRetries($user);
                     $this->Flash->success(__('login.new_password_saved'));
 
@@ -142,6 +146,11 @@ class LoginController extends AppController
         } else {
             return $this->redirect(['action' => 'login']);
         }
+
+        $this->request = $this->request
+            ->withData('password', '')
+            ->withData('password_confirm', '');
+
         $this->set(compact('user'));
     }
 }

@@ -1,6 +1,7 @@
 .DS_Store
 .tags
 .tags1
+.idea/*
 .sass-cache/*
 composer.lock
 /node_modules/*
