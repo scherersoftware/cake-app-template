@@ -62,3 +62,6 @@ Also, we're using the following awesome open-source projects:
 - [PHP Dotenv by Jose Diaz-Gonzalez](https://github.com/josegonzalez)
 - [JShrink by Robert Hafner](https://github.com/tedivm/jshrink)
 - [Assert by Benjamin Eberlei](https://github.com/beberlei/assert)
+- [CakePHP IdeHelper by Mark Scherer](https://github.com/dereuromark/cakephp-ide-helper)
+- [PHPStan by Ondřej Mirtes](https://github.com/phpstan/phpstan)
+- [Mixer by CakeDC](https://github.com/cakedc/mixer)

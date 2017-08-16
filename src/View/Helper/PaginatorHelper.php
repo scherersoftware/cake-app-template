@@ -3,19 +3,22 @@ declare(strict_types = 1);
 namespace App\View\Helper;
 
 use Cake\Utility\Hash;
-use Cake\View\Helper;
-use Cake\View\View;
+use Cake\View\Helper\PaginatorHelper as BasePaginatorHelper;
 
 /**
  * Paginator helper
+ *
+ * @property \Cake\View\Helper\UrlHelper $Url
+ * @property \Cake\View\Helper\NumberHelper $Number
+ * @property \Cake\View\Helper\HtmlHelper $Html
  */
-class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
+class PaginatorHelper extends BasePaginatorHelper
 {
 
     /**
      * Paginator Widget
      *
-     * @param array $options Options
+     * @param string:mixed[] $options Options
      * @return string Markup
      */
     public function numbers(array $options = []): string
@@ -25,7 +28,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
             'last' => 1
         ], $options);
 
-        parent::templates([
+        parent::setTemplates([
             'ellipsis' => '<li class="disabled"><a>...</a></li>',
         ]);
         $pagination = '';

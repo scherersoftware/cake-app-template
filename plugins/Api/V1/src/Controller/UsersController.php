@@ -4,7 +4,7 @@ declare(strict_types = 1);
 namespace Api\V1\Controller;
 
 use CakeApiBaselayer\Lib\ApiReturnCode;
-use Cake\Network\Response;
+use Cake\Http\Response;
 
 class UsersController extends AppController
 {
@@ -17,7 +17,7 @@ class UsersController extends AppController
     public function authorize(): Response
     {
         $this->request->allowMethod('post');
-        if (!isset($this->request->data['email']) || !isset($this->request->data['password'])) {
+        if ($this->request->getData('email') === null || $this->request->getData('password') === null) {
             return $this->Api->response(ApiReturnCode::INVALID_PARAMS);
         }
         if ($this->Auth->user()) {
@@ -36,7 +36,7 @@ class UsersController extends AppController
                 'user' => $userEntity->apiTransform()
             ]);
         } else {
-            $this->Users->increaseLoginRetries($this->request->data);
+            $this->Users->increaseLoginRetries($this->request->getData());
 
             return $this->Api->response(ApiReturnCode::INVALID_CREDENTIALS);
         }
@@ -56,21 +56,6 @@ class UsersController extends AppController
     }
 
     /**
-     * Returns the current user's data.
-     *
-     * @return ServiceResponse
-     */
-    public function current(): Response
-    {
-        $this->request->allowMethod('get');
-        $user = $this->Users->get($this->Auth->user('id'));
-
-        return $this->Api->response(ApiReturnCode::SUCCESS, [
-            'user' => $user->apiTransform()
-        ]);
-    }
-
-    /**
      * Forget Password
      *
      * @return ServiceResponse
@@ -79,11 +64,11 @@ class UsersController extends AppController
     {
         $this->loadModel('Users');
         $this->request->allowMethod('post');
-        if (!isset($this->request->data['email'])) {
+        if ($this->request->getData('email') === null) {
             return $this->Api->response(ApiReturnCode::INVALID_PARAMS);
         }
 
-        $user = $this->Users->getUserByEmail($this->request->data['email']);
+        $user = $this->Users->getUserByEmail($this->request->getData('email'));
         if (empty($user)) {
             return $this->Api->response(ApiReturnCode::INVALID_CREDENTIALS);
         }
@@ -103,12 +88,12 @@ class UsersController extends AppController
         $this->loadModel('Users');
         $this->request->allowMethod('post');
 
-        if (!isset($this->request->data['current_password']) || !isset($this->request->data['password']) || !isset($this->request->data['password_confirm'])) {
+        if ($this->request->getData('current_password') === null || $this->request->getData('password') === null || $this->request->getData('password_confirm') === null) {
             return $this->Api->response(ApiReturnCode::INVALID_PARAMS);
         }
 
         $user = $this->Users->get($this->Auth->user('id'));
-        $user = $this->Users->changePassword($user, $this->request->data);
+        $user = $this->Users->changePassword($user, $this->request->getData());
 
         if ($this->Api->checkForErrors($user)) {
             return $this->Api->response(ApiReturnCode::VALIDATION_FAILED, [

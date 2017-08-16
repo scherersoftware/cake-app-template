@@ -27,7 +27,7 @@ use \ArrayObject;
  * @method \App\Model\Entity\User|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
  * @method \App\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\User[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null)
+ * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
@@ -37,16 +37,16 @@ class UsersTable extends Table
     /**
      * Initialize method
      *
-     * @param array $config The configuration for the Table.
+     * @param string:mixed[] $config The configuration for the Table.
      * @return void
      */
     public function initialize(array $config): void
     {
         parent::initialize($config);
 
-        $this->table('users');
-        $this->displayField('id');
-        $this->primaryKey('id');
+        $this->setTable('users');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
     }
@@ -234,7 +234,7 @@ class UsersTable extends Table
      * check if the user with the email from the reuqestData exists and is locked from
      * login in because of a too high failed login count
      *
-     * @param  array $requestData the request data array
+     * @param string:mixed[] $requestData the request data array
      * @return bool
      */
     public function hasLoginRetriesLock(array $requestData): bool
@@ -253,7 +253,7 @@ class UsersTable extends Table
      * Attached to the Auth.afterIdentify event to call the resetLoginRetries method
      *
      * @param Event $event CakePHP Event
-     * @param array $userData Array with user data
+     * @param string:mixed[] $userData Array with user data
      * @return void
      */
     public function resetLoginRetriesListener(\Cake\Event\Event $event, array $userData): void
@@ -285,7 +285,7 @@ class UsersTable extends Table
      * email address exists and it was not created with social login, failed_login_count
      * will be increased and the failed_login_timestamp is set to now.
      *
-     * @param array $requestData Request Data
+     * @param string:mixed[] $requestData Request data
      * @return bool Returns true if a user was found and the failed_login_count was increased
      */
     public function increaseLoginRetries(array $requestData): bool
@@ -311,7 +311,7 @@ class UsersTable extends Table
      * Finder used for authentications
      *
      * @param Query $query Query
-     * @param array $options Options
+     * @param string:mixed[] $options Options
      * @return Query
      */
     public function findAuth(\Cake\ORM\Query $query, array $options): Query
@@ -330,15 +330,15 @@ class UsersTable extends Table
      * saves them if valid.
      *
      * @param User $user User entity
-     * @param array $postData Array containing new_password and password_confirm keys
+     * @param string:mixed[] $postData Array containing new_password and password_confirm keys
      * @return User|bool
      */
     public function resetPassword(User $user, array $postData)
     {
-        $user->accessible('*', false);
-        $user->accessible(['password'], true);
+        $user->setAccess('*', false);
+        $user->setAccess('password', true);
         $this->patchEntity($user, $postData, ['validate' => 'resetPassword']);
-        if (empty($user->errors())) {
+        if (empty($user->getErrors())) {
             $user->password = $postData['password'];
 
             return $this->save($user);
@@ -352,15 +352,15 @@ class UsersTable extends Table
      * saves them if valid.
      *
      * @param User $user User entity
-     * @param array $postData Array containing new_password and password_confirm keys
+     * @param string:mixed[] $postData Array containing new_password and password_confirm keys
      * @return User|bool
      */
     public function changePassword(User $user, array $postData)
     {
-        $user->accessible('*', false);
-        $user->accessible(['password'], true);
+        $user->setAccess('*', false);
+        $user->setAccess('password', true);
         $this->patchEntity($user, $postData, ['validate' => 'changePassword']);
-        if (empty($user->errors())) {
+        if (empty($user->getErrors())) {
             $user->password = $postData['password'];
 
             return $this->save($user);
@@ -409,11 +409,11 @@ class UsersTable extends Table
         ], true);
 
         $email = new EmailNotification();
-        $email->template('forgot_password', 'default')
+        $email->setTemplate('forgot_password', 'default')
             ->emailFormat('html')
-            ->to($user->email)
-            ->subject(__('email.subject.forgot_password'))
-            ->viewVars([
+            ->setTo($user->email)
+            ->setSubject(__('email.subject.forgot_password'))
+            ->setViewVars([
                 'resetPasswordUrl' => $restoreLink,
                 'fullName' => $user->full_name
             ])

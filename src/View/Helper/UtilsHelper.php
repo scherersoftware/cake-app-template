@@ -7,13 +7,17 @@ use App\Model\Entity\User;
 use Cake\Utility\Hash;
 use Cake\View\Helper;
 
+/**
+ * @property \Cake\View\Helper\FormHelper $Form
+ * @property \ListFilter\View\Helper\ListFilterHelper $ListFilter
+ */
 class UtilsHelper extends Helper
 {
 
     /**
      * Used helpers
      *
-     * @var array
+     * @var string[]
      */
     public $helpers = ['Form'];
 
@@ -79,7 +83,7 @@ class UtilsHelper extends Helper
      * Creates the contentHeader block
      *
      * @param string $headline Headline
-     * @param array $options Options
+     * @param string:mixed[] $options Options
      * @return void
      */
     public function contentHeader(string $headline = null, array $options = []): void
@@ -99,7 +103,6 @@ class UtilsHelper extends Helper
         if ($options['backToListButton']) {
             $actions .= ' ' . $this->ListFilter->backToListButton();
         }
-
 
         $markup = sprintf('<section class="content-header"><h1>%s<div class="actions pull-right">%s</div></h1></section>', $headline, $actions);
         $this->_View->assign('contentHeader', $markup);

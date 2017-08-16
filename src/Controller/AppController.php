@@ -17,7 +17,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-use Cake\Network\Response;
+use Cake\Http\Response;
 
 /**
  * Application Controller
@@ -26,6 +26,11 @@ use Cake\Network\Response;
  * will inherit them.
  *
  * @link http://book.cakephp.org/3.0/en/controllers.html#the-app-controller
+ * @property \App\Model\Table\UsersTable $Users
+ * @property \FrontendBridge\Controller\Component\FrontendBridgeComponent $FrontendBridge
+ * @property \ListFilter\Controller\Component\ListFilterComponent $ListFilter
+ * @property \AuthActions\Controller\Component\AuthUtilsComponent $AuthUtils
+ * @property \CakeApiBaselayer\Controller\Component\ApiComponent $Api
  */
 class AppController extends Controller
 {
@@ -36,7 +41,7 @@ class AppController extends Controller
     /**
      * Load components
      *
-     * @var array
+     * @var string[]
      */
     public $components = [
         'Flash',
@@ -87,26 +92,11 @@ class AppController extends Controller
     }
 
     /**
-     * Before render callback.
-     *
-     * @param \Cake\Event\Event $event The beforeRender event.
-     * @return \Cake\Network\Response|null|void
-     */
-    public function beforeRender(Event $event)
-    {
-        if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
-        ) {
-            $this->set('_serialize', true);
-        }
-    }
-
-    /**
      * Called before the controller action. You can use this method to configure and customize components
      * or perform logic that needs to happen before each controller action.
      *
      * @param \Cake\Event\Event $event An Event instance
-     * @return \Cake\Network\Response|null|void
+     * @return \Cake\Http\Response|null|void
      */
     public function beforeFilter(\Cake\Event\Event $event)
     {
@@ -121,7 +111,7 @@ class AppController extends Controller
         }
 
         if (!$this->Auth->user()) {
-            $this->Auth->config('authError', false);
+            $this->Auth->setConfig('authError', false);
         }
 
         parent::beforeFilter($event);
@@ -130,16 +120,36 @@ class AppController extends Controller
     /**
      * Instantiates the correct view class, hands it its data, and uses it to render the view output.
      *
-     * @param mixed $view View to use for rendering
-     * @param mixed $layout Layout to use
-     * @return \Cake\Network\Response A response object containing the rendered view.
+     * @param string|null $view View to use for rendering
+     * @param string|null $layout Layout to use
+     * @return \Cake\Http\Response A response object containing the rendered view.
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
      */
     public function render($view = null, $layout = null): Response
     {
-        if ($this->_isJsonActionRequest()) {
+        if ($this->request->is('json')) {
             return $this->renderJsonAction($view, $layout);
         }
 
         return parent::render($view, $layout);
+    }
+
+    /**
+     * Redirects to given $url, after turning off $this->autoRender.
+     *
+     * @param string|string[] $url A string or array-based URL pointing to another location within the app,
+     *     or an absolute URL
+     * @param int $status HTTP status code (eg: 301)
+     * @return \Cake\Http\Response|null
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingReturnTypeHint
+     */
+    public function redirect($url, $status = 302)
+    {
+        if ($this->request->is('json')) {
+            return $this->redirectJsonAction($url);
+        }
+
+        return parent::redirect($url, $status);
     }
 }

@@ -9,12 +9,16 @@ use Cake\View\Helper;
 use Cake\View\StringTemplateTrait;
 use ListFilter\View\Helper\ListFilterHelper;
 
+/**
+ * @property \Cake\View\Helper\HtmlHelper $Html
+ * @property \Cake\View\Helper\FormHelper $Form
+ */
 class AdminLteListFilterHelper extends ListFilterHelper
 {
     /**
      * Default Config
      *
-     * @var array
+     * @var string[]
      */
     protected $_defaultConfig = [
         'formOptions' => [],
@@ -50,8 +54,8 @@ class AdminLteListFilterHelper extends ListFilterHelper
      */
     public function openContainer(): string
     {
-        $containerClasses = $this->config('containerClasses');
-        $contentClasses = $this->config('contentClasses');
+        $containerClasses = $this->getConfig('containerClasses');
+        $contentClasses = $this->getConfig('contentClasses');
 
         $title = __d('list_filter', 'list_filter.filter_fieldset_title');
 

@@ -12,14 +12,14 @@ class Status
     /**
      * Descriptions
      *
-     * @var array
+     * @var string[]
      */
     public static $descriptions = [];
 
     /**
      * Get descriptions for statuses
      *
-     * @return array
+     * @return string[]
      */
     public static function getDescriptions(): array
     {
@@ -33,8 +33,8 @@ class Status
     /**
      * Get mapping of const to description
      *
-     * @param string|array $states states to get mapped
-     * @return array
+     * @param string|string[] $states states to get mapped
+     * @return string[]
      */
     public static function getMap($states = null): array
     {

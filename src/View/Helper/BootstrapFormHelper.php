@@ -10,6 +10,8 @@ use Cake\View\View;
  * Wrapper class for BootstrapUI's FormHelper to modify some of the default behavior
  *
  * @package default
+ * @property \Cake\View\Helper\UrlHelper $Url
+ * @property \Cake\View\Helper\HtmlHelper $Html
  */
 class BootstrapFormHelper extends FormHelper
 {
@@ -18,7 +20,7 @@ class BootstrapFormHelper extends FormHelper
      * Construct the widgets and binds the default context providers.
      *
      * @param \Cake\View\View $View The View this helper is being attached to.
-     * @param array $config Configuration settings for the helper.
+     * @param string:mixed[] $config Configuration settings for the helper.
      */
     public function __construct(View $View, array $config = [])
     {
@@ -39,7 +41,7 @@ class BootstrapFormHelper extends FormHelper
      * @param mixed $model The context for which the form is being defined. Can
      *   be an ORM entity, ORM resultset, or an array of meta data. You can use false or null
      *   to make a model-less form.
-     * @param array $options An array of html attributes and options.
+     * @param string:mixed[] $options An array of html attributes and options.
      * @return string An formatted opening FORM tag.
      */
     public function create($model = null, array $options = []): string
@@ -55,7 +57,7 @@ class BootstrapFormHelper extends FormHelper
      * Renders a field suitable for bootstrap-colorpicker
      *
      * @param string $field Field name
-     * @param array $options Options
+     * @param string:mixed[] $options Options
      * @return string
      */
     public function colorPickerInput(string $field, array $options = []): string
@@ -65,16 +67,16 @@ class BootstrapFormHelper extends FormHelper
 
         ], $options);
 
-        $oldInputGroupContainer = $this->config('templates.inputGroupContainer');
+        $oldInputGroupContainer = $this->getConfig('templates.inputGroupContainer');
         $inputGroupContainer = str_replace('input-group', 'input-group colorpicker-component', $oldInputGroupContainer);
 
-        $this->templates([
+        $this->setTemplates([
             'inputGroupContainer' => $inputGroupContainer
         ]);
 
-        $input = parent::input($field, $options);
+        $input = parent::control($field, $options);
 
-        $this->templates([
+        $this->setTemplates([
             'inputGroupContainer' => $oldInputGroupContainer
         ]);
 
@@ -84,6 +86,7 @@ class BootstrapFormHelper extends FormHelper
     /**
      * {@inheritDoc}
      *
+     * @param string:mixed[] $options Options
      * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
      */
     public function error($field, $text = null, array $options = []): string

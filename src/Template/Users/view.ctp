@@ -1,4 +1,8 @@
 <?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\User $user
+ */
 use App\Model\Entity\User;
 
 $this->assign('title', __('users.view.title'));
