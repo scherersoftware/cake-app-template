@@ -58,8 +58,9 @@ class AppController extends Controller
      * Use this method to add common initialization code like loading components.
      *
      * @return void
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingReturnTypeHint
      */
-    public function initialize(): void
+    public function initialize()
     {
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Auth', [
