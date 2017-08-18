@@ -67,17 +67,17 @@
         "check-php": [
             "@test",
             "@php-syntax",
-            "@php-check"
-        ],
-        "check-server": [
-            "@php-syntax",
-            "@cs-check"
+            "@php-check",
+            "@php-check-strict",
+            "@phpstan"
         ],
         "cs-check": [
             "@php-check",
+            "@php-check-strict",
             "@js-check"
         ],
-        "php-check": "vendor/bin/phpcs --colors -pn --ignore=./config/Migrations/*,./config/Seeds/* --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins ./config && vendor/bin/phpcs --colors -p --ignore=./config/Migrations/*,./config/Seeds/*,./config/schema.php --standard=vendor/scherersoftware/coding-standard/scherersoftware ./src ./tests ./plugins ./config",
+        "php-check": "vendor/bin/phpcs --colors -pn --ignore=./config/Migrations/*,./config/Seeds/* --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins ./config",
+        "php-check-strict": "vendor/bin/phpcs -pn --ignore=./config/Migrations/*,./config/Seeds/*,./config/schema.php  --standard=vendor/scherersoftware/coding-standard/scherersoftware ./src ./tests ./plugins ./config",
         "php-fix": "vendor/bin/phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests ./plugins",
         "js-check": "node_modules/.bin/eslint . --quiet",
         "js-fix": "node_modules/.bin/eslint . --fix",
