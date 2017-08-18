@@ -182,15 +182,16 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => 'Smtp',
-            'host' => Environment::read('EMAIL_HOST'),
-            'port' => Environment::read('EMAIL_PORT'),
+            'className' => 'Mail',
+            // The following keys are used in SMTP transports
+            'host' => 'localhost',
+            'port' => 25,
             'timeout' => 30,
-            'username' => Environment::read('EMAIL_USERNAME'),
-            'password' => Environment::read('EMAIL_PASSWORD'),
+            'username' => 'user',
+            'password' => 'secret',
             'client' => null,
             'tls' => null,
-            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+            'url' => Environment::read('EMAIL_TRANSPORT_DEFAULT_URL')
         ],
     ],
 
