@@ -74,7 +74,7 @@ class UsersController extends AppController
     public function view(string $id = null): void
     {
         $user = $this->Users->get($id);
-        $this->set(compact('users'));
+        $this->set(compact('user'));
     }
 
     /**

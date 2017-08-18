@@ -225,16 +225,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => Environment::read('MYSQL_HOST'),
+            'host' => 'localhost',
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => Environment::read('MYSQL_USERNAME'),
-            'password' => Environment::read('MYSQL_PASSWORD'),
-            'database' => Environment::read('MYSQL_DATABASE'),
+            'username' => 'my_app',
+            'password' => 'secret',
+            'database' => 'myapp',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
@@ -370,12 +370,8 @@ return [
                 'rememberuser',
                 'auth_token',
                 'api_token',
-                'mysql_password',
-                'mysql_host',
-                'mysql_username',
-                'mysql_database',
-                'email_username',
-                'email_password',
+                'database_url',
+                'email_transport_default_url',
                 'cookie'
             ]
         ],
@@ -389,10 +385,7 @@ return [
     'Queuesadilla' => [
         'default' => [
             'engine' => 'josegonzalez\Queuesadilla\Engine\MysqlEngine',
-            'database' => Environment::read('MYSQL_DATABASE'),
-            'host' => Environment::read('MYSQL_HOST'),
-            'user' => Environment::read('MYSQL_USERNAME'),
-            'pass' => Environment::read('MYSQL_PASSWORD')
+            'url' => Environment::read('DATABASE_URL')
         ]
     ],
     'Glide' => [
