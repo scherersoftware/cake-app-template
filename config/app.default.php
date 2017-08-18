@@ -261,7 +261,7 @@ return [
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
 
-            'url' => env('DATABASE_URL', null),
+            'url' => Environment::read('DATABASE_URL'),
         ],
 
         /**
