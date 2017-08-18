@@ -41,9 +41,6 @@ class HomeController extends AppController
         try {
             $userTable = TableRegistry::get('Users');
             $seeded = $userTable->find()
-                ->where([
-                    'email' => 'john.doe@example.com'
-                ])
                 ->count();
         } catch (Exception $e) {
             $seeded = false;

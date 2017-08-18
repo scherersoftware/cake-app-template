@@ -48,10 +48,10 @@ endif;
             <div class="row checks">
                 <div class="col-lg-12">
                     <h4>Environment</h4>
-                    <?php if (version_compare(PHP_VERSION, '7.0.0', '>=')): ?>
-                        <p ><i class="fa fa-check" aria-hidden="true"></i> Your version of PHP is 7.0.0 or higher (detected <?= PHP_VERSION ?>).</p>
+                    <?php if (version_compare(PHP_VERSION, '7.1.0', '>=')): ?>
+                        <p ><i class="fa fa-check" aria-hidden="true"></i> Your version of PHP is 7.1.0 or higher (detected <?= PHP_VERSION ?>).</p>
                     <?php else: ?>
-                        <p ><i class="fa fa-times" aria-hidden="true"></i> Your version of PHP is too low. You need PHP 7.0.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</p>
+                        <p ><i class="fa fa-times" aria-hidden="true"></i> Your version of PHP is too low. You need PHP 7.1.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</p>
                     <?php endif; ?>
 
                     <?php if (extension_loaded('mbstring')): ?>
