@@ -22,16 +22,16 @@ class QueuesadillaShell extends \Josegonzalez\CakeQueuesadilla\Shell\Queuesadill
     public function getWorker($engine, $logger): BaseWorker
     {
         $worker = parent::getWorker($engine, $logger);
-        $worker->attachListener('Worker.job.exception', function ($event) {
+        $worker->attachListener('Worker.job.exception', function ($event): void {
             $exception = $event->data['exception'];
             $exception->job = $event->data['job'];
             $sentryHandler = new SentryHandler();
             $sentryHandler->handle($exception);
         });
-        $worker->attachListener('Worker.job.success', function ($event) {
+        $worker->attachListener('Worker.job.success', function ($event): void {
             ConnectionManager::get('default')->disconnect();
         });
-        $worker->attachListener('Worker.job.failure', function ($event) {
+        $worker->attachListener('Worker.job.failure', function ($event): void {
             $failedJob = $event->data['job'];
             $failedItem = $failedJob->item();
             $options = [
