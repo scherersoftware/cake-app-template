@@ -87,6 +87,8 @@ class Installer
         if (!file_exists($appConfig)) {
             copy($defaultConfig, $appConfig);
             $io->write('Created `config/app.php` file');
+            // Delete app.default.php
+            unlink($defaultConfig);
         }
     }
 
