@@ -32,12 +32,12 @@
     },
     "require-dev": {
         "psy/psysh": "@stable",
-        "phpunit/phpunit": "~8.0",
+        "phpunit/phpunit": "~6.0",
         "cakephp/debug_kit": "~3.2",
         "cakephp/bake": "~1.1",
         "cakephp/cakephp-codesniffer": "~3.0",
         "scherersoftware/coding-standard": "~3.0",
-        "phpstan/phpstan": "~0.7",
+        "phpstan/phpstan": "~0.8",
         "dereuromark/cakephp-ide-helper": "~0.8",
         "cakedc/mixer": "^1.1"
     },
