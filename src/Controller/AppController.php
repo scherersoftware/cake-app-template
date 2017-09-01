@@ -103,7 +103,7 @@ class AppController extends Controller
     {
         $this->initAuthActions();
         $this->loadModel('Users');
-        $this->Auth->eventManager()->attach([$this->Users, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
+        $this->Auth->getEventManager()->on([$this->Users, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
 
         if (!$this->AuthUtils->loggedIn() && $userId = $this->AuthUtils->checkRememberMeCookie()) {
             $this->loadModel('Users');

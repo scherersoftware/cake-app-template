@@ -95,7 +95,7 @@ class BootstrapFormHelper extends FormHelper
 
         if ($this->context() instanceof \Cake\View\Form\EntityContext
             && count($parts) > 1
-            && (is_array($this->context()->entity()->get($parts[0])) || isset($this->request->data[$parts[0]]))
+            && (is_array($this->context()->entity()->get($parts[0])) || $this->request->getData($parts[0]) !== null)
         ) {
             $errors = $this->context()->entity()->errors();
             if (Hash::check($errors, $field)) {

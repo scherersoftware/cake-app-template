@@ -34,12 +34,12 @@ class LoginController extends AppController
      */
     public function login()
     {
-        $this->viewBuilder()->layout('plain');
-        if (!$this->request->session()->started()) {
-            $this->request->session()->start();
+        $this->viewBuilder()->setLayout('plain');
+        if (!$this->request->getSession()->started()) {
+            $this->request->getSession()->start();
         }
-        if (!empty($this->request->query('redirectUrl'))) {
-            $this->request->session()->write('Auth.redirect', $this->request->query('redirectUrl'));
+        if (!empty($this->request->getQuery('redirectUrl'))) {
+            $this->request->getSession()->write('Auth.redirect', $this->request->getQuery('redirectUrl'));
         }
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -69,8 +69,8 @@ class LoginController extends AppController
     public function logout(): Response
     {
         $this->Flash->success(__('login.you_have_been_logged_out'));
-        if ($this->request->session()->started()) {
-            $this->request->session()->destroy();
+        if ($this->request->getSession()->started()) {
+            $this->request->getSession()->destroy();
         }
         $this->AuthUtils->destroyRememberMeCookie();
 
@@ -84,7 +84,7 @@ class LoginController extends AppController
      */
     public function forgotPassword()
     {
-        $this->viewBuilder()->layout('plain');
+        $this->viewBuilder()->setLayout('plain');
         if ($this->request->is('post')) {
             if ($this->request->getData('email') !== null && Validation::email($this->request->getData('email'))) {
                 $user = $this->Users->getUserByEmail($this->request->getData('email'));
@@ -114,7 +114,7 @@ class LoginController extends AppController
      */
     public function restorePassword(string $userId, string $token)
     {
-        $this->viewBuilder()->layout('plain');
+        $this->viewBuilder()->setLayout('plain');
         if (!empty($userId) && !empty($token)) {
             $user = $this->Users->get($userId);
             if (!empty($user)) {
